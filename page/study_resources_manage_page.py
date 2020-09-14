@@ -9,7 +9,7 @@ class StudyResourcesManagePage(BaseAction):
     resources_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[2]/span"
 
     # 学习资源管理按钮
-    study_resources_manage_btn = By.CSS_SELECTOR, "li.jw-cursor-cursor:nth-child(2)"
+    study_resources_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[1]/ul/li[3]"
 
     # 资源名称输入框
     resources_name_search = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div[1]/main/div/div[1]/div/input"
@@ -29,21 +29,24 @@ class StudyResourcesManagePage(BaseAction):
     # 资源分类选择框
     resources_sort_select = By.CSS_SELECTOR, ".el-cascader > div:nth-child(1) > input:nth-child(1)"
 
-    d1 = By.XPATH, "/html/body/div[3]/div[1]/div[1]/div[1]/ul/li[2]/span"
-    d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li[2]/span"
-    d3 = By.XPATH, "/html/body/div[3]/div[1]/div[3]/div[1]/ul/li[2]/span"
+    d1 = By.XPATH, "/html/body/div[3]/div[1]/div[1]/div[1]/ul/li[1]/span"
+    d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li[1]/span"
+    d3 = By.XPATH, "/html/body/div[3]/div[1]/div[3]/div[1]/ul/li[1]/span"
 
-    # 编辑资源名称按钮
-    edit_resources_name_btn = By.CSS_SELECTOR, "i.jw-learning-icon:nth-child(2)"
+    # 资源名称按钮
+    resources_sort_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div[1]/main/div/div[4]/div/div[2]/div[2]/form/div[2]/div[1]/div/div/span"
 
     # 编辑资源名称输入框
     edit_resources_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div[1]/main/div/div[4]/div/div[2]/div[2]/form/div[2]/div[1]/div/div/p/div/input"
 
     # 确定按钮
-    determine_btn = By.CSS_SELECTOR, ".dialog-footer > button:nth-child(1)"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div[1]/main/div/div[4]/div/div[3]/div/button[1]"
 
     # 删除按钮
     remove_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(6) > div:nth-child(1) > main:nth-child(1) > span:nth-child(2)"
+
+    # 弹窗的确定按钮
+    determine1_btn = By.CSS_SELECTOR, "button.el-button:nth-child(2)"
 
     # 向右翻页
     page_right = By.CSS_SELECTOR, "i.el-icon-arrow-right:nth-child(1)"
@@ -61,8 +64,8 @@ class StudyResourcesManagePage(BaseAction):
     turn_the_page_area = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul"
 
     # 20条/每页按钮
-    # third_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]/span"
-    third_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > span:nth-child(1)"
+    third_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]/span"
+    # third_btn = By.CSS_SELECTOR, ".hover > span:nth-child(1)"
 
     # 资料库页面元素和操作方法
     # 课程资料库按钮
@@ -72,8 +75,8 @@ class StudyResourcesManagePage(BaseAction):
     type_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div[1]/main/div[2]/div/div/div/input"
 
     # 选择类型
-    first_type_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > span:nth-child(1)"
-    second_type_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > span:nth-child(1)"
+    first_type_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]"
+    second_type_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[4]"
 
     # 上传时间筛选框
     time_filter = By.CSS_SELECTOR, "input.el-range-input:nth-child(2)"
@@ -114,11 +117,14 @@ class StudyResourcesManagePage(BaseAction):
     # 删除按钮
     more_remove_btn = By.XPATH, "/html/body/ul/li[3]"
 
+    # 点击删除弹窗的确定按钮
+    determine2_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]"
+
     # 启用(禁用)按钮
     more_enable_btn = By.XPATH, "/html/body/ul/li[4]"
 
     # 点击资源管理
-    def click_resources_btn(self):
+    def click_resources_manage(self):
         return self.click(self.resources_btn)
 
     # 点击学习资源管理
@@ -159,9 +165,9 @@ class StudyResourcesManagePage(BaseAction):
         self.click(self.d2)
         return self.click(self.d3)
 
-    # 点击编辑资源名称按钮
-    def click_edit_resources_name_btn(self):
-        return self.click(self.edit_resources_name_btn)
+    # 点击资源名称按钮
+    def click_resources_sort_btn(self):
+        return self.click(self.resources_sort_btn)
 
     # 弹窗下的资源名称输入框
     def click_resources_name_input(self):
@@ -174,6 +180,10 @@ class StudyResourcesManagePage(BaseAction):
     # 点击删除按钮
     def click_remove_btn(self):
         return self.click(self.remove_btn)
+
+    # 点击确定按钮
+    def click_determine1_btn(self):
+        return self.click(self.determine1_btn)
 
     # 点击向左翻页
     def click_page_right(self):
@@ -258,6 +268,10 @@ class StudyResourcesManagePage(BaseAction):
     # 点击删除
     def click_more_remove_btn(self):
         return self.click(self.more_remove_btn)
+
+    # 点击确定
+    def click_determine2_btn(self):
+        return self.click(self.determine2_btn)
 
     # 点击启用/禁用
     def click_more_enable(self):

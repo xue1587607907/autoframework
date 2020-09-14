@@ -33,7 +33,8 @@ class ResourcesSortPage(BaseAction):
     wps_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div[6]/div[2]/div[2]/div[1]/span[2]/span"
 
     # 资源名称
-    resources_name = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[2]/td[1]/div/div/span"
+    # resources_name = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[2]/td[1]/div/div/span"
+    resources_name = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/div/span"
 
     # 上移按钮
     move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[2]/div/main/main/div/span[2]"
@@ -57,7 +58,7 @@ class ResourcesSortPage(BaseAction):
     resources_sort_area = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]"
 
     #  点击资源管理
-    def click_resources_btn(self):
+    def click_resources_manage(self):
         return self.click(self.resources_btn)
 
     # 点击新增按钮
@@ -105,8 +106,8 @@ class ResourcesSortPage(BaseAction):
         return self.move_mouse(self.resources_sort_area)
 
     # 点击wps
-    def click_wps(self):
-        return self.click(self.wps_btn)
+    # def click_wps(self):
+    #     return self.click(self.wps_btn)
 
     # 点击删除按钮
     def click_remove_btn(self):

@@ -18,7 +18,7 @@ class BaseAction:
 
     # 点击操作
     def click(self, feature):
-        time.sleep(2)
+        time.sleep(1)
         return self.find_el(feature).click()
 
     # 输入操作
@@ -28,7 +28,7 @@ class BaseAction:
 
     # 清空操作
     def clear(self, feature):
-        time.sleep(2)
+        time.sleep(1)
         return self.find_el(feature).clear()
 
     # 切换frame
