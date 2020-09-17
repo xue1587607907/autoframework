@@ -28,8 +28,8 @@ class AccountDM(BaseAction):
     # 修改"账号名"按钮
     account_button = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
 
-    # 部门搜索框
-    department_search = By.CSS_SELECTOR, ".jw-tree-data-contain > div:nth-child(1) > input:nth-child(1)"
+    # 第一个搜索框
+    first_search = By.CSS_SELECTOR, ".jw-tree-data-contain > div:nth-child(1) > input:nth-child(1)"
 
     # 部门放大镜
     department_mag = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[1]/span/span/i"
@@ -37,8 +37,8 @@ class AccountDM(BaseAction):
     # 账号名放大镜
     account_mag = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[1]/div/span/span/i"
 
-    # 账号名搜索框
-    account_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
+    # 第二个搜索框
+    second_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 状态筛选框
     status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div/div"
@@ -90,13 +90,13 @@ class AccountDM(BaseAction):
 
     # 通过部门查询
     def input_department(self, content):
-        self.input(self.department_search, content)
+        self.input(self.first_search, content)
         self.click_enter()
         return self.clear_department()
 
     # 清空部门内容
     def clear_department(self):
-        return self.clear(self.department_search)
+        return self.clear(self.second_search)
 
     # 点击部门放大镜
     def click_department_mag(self):
@@ -104,12 +104,12 @@ class AccountDM(BaseAction):
 
     # 通过账号查询
     def input_account(self, content):
-        self.input(self.account_search, content)
+        self.input(self.second_search, content)
         return self.click_enter()
 
     # 清空账号内容
     def clear_account(self):
-        return self.clear(self.account_search)
+        return self.clear(self.second_search)
 
     # 点击账号放大镜
     def click_account_mag(self):
@@ -129,7 +129,7 @@ class AccountDM(BaseAction):
 
     # 点击回车
     def click_enter(self):
-        return self.click_keys_enter(self.department_search)
+        return self.click_keys_enter(self.first_search)
 
     # "更多"按钮
     more_button = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/div/button"

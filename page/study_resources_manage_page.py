@@ -48,7 +48,7 @@ class StudyResourcesManagePage(BaseAction):
     # 弹窗的确定按钮
     determine1_btn = By.CSS_SELECTOR, "button.el-button:nth-child(2)"
 
-    # 向右翻页
+    # 向右翻页---------------------------------------------------------------------------
     page_right = By.CSS_SELECTOR, "i.el-icon-arrow-right:nth-child(1)"
 
     # 向左翻页
@@ -63,15 +63,15 @@ class StudyResourcesManagePage(BaseAction):
     # 翻页区域
     turn_the_page_area = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul"
 
-    # 20条/每页按钮
-    third_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]/span"
+    # 5条/每页按钮---------------------------------------------------------------------------
+    third_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
     # third_btn = By.CSS_SELECTOR, ".hover > span:nth-child(1)"
 
     # 资料库页面元素和操作方法
     # 课程资料库按钮
     database_btn = By.CSS_SELECTOR, "#tab-courseLib > span:nth-child(1)"
 
-    # 类型筛选框
+    # 类型筛选框---------------------------------------------------------------------------
     type_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div[1]/main/div[2]/div/div/div/input"
 
     # 选择类型
@@ -94,7 +94,7 @@ class StudyResourcesManagePage(BaseAction):
     enable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
     # enable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1)"
 
-    # 选择禁用
+    # 选择禁用---------------------------------------------------------------------------
     disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
     # disable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
 
@@ -197,11 +197,11 @@ class StudyResourcesManagePage(BaseAction):
     def click_num_btn_page(self):
         return self.click(self.num_btn_page)
 
-    # 点击10/页筛选框
+    # 点击页数筛选框
     def click_page_size(self):
         return self.click(self.select_page_size)
 
-    # 点击20条/页按钮
+    # 点击5条/页按钮
     def click_third_btn(self):
         return self.click(self.third_btn)
 

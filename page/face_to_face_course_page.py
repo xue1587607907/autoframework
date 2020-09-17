@@ -30,7 +30,7 @@ class FaceToFaceCoursePage(BaseAction):
     courses_name_input = By.CSS_SELECTOR, "div.el-form-item:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 资源分类输入框
-    resources_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/div/form/div[2]/div/div/div/div/input"
+    resources_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/form/div[2]/div/div/div/div/input"
 
     # 选择三级分类
     d1 = By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li[2]/span"

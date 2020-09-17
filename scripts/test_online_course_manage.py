@@ -18,11 +18,6 @@ class TestOnlineCourseManageCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    # def teardown_class(self):
-    #     time.sleep(2)
-    #     DriverUtils.set_switch(False)
-    #     DriverUtils.quit_driver()
-
     @pytest.mark.run(order=17)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_course_query(self):
@@ -111,8 +106,6 @@ class TestOnlineCourseManageCRUD:
         self.online_course.click_remove2_btn()
         self.online_course.click_determine5_btn()
 
-    # def test_a(self):
-    #     pass
 
 
 

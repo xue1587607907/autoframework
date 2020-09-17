@@ -17,11 +17,6 @@ class TestResourcesSortCRUD:
         time.sleep(1)
         DriverUtils.quit_driver()
 
-    # def teardown_class(self):
-    #     time.sleep(2)
-    #     DriverUtils.set_switch(False)
-    #     DriverUtils.quit_driver()
-
     i = 0
     str = ""
     while i < 4:

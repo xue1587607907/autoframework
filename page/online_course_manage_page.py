@@ -8,7 +8,7 @@ class OnlineCourseManagePage(BaseAction):
     # 在线课程管理
     online_course_manage_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[4]"
 
-    # 课程名称搜索框
+    # 课程名称搜索框-------------------------------------------------------------------------------
     course_name_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 时间筛选框
@@ -32,7 +32,7 @@ class OnlineCourseManagePage(BaseAction):
     # 资源分类输入框
     resources_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/div/form/div[2]/div/div/div/div/input"
 
-    # 选择三级分类
+    # 选择三级分类-------------------------------------------------------------------------------
     d1 = By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li[2]/span"
     d2 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li[1]/span"
     d3 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[2]/span"
@@ -322,7 +322,7 @@ class OnlineCourseManagePage(BaseAction):
     def click_disable1_btn(self):
         return self.click(self.disable1_btn)
 
-    # 点击确定按钮
+    # 禁用/删除弹窗的确定按钮
     def click_determine5_btn(self):
         return self.click(self.determine5_btn)
 

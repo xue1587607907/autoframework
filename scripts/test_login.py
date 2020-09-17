@@ -32,52 +32,6 @@ class TestLogin:
         time.sleep(1)
 
 
-    # i = 0
-    # str = ""
-    # while i < 3:
-    #     num = random.randrange(48, 57)
-    #     if num < 57:
-    #         str += chr(num)
-    #         i += 1
-    #
-    # @pytest.mark.parametrize("params", [{"useraccount": "xue"+str, "name": "xue"+str}])
-    # def test_add_user(self, params):
-    #     self.account_dm_page.click_add_user()
-    #     self.account_dm_page.input_user_account(params["useraccount"])
-    #     self.account_dm_page.input_username(params["name"])
-    #     self.account_dm_page.select_department()
-    #     time.sleep(2)
-    #     self.account_dm_page.click_preservation()
-    #
-    # @pytest.mark.parametrize("params", [{"useraccount": "aaa"+str, "name": "aaa"+str}])
-    # def test_modify_personal_data(self, params):
-    #     self.account_dm_page.click_account_button()
-    #     self.account_dm_page.clear_user_account()
-    #     self.account_dm_page.input_user_account(params["useraccount"])
-    #     self.account_dm_page.clear_username()
-    #     self.account_dm_page.input_username(params["name"])
-    #     self.account_dm_page.click_preservation()
-    #     time.sleep(2)
-    #
-    # def test_query(self):
-    #     self.account_dm_page.input_department("技术部")
-    #     self.account_dm_page.input_account("aaa")
-    #     self.account_dm_page.clear_account()
-    #     self.account_dm_page.click_enter()
-    #     self.account_dm_page.click_status_filter()
-    #     self.account_dm_page.click_disable()
-    #     self.account_dm_page.click_status_filter()
-    #     self.account_dm_page.click_enable()
-    #     time.sleep(2)
-    #
-    # def test_click_disable(self):
-    #     self.account_dm_page.click_more_btn()
-    #     self.account_dm_page.click_more_disable_btn()
-    #     self.driver.implicitly_wait(10)
-    #     self.account_dm_page.click_determine_btn()
-    #     time.sleep(3)
-    #
-
 
 
 
