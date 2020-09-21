@@ -22,7 +22,7 @@ class TestOnlineCourseManageCRUD:
     @pytest.mark.skipif(condition=True, reason=None)
     def test_course_query(self):
         self.online_course.refresh_page()
-        # self.resources_sort_page.click_resources_manage()
+        self.resources_sort_page.click_resources_manage()
         self.online_course.click_online_course_manage_btn()
         self.online_course.click_course_name_search()
         self.online_course.input_courses_name("测试")

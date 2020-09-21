@@ -6,7 +6,7 @@ from base.base_action import BaseAction
 class StudyResourcesManagePage(BaseAction):
 
     # 资源管理按钮
-    resources_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[2]/span"
+    resources_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[3]/span"
 
     # 学习资源管理按钮
     study_resources_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[1]/ul/li[3]"

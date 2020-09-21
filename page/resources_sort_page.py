@@ -7,18 +7,18 @@ from base.base_action import BaseAction
 class ResourcesSortPage(BaseAction):
 
     # 资源管理按钮
-    resources_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[2]/span"
+    resources_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[3]/span"
 
     # 新增按钮
     add_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/div/button"
 
     # 父级分类输入框
-    parent_sort = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div[2]/form/div[1]/div/div/div/input"
+    parent_sort = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div[2]/form/div[1]/div/div/div[1]/input"
 
     # 资源分类
     d1 = By.XPATH, "/html/body/div[3]/div[1]/div[1]/div[1]/ul/li/span"
-    d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li[6]/span"
-    d3 = By.XPATH, "/html/body/div[3]/div[1]/div[3]/div[1]/ul/li[2]/label/span[1]/span"
+    d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li/span"
+    d3 = By.XPATH, "/html/body/div[3]/div[1]/div[3]/div[1]/ul/li/label/span[1]/span"
 
     # 弹窗的分类名称
     sort_name = By.CSS_SELECTOR, "div.el-form-item:nth-child(2) > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)"

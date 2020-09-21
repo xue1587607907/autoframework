@@ -33,9 +33,9 @@ class OnlineCourseManagePage(BaseAction):
     resources_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/div/form/div[2]/div/div/div/div/input"
 
     # 选择三级分类-------------------------------------------------------------------------------
-    d1 = By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li[2]/span"
-    d2 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li[1]/span"
-    d3 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[2]/span"
+    d1 = By.XPATH, "/html/body/div[2]/div[1]/div/div[1]/ul/li/span"
+    d2 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li/span"
+    d3 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[1]/span"
 
     # 课程封面按钮
     courses_cover_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/div/div[1]/div[1]/div[2]/div/div/div[1]/i"
@@ -59,16 +59,16 @@ class OnlineCourseManagePage(BaseAction):
     content_type = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[1]/div/div/div/div[1]/input"
 
     # 视频按钮
-    video_btn = By.CSS_SELECTOR, "li.el-select-dropdown__item:nth-child(1)"
+    video_btn = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[1]"
 
     # 学习资料按钮
-    learn_data_btn = By.CSS_SELECTOR, "li.el-select-dropdown__item:nth-child(2)"
+    learn_data_btn = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[2]"
 
     # 选择视频按钮
-    select_video_btn = By.CSS_SELECTOR, ".el-button--small"
+    select_video_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[2]/div/div/button"
 
     # 选择资料按钮
-    select_data_btn = By.CSS_SELECTOR, ".el-button--small > span:nth-child(1)"
+    select_data_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[2]/div/div/button/span"
 
     # 勾选弹窗的资料
     check_data_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(2) > td:nth-child(1) > div:nth-child(1) > label:nth-child(1) > span:nth-child(1) > span:nth-child(1)"

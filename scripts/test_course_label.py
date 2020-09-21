@@ -14,13 +14,8 @@ class TestQuestionBankCRUD:
         self.resources_sort_page = ResourcesSortPage(self.driver)
         self.course_label_page = CourseLabelPage(self.driver)
 
-    # def teardown(self):
-    #     time.sleep(2)
-    #     DriverUtils.quit_driver()
-
-    def teardown_class(self):
+    def teardown(self):
         time.sleep(2)
-        DriverUtils.set_switch(False)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=10.2)

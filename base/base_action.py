@@ -3,7 +3,9 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
 
+# 页面基础操作,所有页面均需继承该类
 class BaseAction:
+
     # 初始化驱动
     def __init__(self, driver):
         self.driver = driver
@@ -60,6 +62,11 @@ class BaseAction:
     def refresh_page(self):
         time.sleep(2)
         return self.driver.refresh()
+
+    # 后退
+    def back_off(self):
+        time.sleep(2)
+        return self.driver.back()
 
     # 鼠标悬停操作
     def move_mouse(self, feature):

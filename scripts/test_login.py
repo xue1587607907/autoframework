@@ -21,7 +21,7 @@ class TestLogin:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=1)
-    @pytest.mark.parametrize("params", [{"username": "aaa111", "password": "aaa111", "info": "学习中心"}])
+    @pytest.mark.parametrize("params", [{"username": "cw01", "password": "cw01", "info": "学习中心"}])
     def test_login(self, params):
         self.login_page.username_input(params["username"])
         self.login_page.password_input(params["password"])

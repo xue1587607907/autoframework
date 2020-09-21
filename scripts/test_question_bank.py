@@ -18,11 +18,6 @@ class TestQuestionBankCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    # def teardown_class(self):
-    #     time.sleep(2)
-    #     DriverUtils.set_switch(False)
-    #     DriverUtils.quit_driver()
-
     @pytest.mark.run(order=25)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_question_bank_query(self):

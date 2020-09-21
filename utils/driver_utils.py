@@ -10,7 +10,7 @@ class DriverUtils:
         if cls.driver is None:
             cls.driver = webdriver.Chrome()
             cls.driver.maximize_window()
-            cls.driver.implicitly_wait(50)
+            cls.driver.implicitly_wait(20)
         return cls.driver
 
     @classmethod

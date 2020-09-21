@@ -18,11 +18,6 @@ class TestStudyResourcesCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    # def teardown_class(self):
-    #     time.sleep(2)
-    #     DriverUtils.set_switch(False)
-    #     DriverUtils.quit_driver()
-
     @pytest.mark.run(order=11)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_video_library_query(self):
@@ -64,8 +59,8 @@ class TestStudyResourcesCRUD:
         self.study.click_database_btn()
         self.study.click_type_filter()
         self.study.click_first_type_btn()
-        self.study.click_type_filter()
-        self.study.click_second_type_btn()
+        # self.study.click_type_filter()
+        # self.study.click_second_type_btn()
         self.study.refresh_page()
         self.study.click_database_btn()
         self.study.click_time_filter()

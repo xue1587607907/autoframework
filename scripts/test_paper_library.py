@@ -41,7 +41,7 @@ class TestQuestionBankCRUD:
         self.paper_page.click_status_filter()
         self.question_bank_page.click_disable_btn()
 
-    @pytest.mark.run(order=32)
+    @pytest.mark.run(order=31)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_fixed_paper(self):
         self.paper_page.click_new_btn()
@@ -59,7 +59,7 @@ class TestQuestionBankCRUD:
         self.paper_page.input_score(5)
         self.paper_page.click_save_btn()
 
-    @pytest.mark.run(order=31)
+    @pytest.mark.run(order=32)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_random_paper(self):
         self.paper_page.click_new_btn()
@@ -72,7 +72,7 @@ class TestQuestionBankCRUD:
         self.paper_page.input_random_paper("测试{}".format(time.strftime("%H%M%S")))
         self.paper_page.click_determine3_btn()
 
-    @pytest.mark.run(order=32)
+    @pytest.mark.run(order=33)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_paper_content(self):
         self.paper_page.click_more_btn()
@@ -86,14 +86,14 @@ class TestQuestionBankCRUD:
         self.paper_page.click_disable1_btn()
         self.paper_page.click_determine4_btn()
 
-    @pytest.mark.run(order=33)
+    @pytest.mark.run(order=34)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_paper(self):
         self.paper_page.click_radio()
         self.paper_page.click_remove1_btn()
         self.paper_page.click_determine5_btn()
 
-    @pytest.mark.run(order=34)
+    @pytest.mark.run(order=35)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_turn_the_page(self):
         self.question_bank_page.refresh_page()

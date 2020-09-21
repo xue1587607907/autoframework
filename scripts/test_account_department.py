@@ -41,7 +41,7 @@ class TestAccountCRUD:
 
     @pytest.mark.run(order=3)
     @pytest.mark.skipif(condition=True, reason=None)
-    @pytest.mark.parametrize("params", [{"useraccount": "abc{}".format(time.strftime("%Y%m%d%H%M%S")), "name": "abc{}".format(time.strftime("%Y%m%d%H%M%S"))}])
+    @pytest.mark.parametrize("params", [{"useraccount": "abc{}".format(time.strftime("%H%M%S")), "name": "abc{}".format(time.strftime("%H%M%S"))}])
     def test_modify_personal_data(self, params):
         self.account_dm_page.click_account_button()
         self.account_dm_page.clear_user_account()
@@ -49,7 +49,6 @@ class TestAccountCRUD:
         self.account_dm_page.clear_username()
         self.account_dm_page.input_username(params["name"])
         self.account_dm_page.click_preservation()
-        time.sleep(2)
 
     @pytest.mark.run(order=4)
     @pytest.mark.skipif(condition=True, reason=None)
@@ -63,7 +62,6 @@ class TestAccountCRUD:
         self.account_dm_page.click_disable()
         self.account_dm_page.click_status_filter()
         self.account_dm_page.click_enable()
-        time.sleep(2)
 
     @pytest.mark.run(order=5)
     @pytest.mark.skipif(condition=True, reason=None)
@@ -72,5 +70,4 @@ class TestAccountCRUD:
         self.account_dm_page.click_more_disable_btn()
         self.driver.implicitly_wait(10)
         self.account_dm_page.click_determine_btn()
-        time.sleep(3)
 
