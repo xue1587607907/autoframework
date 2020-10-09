@@ -3,7 +3,7 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
 
-# 页面基础操作,所有页面均需继承该类
+# 页面基础操作
 class BaseAction:
 
     # 初始化驱动

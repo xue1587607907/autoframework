@@ -57,7 +57,7 @@ class PaperLibraryPage(BaseAction):
     remove_btn = By.CSS_SELECTOR, "div.jw-new-newfixed-ti:nth-child(2) > div:nth-child(3) > form:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > span:nth-child(3) > img:nth-child(1)"
 
     # 提示确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div[1]/div/div/div[3]/div/form/div[2]/div/p/div[1]/div/div[3]/span/button[2]/span"
+    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div[1]/div/div/div[2]/div[2]/form/div[2]/div/p/div[1]/div/div[3]/span/button[2]/span"
 
     # 分值输入框
     score_input = By.CSS_SELECTOR, "div.el-input:nth-child(2) > input:nth-child(1)"
@@ -110,7 +110,7 @@ class PaperLibraryPage(BaseAction):
     determine4_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 选择试卷单选框
-    radio = By.CSS_SELECTOR, ".el-table__body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(1) > label:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+    radio = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span"
 
     # 试卷删除按钮
     remove1_btn = By.CSS_SELECTOR, "button.el-button--mini:nth-child(2)"

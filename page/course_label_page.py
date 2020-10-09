@@ -12,8 +12,8 @@ class CourseLabelPage(BaseAction):
     resources_sort_input = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[1]/main/form/div/div/div/div[1]/input"
 
     # 选择三级分类
-    d1 = By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li[1]/span"
-    d2 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li[2]/span"
+    d1 = By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li/span"
+    d2 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li/span"
     d3 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[2]/span"
 
     # 新建按钮

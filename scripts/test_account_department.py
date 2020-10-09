@@ -32,7 +32,6 @@ class TestAccountCRUD:
     @pytest.mark.skipif(condition=True, reason=None)
     @pytest.mark.parametrize("params", [{"useraccount": "xue"+str, "name": "xue"+str}])
     def test_add_user(self, params):
-        # self.learning_center_page.click_head_portrait()
         self.account_dm_page.click_add_user()
         self.account_dm_page.input_user_account(params["useraccount"])
         self.account_dm_page.input_username(params["name"])
@@ -56,8 +55,6 @@ class TestAccountCRUD:
         self.account_dm_page.input_department("技术部")
         self.account_dm_page.input_account("jack")
         self.account_dm_page.refresh_page()
-        # self.account_dm_page.clear_account()
-        # self.account_dm_page.click_enter()
         self.account_dm_page.click_status_filter()
         self.account_dm_page.click_disable()
         self.account_dm_page.click_status_filter()

@@ -33,8 +33,7 @@ class ResourcesSortPage(BaseAction):
     wps_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div[6]/div[2]/div[2]/div[1]/span[2]/span"
 
     # 资源名称
-    # resources_name = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[2]/td[1]/div/div/span"
-    resources_name = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/div/span"
+    resources_name = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[3]/td[1]/div/div/span"
 
     # 上移按钮
     move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[2]/div/main/main/div/span[2]"
@@ -43,7 +42,7 @@ class ResourcesSortPage(BaseAction):
     move_down_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[2]/div/main/main/div/span[2]"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[2]/div/main/main/div/span[1]"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[2]/div/main/main/div/span[1]"
 
     # 删除弹出的"确定"按钮
     remove_determine_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"

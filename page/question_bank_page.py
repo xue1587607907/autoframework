@@ -38,15 +38,15 @@ class QuestionBankPage(BaseAction):
     sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[5]/div/div[2]/form/div[2]/div/div/div/input"
 
     # 三级分类按钮
-    # d1 = By.XPATH, "/html/body/div[4]/div[1]/div[1]/div[1]/ul/li[3]/span"
-    # d2 = By.XPATH, "/html/body/div[4]/div[1]/div[2]/div[1]/ul/li[2]/span"
-    # d3 = By.XPATH, "/html/body/div[4]/div[1]/div[3]/div[1]/ul/li[1]/span"
-    d1 = By.XPATH, "/html/body/div[3]/div[1]/div/div[1]/ul/li[1]/span"
-    d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li[2]/span"
-    d3 = By.XPATH, "/html/body/div[3]/div[1]/div[3]/div[1]/ul/li[2]/span"
+    d1 = By.XPATH, "/html/body/div[3]/div[1]/div/div[1]/ul/li/span"
+    d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li/span"
+    d3 = By.XPATH, "/html/body/div[3]/div[1]/div[3]/div[1]/ul/li[1]/span"
 
     # 确定按钮
-    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[5]/div/div[3]/div/div/button[2]"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[5]/div/div[3]/div/div/button[2]/span"
+
+    # 第二个确定按钮
+    determine5_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]"
 
     # 单选题按钮
     single_choice_questions_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/ul/li[1]"
@@ -166,6 +166,10 @@ class QuestionBankPage(BaseAction):
     # 点击确定按钮
     def click_determine_btn(self):
         return self.click(self.determine_btn)
+
+    # 再次点击弹窗的确定
+    def click_determine5_btn(self):
+        return self.click(self.determine5_btn)
 
     # 点击单选题
     def click_single_choice_questions_btn(self):

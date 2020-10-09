@@ -2,6 +2,7 @@ from selenium import webdriver
 
 
 class DriverUtils:
+
     driver = None
     switch = False
 
@@ -10,7 +11,7 @@ class DriverUtils:
         if cls.driver is None:
             cls.driver = webdriver.Chrome()
             cls.driver.maximize_window()
-            cls.driver.implicitly_wait(20)
+            cls.driver.implicitly_wait(10)
         return cls.driver
 
     @classmethod

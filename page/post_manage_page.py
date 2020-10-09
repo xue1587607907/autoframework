@@ -40,7 +40,7 @@ class PostManagePage(BaseAction):
     manage_user_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/button[1]"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[8]/div/main/main/button[2]"
+    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[6]/div/main/main/button[3]/span"
 
     # 弹窗的确定按钮
     determine1_btn = By.CSS_SELECTOR, "button.el-button--small:nth-child(2) > span:nth-child(1)"

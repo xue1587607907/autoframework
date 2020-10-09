@@ -95,16 +95,16 @@ class TestOnlineCourseManageCRUD:
     def test_more(self):
         # self.resources_sort_page.click_resources_btn()
         # self.online_course.click_online_course_manage_btn()
-        self.online_course.click_page_right()
-        self.online_course.click_page_left()
-        self.online_course.refresh_page()
-        self.online_course.click_page_num_filter()
-        self.online_course.click_first_btn()
         self.online_course.refresh_page()
         self.online_course.click_disable1_btn()
         self.online_course.click_determine5_btn()
         self.online_course.click_remove2_btn()
         self.online_course.click_determine5_btn()
+        # self.online_course.click_page_right()
+        # self.online_course.click_page_left()
+        # self.online_course.refresh_page()
+        # self.online_course.click_page_num_filter()
+        # self.online_course.click_first_btn()
 
 
 

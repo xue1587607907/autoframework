@@ -48,6 +48,7 @@ class TestQuestionBankCRUD:
         self.question_bank_page.click_sort_input()
         self.question_bank_page.select_third_sort()
         self.question_bank_page.click_determine_btn()
+        self.question_bank_page.click_determine5_btn()
         self.question_bank_page.click_single_choice_questions_btn()
         self.question_bank_page.input_subject(123)
         self.question_bank_page.input_option_a(123)
@@ -74,7 +75,7 @@ class TestQuestionBankCRUD:
         self.question_bank_page.click_remove_btn()
         self.question_bank_page.click_determine3_btn()
 
-    @pytest.mark.run(order=29)
+    @pytest.mark.run(order=29)  # 翻页组件位置更改
     @pytest.mark.skipif(condition=True, reason=None)
     def test_turn_the_page(self):
         self.question_bank_page.refresh_page()

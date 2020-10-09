@@ -6,8 +6,8 @@ from page.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 
-# 试题库测试脚本
-class TestQuestionBankCRUD:
+# 试卷库测试脚本
+class TestPaperLibraryCRUD:
 
     def setup(self):
         self.driver = DriverUtils.get_driver()
@@ -48,7 +48,7 @@ class TestQuestionBankCRUD:
         self.paper_page.click_fixed_papers_btn()
         self.paper_page.input_paper_name("测试{}".format(time.strftime("%H%M%S")))
         self.paper_page.click_question_bank_select_btn()
-        self.paper_page.input_question_bank("测试新建完题库后，立马改题库")
+        self.paper_page.input_question_bank("心理学")
         self.paper_page.click_search_btn()
         # self.paper_page.click_keys_enter(self.paper_page.search_question_bank_input)
         self.paper_page.select_question_bank1_btn()
@@ -93,7 +93,7 @@ class TestQuestionBankCRUD:
         self.paper_page.click_remove1_btn()
         self.paper_page.click_determine5_btn()
 
-    @pytest.mark.run(order=35)
+    @pytest.mark.run(order=35)  # 翻页组件位置更改
     @pytest.mark.skipif(condition=True, reason=None)
     def test_turn_the_page(self):
         self.question_bank_page.refresh_page()

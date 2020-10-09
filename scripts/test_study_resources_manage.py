@@ -11,8 +11,6 @@ class TestStudyResourcesCRUD:
         self.driver = DriverUtils.get_driver()
         DriverUtils.set_switch(True)
         self.study = StudyResourcesManagePage(self.driver)
-        # self.learning_center_page = LearningCenterPage(self.driver)
-        # self.account_dm_page = AccountDM(self.driver)
 
     def teardown(self):
         time.sleep(2)
@@ -79,6 +77,10 @@ class TestStudyResourcesCRUD:
     def test_more_operation(self):
         self.study.refresh_page()
         self.study.click_database_btn()
+        # self.study.click_more_btn()
+        # self.study.click_related_courses()
+        # self.study.select_related_courses()
+        # self.study.click_related_courses_determine()
         self.study.move_mouse(self.study.more_btn)
         self.study.click_more_enable()
         self.study.refresh_page()
@@ -86,14 +88,10 @@ class TestStudyResourcesCRUD:
         self.study.click_more_btn()
         self.study.click_download_btn()
         self.study.click_more_btn()
-        self.study.click_related_courses()
-        self.study.select_related_courses()
-        self.study.click_related_courses_determine()
-        self.study.click_more_btn()
         self.study.click_more_remove_btn()
         self.study.click_determine2_btn()
 
-    @pytest.mark.run(order=16)
+    @pytest.mark.run(order=16)  # 分页组件位置更改
     @pytest.mark.skipif(condition=True, reason=None)
     def test_turn_the_page(self):
         self.study.refresh_page()
@@ -101,13 +99,6 @@ class TestStudyResourcesCRUD:
         self.study.click_page_left()
         self.study.click_num_btn_page()
         self.study.click_page_size()
-        # self.study.move_mouse(self.study.turn_the_page_area)
         self.study.click_third_btn()
-
-
-
-
-
-
 
 

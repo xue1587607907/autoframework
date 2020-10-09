@@ -8,5 +8,3 @@ def analyze_data(filename):
         for value in data_dict.values():
             list_data.append(value)
         return list_data
-
-

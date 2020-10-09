@@ -21,7 +21,7 @@ class FaceToFaceCoursePage(BaseAction):
     # 状态筛选框
     status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[3]/div/div/div/input"
     enable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
-    disable_btn = By.XPATH, "/html/body/div[3]/div[1]/div[1]/ul/li[3]/span"
+    disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]"
 
     # 新建课程按钮
     new_courses = By.CSS_SELECTOR, ".jw-table-buttons-contain > div:nth-child(1) > button:nth-child(1)"
@@ -82,7 +82,7 @@ class FaceToFaceCoursePage(BaseAction):
     def input_courses_name(self, content):
         return self.input(self.course_name_search, content)
 
-    # 点击新增时间筛选框
+    # 点击时间筛选框
     def click_time_filter(self):
         return self.click(self.time_filter)
 

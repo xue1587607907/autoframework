@@ -29,7 +29,6 @@ class TestTrainSortCRUD:
         self.train_sort_page.click_parent_sort()
         self.train_sort_page.select_sort()
         self.train_sort_page.click_blank_area()
-        # self.train_sort_page.click(self.train_sort_page.sort_name_input)
         self.train_sort_page.input_sort_name("二级分类{}".format(time.strftime("%M%S")))
         self.train_sort_page.click_determine_btn()
 
@@ -48,3 +47,4 @@ class TestTrainSortCRUD:
         self.train_sort_page.click_move_down_btn()
         self.train_sort_page.click_remove_btn()
         self.train_sort_page.click_determine1_btn()
+

@@ -11,13 +11,12 @@ class TestPostManageCRUD:
         self.driver = DriverUtils.get_driver()
         DriverUtils.set_switch(True)
         self.post_manage_page = PostManagePage(self.driver)
-        # self.train_sort_page = TrainSortPage(self.driver)
 
     def teardown(self):
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=39)
+    @pytest.mark.run(order=5.1)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.post_manage_page.click_post_manage_btn()
@@ -26,7 +25,7 @@ class TestPostManageCRUD:
         self.post_manage_page.input_second_search("技术")
         self.post_manage_page.click_keys_enter(self.post_manage_page.second_search)
 
-    @pytest.mark.run(order=40)
+    @pytest.mark.run(order=5.2)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_post(self):
         self.post_manage_page.refresh_page()
@@ -36,7 +35,7 @@ class TestPostManageCRUD:
         self.post_manage_page.input_post_name(123)
         self.post_manage_page.click_determine_btn()
 
-    @pytest.mark.run(order=41)
+    @pytest.mark.run(order=5.3)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify(self):
         self.post_manage_page.click_post_name1_btn()
@@ -44,7 +43,7 @@ class TestPostManageCRUD:
         self.post_manage_page.input_post_name("修改后的名称{}".format(time.strftime("%M%S")))
         self.post_manage_page.click_determine_btn()
 
-    @pytest.mark.run(order=42)
+    @pytest.mark.run(order=5.4)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_remove(self):
         self.post_manage_page.click_remove_btn()

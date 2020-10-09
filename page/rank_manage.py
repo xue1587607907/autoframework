@@ -33,7 +33,7 @@ class RankManagePage(BaseAction):
     new_rank = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[2]/form/div[2]/div/div/div/div/div/div/input"
 
     # 选择职级
-    select_rank = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(5) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
+    select_rank = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[2]"
 
     # 确定按钮
     determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[3]/div/button[1]"

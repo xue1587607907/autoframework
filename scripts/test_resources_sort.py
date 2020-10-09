@@ -1,4 +1,3 @@
-import random
 import time
 import pytest
 from page.resources_sort_page import ResourcesSortPage
@@ -17,31 +16,21 @@ class TestResourcesSortCRUD:
         time.sleep(1)
         DriverUtils.quit_driver()
 
-    i = 0
-    str = ""
-    while i < 4:
-        num = random.randrange(48, 57)
-        if num < 57:
-            str += chr(num)
-            i += 1
-
     @pytest.mark.run(order=6)
     @pytest.mark.skipif(condition=True, reason=None)
-    @pytest.mark.parametrize("params", [{"name": "三级分类"+str}])
-    def test_add_resources_sort(self, params):
+    def test_add_resources_sort(self):
         self.resources_sort_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
         self.resources_sort_page.click_add_btn()
         self.resources_sort_page.select_parent_sort()
         self.resources_sort_page.click_blank_space()
-        self.resources_sort_page.input_sort_name(params["name"])
+        self.resources_sort_page.input_sort_name("三级分类{}".format(time.strftime("%M%S")))
         self.resources_sort_page.click_determine_btn()
 
     @pytest.mark.run(order=7)
     @pytest.mark.skipif(condition=True, reason=None)
     @pytest.mark.parametrize("params", [{"name": "修改后的分类{}".format(time.strftime("%H%M%S"))}])
     def test_modify_resources_name(self, params):
-        # self.resources_sort_page.refresh_page()
         self.resources_sort_page.click_resources_name()
         self.resources_sort_page.clear_resources_name_input()
         self.resources_sort_page.input_sort_name(params["name"])
@@ -55,7 +44,6 @@ class TestResourcesSortCRUD:
         # self.resources_sort_page.move_mouse_resources_sort()
         # js = "window.scrollTo(0,1000)"
         # self.driver.execute_script(js)
-        # self.resources_sort_page.click_wps()
         self.resources_sort_page.click_move_down_btn()
 
     @pytest.mark.run(order=9)

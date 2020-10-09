@@ -44,13 +44,13 @@ class TrainSortPage(BaseAction):
     move_down_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[2]/div/main/main/div/span[2]"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[2]/div/main/main/div/span[1]"
+    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[4]/td[2]/div/main/main/div/span[1]"
 
     # 删除弹窗的确定按钮
     determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 分类名称按钮(点击进入编辑)
-    sort_name_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/div/span"
+    sort_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[4]/td[1]/div/div/span"
 
     # 点击培训管理
     def click_train_manage_btn(self):

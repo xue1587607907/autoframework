@@ -118,7 +118,7 @@ class StudyResourcesManagePage(BaseAction):
     more_remove_btn = By.XPATH, "/html/body/ul/li[3]"
 
     # 点击删除弹窗的确定按钮
-    determine2_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]"
+    determine2_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 启用(禁用)按钮
     more_enable_btn = By.XPATH, "/html/body/ul/li[4]"

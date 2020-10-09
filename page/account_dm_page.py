@@ -6,16 +6,16 @@ from base.base_action import BaseAction
 class AccountDM(BaseAction):
 
     # 新增按钮
-    add_user = By.CSS_SELECTOR, "div[class='jw-table-buttons-contain'] span"
+    add_user = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/div/button/span"
 
     # 用户账号
-    user_account = By.CSS_SELECTOR, "div[class= 'el-input el-input--mini'] input"
+    user_account = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/form/div[1]/div/div[1]/div/input"
 
     # 姓名
-    username = By.CSS_SELECTOR, "div[class='jw-right-account-form jw-part-account-form'] input"
+    username = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/form/div[2]/div/div[1]/div/input"
 
     # 部门
-    department = By.CSS_SELECTOR, ".el-input__suffix"
+    department = By.CSS_SELECTOR, ".el-cascader > div:nth-child(1) > input:nth-child(1)"
     d1 = By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li/label/span[1]/span"
     d2 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li[2]/label/span[1]/span"
     d3 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[2]/label/span[1]/span"
@@ -26,7 +26,7 @@ class AccountDM(BaseAction):
     preservation = By.CSS_SELECTOR, "button.el-button--primary:nth-child(1) > span:nth-child(1)"
 
     # 修改"账号名"按钮
-    account_button = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
+    account_button = By.CSS_SELECTOR, ".el-table__fixed > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 第一个搜索框
     first_search = By.CSS_SELECTOR, ".jw-tree-data-contain > div:nth-child(1) > input:nth-child(1)"
@@ -148,12 +148,4 @@ class AccountDM(BaseAction):
     # 点击确定按钮
     def click_determine_btn(self):
         return self.click(self.determine_btn)
-
-    # 搜索框的清空按钮
-    search_clear_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[3]/div/div/div/span/span/i[2]"
-
-    # 点击清空
-    def click_clear(self):
-        pass
-
 
