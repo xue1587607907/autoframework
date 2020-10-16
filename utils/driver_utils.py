@@ -3,23 +3,23 @@ from selenium import webdriver
 
 class DriverUtils:
 
-    driver = None
-    switch = False
+    __driver = None
+    __switch = False
 
     @classmethod
     def get_driver(cls):
-        if cls.driver is None:
-            cls.driver = webdriver.Chrome()
-            cls.driver.maximize_window()
-            cls.driver.implicitly_wait(10)
-        return cls.driver
+        if cls.__driver is None:
+            cls.__driver = webdriver.Chrome()
+            cls.__driver.maximize_window()
+            cls.__driver.implicitly_wait(10)
+        return cls.__driver
 
     @classmethod
     def quit_driver(cls):
-        if cls.driver is not None and cls.switch is False:
-            cls.driver.quit()
-            cls.driver = None
+        if cls.__driver is not None and cls.__switch is False:
+            cls.__driver.quit()
+            cls.__driver = None
 
     @classmethod
     def set_switch(cls, switch):
-        cls.switch = switch
+        cls.__switch = switch

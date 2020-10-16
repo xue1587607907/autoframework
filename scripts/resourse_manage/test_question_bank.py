@@ -1,7 +1,7 @@
 import time
 import pytest
-from page.question_bank_page import QuestionBankPage
-from page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage_page.question_bank_page import QuestionBankPage
+from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -18,7 +18,7 @@ class TestQuestionBankCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=25)
+    @pytest.mark.run(order=41)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_question_bank_query(self):
         self.question_bank_page.refresh_page()
@@ -39,7 +39,7 @@ class TestQuestionBankCRUD:
         self.question_bank_page.click_status_filter()
         self.question_bank_page.click_disable_btn()
 
-    @pytest.mark.run(order=26)
+    @pytest.mark.run(order=42)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_question_bank(self):
         self.question_bank_page.refresh_page()
@@ -57,7 +57,7 @@ class TestQuestionBankCRUD:
         self.question_bank_page.click_determine1_btn()
         self.question_bank_page.click_determine2_btn()
 
-    @pytest.mark.run(order=27)
+    @pytest.mark.run(order=43)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_question_bank(self):
         self.question_bank_page.click_question_bank1_btn()
@@ -65,7 +65,7 @@ class TestQuestionBankCRUD:
         self.question_bank_page.input_question_bank_name("修改的名称{}".format(time.strftime("%H%M%S")))
         self.question_bank_page.click_determine2_btn()
 
-    @pytest.mark.run(order=28)
+    @pytest.mark.run(order=44)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_disable_and_remove(self):
         self.question_bank_page.click_more_btn()
@@ -75,7 +75,7 @@ class TestQuestionBankCRUD:
         self.question_bank_page.click_remove_btn()
         self.question_bank_page.click_determine3_btn()
 
-    @pytest.mark.run(order=29)  # 翻页组件位置更改
+    @pytest.mark.run(order=45)  # 翻页组件位置更改
     @pytest.mark.skipif(condition=True, reason=None)
     def test_turn_the_page(self):
         self.question_bank_page.refresh_page()

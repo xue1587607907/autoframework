@@ -50,8 +50,16 @@ class AccountDM(BaseAction):
     disable = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # "禁用"该用户的"确定"按钮
-    # determine_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
     determine_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]"
+
+    # 有效期输入框
+    time_of_validity_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/form/div[13]/div/div[1]/div/input"
+
+    # 选择日期按钮
+    date_btn = By.XPATH, "/html/body/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[7]/div/span"
+
+    # 空白区域
+    blank_area = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/ul"
 
     # 点击新增
     def click_add_user(self):
@@ -132,7 +140,7 @@ class AccountDM(BaseAction):
         return self.click_keys_enter(self.first_search)
 
     # "更多"按钮
-    more_button = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/div/button"
+    more_button = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/div/button"
 
     # "更多"下的"禁用"按钮
     more_disable_button = By.XPATH, "/html/body/ul/li[2]"
@@ -148,4 +156,18 @@ class AccountDM(BaseAction):
     # 点击确定按钮
     def click_determine_btn(self):
         return self.click(self.determine_btn)
+
+    # 点击有效期输入框
+    def click_time_of_validity_input(self):
+        return self.click(self.time_of_validity_input)
+
+    # 选择日期
+    def select_time_of_validity(self):
+        return self.click(self.date_btn)
+
+    # 点击空白区域
+    def click_blank_area(self):
+        return self.click(self.blank_area)
+
+
 

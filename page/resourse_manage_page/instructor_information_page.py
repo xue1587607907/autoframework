@@ -12,10 +12,10 @@ class InstructorInformationPage(BaseAction):
     lecturer_info_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[8]/span[2]"
 
     # 关键字搜索框
-    keyword_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/form/div[1]/div/div/input"
+    keyword_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[1]/div[1]/div[1]/div/input"
 
     # 讲师类别筛选
-    lecturer_type_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/form/div[2]/div/div/div[1]/input"
+    lecturer_type_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[1]/div[1]/div[2]/div/div/input"
 
     # 内部讲师按钮
     inside_lecturer = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"

@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -16,7 +16,7 @@ class TestResourcesSortCRUD:
         time.sleep(1)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=6)
+    @pytest.mark.run(order=19)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_resources_sort(self):
         self.resources_sort_page.refresh_page()
@@ -27,7 +27,7 @@ class TestResourcesSortCRUD:
         self.resources_sort_page.input_sort_name("三级分类{}".format(time.strftime("%M%S")))
         self.resources_sort_page.click_determine_btn()
 
-    @pytest.mark.run(order=7)
+    @pytest.mark.run(order=20)
     @pytest.mark.skipif(condition=True, reason=None)
     @pytest.mark.parametrize("params", [{"name": "修改后的分类{}".format(time.strftime("%H%M%S"))}])
     def test_modify_resources_name(self, params):
@@ -36,7 +36,7 @@ class TestResourcesSortCRUD:
         self.resources_sort_page.input_sort_name(params["name"])
         self.resources_sort_page.click_determine_btn()
 
-    @pytest.mark.run(order=8)
+    @pytest.mark.run(order=21)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_move_up_and_down(self):
         # self.resources_sort_page.refresh_page()
@@ -46,15 +46,14 @@ class TestResourcesSortCRUD:
         # self.driver.execute_script(js)
         self.resources_sort_page.click_move_down_btn()
 
-    @pytest.mark.run(order=9)
+    @pytest.mark.run(order=22)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_resources_sort(self):
         self.resources_sort_page.click_remove_btn()
         self.resources_sort_page.click_remove_determine_btn()
         self.resources_sort_page.refresh_page()
-        # self.resources_sort_page.click_wps()
 
-    @pytest.mark.run(order=10)
+    @pytest.mark.run(order=23)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query_resources_sort(self):
         self.resources_sort_page.click_resources_sort_search()

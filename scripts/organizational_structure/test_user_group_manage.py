@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.user_group_manage_page import UserGroupManagePage
+from page.organizational_structure_page.user_group_manage_page import UserGroupManagePage
 from utils.driver_utils import DriverUtils
 
 
@@ -16,7 +16,7 @@ class TestUserGroupManageCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=5.8)
+    @pytest.mark.run(order=12)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.user_group_manage_page.click_user_group_manage_btn()
@@ -27,7 +27,7 @@ class TestUserGroupManageCRUD:
         self.user_group_manage_page.input_user_group_name1("{}".format(time.strftime("%M%S")))
         self.user_group_manage_page.click_determine_btn()
 
-    @pytest.mark.run(order=5.9)
+    @pytest.mark.run(order=13)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify(self):
         self.user_group_manage_page.click_user_group_name_btn()
@@ -35,7 +35,7 @@ class TestUserGroupManageCRUD:
         self.user_group_manage_page.input(self.user_group_manage_page.user_group_name_input1, "修改后{}".format(time.strftime("%M%S")))
         self.user_group_manage_page.click(self.user_group_manage_page.determine_btn1)
 
-    @pytest.mark.run(order=5.95)
+    @pytest.mark.run(order=14)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_more(self):
         self.user_group_manage_page.click_manage_user_btn()

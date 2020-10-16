@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.post_manage_page import PostManagePage
+from page.organizational_structure_page.post_manage_page import PostManagePage
 from utils.driver_utils import DriverUtils
 
 
@@ -16,7 +16,7 @@ class TestPostManageCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=5.1)
+    @pytest.mark.run(order=6)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.post_manage_page.click_post_manage_btn()
@@ -25,26 +25,36 @@ class TestPostManageCRUD:
         self.post_manage_page.input_second_search("技术")
         self.post_manage_page.click_keys_enter(self.post_manage_page.second_search)
 
-    @pytest.mark.run(order=5.2)
+    @pytest.mark.run(order=7)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_post(self):
         self.post_manage_page.refresh_page()
         self.post_manage_page.click_new_btn()
         self.post_manage_page.click_classification_select()
         self.post_manage_page.select_third_sort()
-        self.post_manage_page.input_post_name(123)
+        self.post_manage_page.input_post_name("测试{}".format(time.strftime("%M%S")))
         self.post_manage_page.click_determine_btn()
 
-    @pytest.mark.run(order=5.3)
+    @pytest.mark.run(order=8)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify(self):
         self.post_manage_page.click_post_name1_btn()
         self.post_manage_page.clear(self.post_manage_page.post_name_input)
         self.post_manage_page.input_post_name("修改后的名称{}".format(time.strftime("%M%S")))
         self.post_manage_page.click_determine_btn()
+        self.post_manage_page.click_manage_user_btn1()
+        self.post_manage_page.click_select_user_radio()
+        self.post_manage_page.click_adjust_post_btn()
+        self.post_manage_page.click_new_post_select()
+        self.post_manage_page.click_select_post()
+        self.post_manage_page.click_blank_area1()
+        self.post_manage_page.click_select_post_input()
+        self.post_manage_page.click_select_specific_post()
+        self.post_manage_page.click_determine2_btn()
 
-    @pytest.mark.run(order=5.4)
+    @pytest.mark.run(order=9)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_remove(self):
+        self.post_manage_page.click_post_manage_btn()
         self.post_manage_page.click_remove_btn()
         self.post_manage_page.click_determine1_btn()

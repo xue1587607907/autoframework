@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.learning_project_page import LearningProjectPage
+from page.training_manage_page.learning_project_page import LearningProjectPage
 from utils.driver_utils import DriverUtils
 
 
@@ -21,7 +21,7 @@ class TestLearningProjectCRUD:
         DriverUtils.set_switch(False)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=39)
+    @pytest.mark.run(order=67)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.learn_pro_page.click_train_manage_btn()
@@ -40,7 +40,7 @@ class TestLearningProjectCRUD:
         self.learn_pro_page.click_status_filter()
         self.learn_pro_page.click_finished_btn()
 
-    @pytest.mark.run(order=40)
+    @pytest.mark.run(order=68)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_project(self):
         self.learn_pro_page.click_new_btn()
@@ -102,7 +102,7 @@ class TestLearningProjectCRUD:
         self.learn_pro_page.click_next2_btn()
         self.learn_pro_page.click_save_and_publish()
 
-    @pytest.mark.run(order=40)
+    @pytest.mark.run(order=69)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify(self):
         self.learn_pro_page.click_project_name_btn()

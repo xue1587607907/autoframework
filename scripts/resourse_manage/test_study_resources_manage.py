@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.study_resources_manage_page import StudyResourcesManagePage
+from page.resourse_manage_page.study_resources_manage_page import StudyResourcesManagePage
 from utils.driver_utils import DriverUtils
 
 
@@ -16,7 +16,7 @@ class TestStudyResourcesCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=11)
+    @pytest.mark.run(order=27)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_video_library_query(self):
         self.study.refresh_page()
@@ -31,7 +31,7 @@ class TestStudyResourcesCRUD:
         self.study.click_status_filter1()
         self.study.click_transcoding_fail()
 
-    @pytest.mark.run(order=12)
+    @pytest.mark.run(order=28)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_resources_info(self):
         self.study.refresh_page()
@@ -44,13 +44,13 @@ class TestStudyResourcesCRUD:
         self.study.input(self.study.edit_resources_name_input, "测试{}".format(time.strftime("%H%M%S")))
         self.study.click_determine_btn()
 
-    @pytest.mark.run(order=13)
+    @pytest.mark.run(order=29)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_resources(self):
         self.study.click_remove_btn()
         self.study.click_determine1_btn()
 
-    @pytest.mark.run(order=14)
+    @pytest.mark.run(order=30)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_database_query(self):
         self.study.refresh_page()
@@ -72,7 +72,7 @@ class TestStudyResourcesCRUD:
         self.study.click_status_filter2()
         self.study.click_disable_btn()
 
-    @pytest.mark.run(order=15)
+    @pytest.mark.run(order=31)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_more_operation(self):
         self.study.refresh_page()
@@ -91,7 +91,7 @@ class TestStudyResourcesCRUD:
         self.study.click_more_remove_btn()
         self.study.click_determine2_btn()
 
-    @pytest.mark.run(order=16)  # 分页组件位置更改
+    @pytest.mark.run(order=32)  # 分页组件位置更改
     @pytest.mark.skipif(condition=True, reason=None)
     def test_turn_the_page(self):
         self.study.refresh_page()

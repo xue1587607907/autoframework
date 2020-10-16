@@ -1,7 +1,7 @@
 import time
 import pytest
-from page.course_label_page import CourseLabelPage
-from page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage_page.course_label_page import CourseLabelPage
+from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -18,7 +18,7 @@ class TestQuestionBankCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=10.2)
+    @pytest.mark.run(order=24)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_course_label(self):
         self.resources_sort_page.click_resources_manage()
@@ -35,7 +35,7 @@ class TestQuestionBankCRUD:
         self.course_label_page.click_remove_label_btn()
         self.course_label_page.click_determine_btn()
 
-    @pytest.mark.run(order=10.4)
+    @pytest.mark.run(order=25)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_label_sort(self):
         self.course_label_page.click_edit_label_btn()
@@ -45,7 +45,7 @@ class TestQuestionBankCRUD:
         self.course_label_page.input_label_name1("修改后{}".format(time.strftime("%H%M%S")))
         self.course_label_page.click_determine_btn()
 
-    @pytest.mark.run(order=10.6)
+    @pytest.mark.run(order=26)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_label_sort(self):
         self.course_label_page.click_remove1_label_btn()

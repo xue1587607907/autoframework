@@ -1,7 +1,7 @@
 import time
 import pytest
-from page.face_to_face_course_page import FaceToFaceCoursePage
-from page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage_page.face_to_face_course_page import FaceToFaceCoursePage
+from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -18,7 +18,7 @@ class TestFaceToFaceCourseCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=21)
+    @pytest.mark.run(order=37)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_course_query(self):
         self.face_page.refresh_page()
@@ -38,7 +38,7 @@ class TestFaceToFaceCourseCRUD:
         self.face_page.click_status_filter()
         self.face_page.click_disable_btn()
 
-    @pytest.mark.run(order=22)
+    @pytest.mark.run(order=38)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_course(self):
         self.face_page.click_new_courses()
@@ -49,7 +49,7 @@ class TestFaceToFaceCourseCRUD:
         self.face_page.input_class_hours(2)
         self.face_page.click_save_and_publish()
 
-    @pytest.mark.run(order=23)
+    @pytest.mark.run(order=39)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_course_content(self):
         self.face_page.click_course_name_btn()
@@ -61,7 +61,7 @@ class TestFaceToFaceCourseCRUD:
         self.face_page.input_class_hours(3)
         self.face_page.click_save_and_publish()
 
-    @pytest.mark.run(order=24)
+    @pytest.mark.run(order=40)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_more(self):
         self.face_page.refresh_page()

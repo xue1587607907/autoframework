@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.train_sort_page import TrainSortPage
+from page.training_manage_page.train_sort_page import TrainSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -16,7 +16,7 @@ class TestTrainSortCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=36)
+    @pytest.mark.run(order=60)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_sort_query(self):
         self.train_sort_page.click_train_manage_btn()
@@ -32,7 +32,7 @@ class TestTrainSortCRUD:
         self.train_sort_page.input_sort_name("二级分类{}".format(time.strftime("%M%S")))
         self.train_sort_page.click_determine_btn()
 
-    @pytest.mark.run(order=37)
+    @pytest.mark.run(order=61)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_sort_content(self):
         self.train_sort_page.click_sort_name_btn()
@@ -40,7 +40,7 @@ class TestTrainSortCRUD:
         self.train_sort_page.input_sort_name("修改后{}".format(time.strftime("%M%S")))
         self.train_sort_page.click_determine_btn()
 
-    @pytest.mark.run(order=38)
+    @pytest.mark.run(order=62)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_more_operation(self):
         self.train_sort_page.click_move_up_btn()

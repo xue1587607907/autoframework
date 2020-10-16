@@ -1,7 +1,7 @@
 import time
 import pytest
-from page.cooperative_organization_page import CooperativeOrganizationPage
-from page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage_page.cooperative_organization_page import CooperativeOrganizationPage
+from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -18,7 +18,7 @@ class TestCooperativeOrganizationCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=35.6)
+    @pytest.mark.run(order=57)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.resources_sort_page.refresh_page()
@@ -34,14 +34,14 @@ class TestCooperativeOrganizationCRUD:
         self.coo_organ_page.click_disable_btn()
         self.coo_organ_page.refresh_page()
 
-    @pytest.mark.run(order=35.7)
+    @pytest.mark.run(order=58)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
         self.coo_organ_page.click_new_btn()
         self.coo_organ_page.input_mechanism_name("{}".format(time.strftime("%M%S")))
         self.coo_organ_page.click_determine_btn()
 
-    @pytest.mark.run(order=35.8)
+    @pytest.mark.run(order=59)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_and_disable(self):
         self.coo_organ_page.click_disable1_btn()
