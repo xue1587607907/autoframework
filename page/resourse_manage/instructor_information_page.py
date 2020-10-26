@@ -18,35 +18,35 @@ class InstructorInformationPage(BaseAction):
     lecturer_type_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[1]/div[1]/div[2]/div/div/input"
 
     # 内部讲师按钮
-    inside_lecturer = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
+    inside_lecturer = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
 
     # 外部讲师
-    outside_lecturer = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]/span"
+    outside_lecturer = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # 授课类别筛选
-    teach_type_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/form/div[3]/div/div/div[1]/input"
+    teach_type_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[1]/div[1]/div[3]/div/div[1]/input"
 
     # 选择第一个
-    first_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
+    first_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
 
     # 讲师级别筛选框
-    lecturer_level_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/form/div[4]/div/div/div[1]/input"
+    lecturer_level_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[1]/div[1]/div[4]/div/div[1]/input"
 
     # 初级讲师按钮
-    primary_lecturer = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]"
+    primary_lecturer = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
 
     # 中级讲师
-    intermediate_lecturer = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]"
+    intermediate_lecturer = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/form/div[5]/div/div/div/input"
+    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[1]/div[1]/div[5]/div/div/input"
 
     # 启用/禁用
-    enable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]"
-    disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]"
+    enable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
+    disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # 新建讲师按钮
-    add_lecturer_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/form/div[6]/div/div/div/button/span"
+    add_lecturer_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[1]/div[2]/div/button/span"
 
     # 外部讲师按钮
     add_outside_lecturer = By.XPATH, "/html/body/ul/li[1]/p"
@@ -64,10 +64,10 @@ class InstructorInformationPage(BaseAction):
     determine_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[3]/div/button[1]/span"
 
     # 姓名按钮(点击进入编辑)
-    name_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div/div[3]/table/tbody/tr[1]/td[2]/div/p"
+    name_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(2) > div:nth-child(1) > span:nth-child(1)"
 
     # 禁用按钮
-    disable1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div/div[5]/div[2]/table/tbody/tr[1]/td[9]/div/span/button"
+    disable1_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > main:nth-child(1) > button:nth-child(1) > span:nth-child(1)"
 
     # 禁用的确定按钮
     determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
@@ -79,7 +79,7 @@ class InstructorInformationPage(BaseAction):
     add_inside_lecturer = By.XPATH, "/html/body/ul/li[2]/p"
 
     # 讲师姓名输入框
-    lecturer_name_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[1]/form/div[1]/div/div/div/input"
+    lecturer_name_input1 = By.XPATH, "//*[@id='app']/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[1]/form/div[1]/div/div/input"
 
     # 选择内部讲师
     select_inside_lecturer = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(1) > div:nth-child(1) > label:nth-child(1) > span:nth-child(1) > span:nth-child(1)"

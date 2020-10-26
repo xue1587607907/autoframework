@@ -36,24 +36,24 @@ class LearningProjectPage(BaseAction):
     project_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/form/div/div[1]/div[2]/div/div/div[1]/input"
 
     # 项目分类输入框
-    project_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/form/div/div[6]/div[2]/div/div/div/div/input"
+    project_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/form/div/div[3]/div[2]/div/div/div/div/input"
 
     # 选择三级分类
-    d1 = By.XPATH, "/html/body/div[2]/div[1]/div/div[1]/ul/li"
-    d2 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li[2]/span"
+    d1 = By.XPATH, "/html/body/div[2]/div[1]/div/div[1]/ul/li[1]/label/span[1]/span"
+    d2 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li[2]/label/span[1]/span"
     d3 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li/label/span[1]/span"
 
     # 空白区域
     blank_area = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/ul"
 
     # 开始时间输入框
-    start_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/form/div/div[3]/div[2]/div/div/div/div/input"
+    start_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/form/div/div[5]/div[2]/div/div/div[1]/div/span[1]/i"
 
     # 选择开始时间
     select_start_time = By.XPATH, "/html/body/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[3]/div/span"
 
     # 结束时间输入框
-    end_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/form/div/div[5]/div[2]/div/div/div[1]/div/input"
+    end_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/form/div/div[7]/div[2]/div/div/div[1]/div/span[1]/i"
 
     # 选择结束时间
     select_end_time = By.XPATH, "/html/body/div[4]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[4]/div/span"
@@ -123,22 +123,22 @@ class LearningProjectPage(BaseAction):
     add_test_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[3]"
 
     # 所用试卷输入框
-    papers_used_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[1]/div[2]/div/form/div[1]/div/p/div/input"
+    papers_used_input = By.CSS_SELECTOR, "div.jw-self-form-item:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 选择试卷
-    select_paper = By.XPATH, "/html/body/div[3]/div/div[2]/div/div/div[1]/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
+    select_paper = By.XPATH, "/html/body/div[3]/div/div[2]/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
 
     # 确定按钮
-    determine5_btn = By.XPATH, "/html/body/div[2]/div/div[2]/div/div/div[3]/button[1]"
+    determine5_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[2]"
 
     # 考试名称输入框
-    exam_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[1]/div[2]/div/form/div[2]/div/div[1]/input"
+    exam_name_input = By.CSS_SELECTOR, "div.jw-self-form-item:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 设置考试期限按钮
-    radio_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[1]/div[2]/div/form/div[4]/div/div/div/div/div/div[1]/div/label/span[1]/span"
+    radio_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/form/div[4]/div/div/label/span[1]/span"
 
     # 开始日期输入框
-    start_time_input2 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[1]/div[2]/div/form/div[4]/div/div/div/div/div/div[1]/div/div[1]/input[1]"
+    start_time_input2 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/form/div[4]/div/div/div/div/div/i[1]"
 
     # 选择考试期限
     time1 = By.XPATH, "/html/body/div[4]/div[1]/div/div[2]/table/tbody/tr[5]/td[5]/div/span"
@@ -148,16 +148,16 @@ class LearningProjectPage(BaseAction):
     determine6_btn = By.XPATH, "/html/body/div[4]/div[2]/button[2]/span"
 
     # 考试时长输入框
-    exam_duration = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[1]/div[2]/div/form/div[5]/div/div[1]/input"
+    exam_duration = By.CSS_SELECTOR, "div.el-form-item:nth-child(6) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 通过分数输入框
-    pass_score_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[1]/div[2]/div/form/div[7]/div/div[1]/input"
+    pass_score_input = By.CSS_SELECTOR, "div.jw-el-form-item-inline:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 学分输入框
-    credit_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[1]/div[2]/div/form/div[7]/div/div[2]/div/input"
+    credit_input = By.CSS_SELECTOR, "div.el-input-number:nth-child(4) > div:nth-child(1) > input:nth-child(1)"
 
     # 确定按钮
-    determine7_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[2]"
+    determine7_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[2]/span"
 
     # 上移/下移
     move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[2]/div/div/div[3]/table/tbody/tr[2]/td[5]/div/main/div/span[3]"
@@ -182,16 +182,19 @@ class LearningProjectPage(BaseAction):
     add_user_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/button[1]/span"
 
     # 选择用户复选框
-    select_user = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[3]/div/div[2]/div/div/div/div[1]/div/div[3]/div[2]/div[2]/div[1]/div/div/div[2]/table/thead/tr/th[1]/div/label/span/span"
+    select_user = By.XPATH, "/html/body/div[3]/div/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div[2]/table/thead/tr/th[1]/div/label/span/span"
 
     # 确定按钮
-    determine9_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[3]/div/div[3]/div/button[2]"
+    determine9_btn = By.XPATH, "/html/body/div[3]/div/div[3]/div/button[2]"
 
     # 下一步按钮
-    next2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/button[1]/span"
+    next2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[4]/button[1]/span"
+
+    # 选修任务输入框
+    elective_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[4]/div[2]/div[2]/form/div/div/div[1]/div/input"
 
     # 保存并发布按钮
-    save_and_publish = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[6]/button[2]"
+    save_and_publish = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[6]/button[2]/span"
 
     # 项目名称按钮
     project_name_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
@@ -258,7 +261,7 @@ class LearningProjectPage(BaseAction):
     def select_third_sort(self):
         self.click(self.d1)
         self.click(self.d2)
-        self.click(self.d3)
+        # self.click(self.d3)
         return self.click(self.blank_area)
 
     # 点击开始时间输入框
@@ -454,6 +457,10 @@ class LearningProjectPage(BaseAction):
     # 点击下一步按钮
     def click_next2_btn(self):
         return self.click(self.next2_btn)
+
+    # 输入选修任务数量
+    def input_elective(self, content):
+        return self.input(self.elective_input, content)
 
     # 点击保存并发布
     def click_save_and_publish(self):

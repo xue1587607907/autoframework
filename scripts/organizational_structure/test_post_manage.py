@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.organizational_structure_page.post_manage_page import PostManagePage
+from page.organizational_structure.post_manage_page import PostManagePage
 from utils.driver_utils import DriverUtils
 
 

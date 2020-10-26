@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 

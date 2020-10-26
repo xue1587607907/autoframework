@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.learning_center_page import LearningCenterPage
+from page.learning_center.learning_center_page import LearningCenterPage
 from page.login_page import LoginPage
 from utils.driver_utils import DriverUtils
 

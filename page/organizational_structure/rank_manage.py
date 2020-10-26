@@ -24,19 +24,19 @@ class RankManagePage(BaseAction):
     edit_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[4]/div/main/main/div/span[1]"
 
     # 用户单选框
-    user_radio = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/label/span/span"
+    user_radio = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/label/span/span"
 
     # 调整职级按钮
-    adjust_rank_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div/div/div[2]/div[1]/div/button"
+    adjust_rank_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/button"
 
     # 新职级选择框
-    new_rank = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[2]/form/div[2]/div/div/div/div/div/div/input"
+    new_rank = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/div/div/div[2]/form/div[2]/div/div/div/div/div/div/input"
 
     # 选择职级
-    select_rank = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[1]/span"
+    select_rank = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[2]"
 
     # 确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[3]/div/button[1]"
+    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/div/div/div[3]/div/button[1]"
 
     # 上移/下移
     move_up_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[4]/td[4]/div/main/main/div/span[2]"

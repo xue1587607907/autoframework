@@ -1,7 +1,7 @@
 import random
 import time
 import pytest
-from page.organizational_structure_page.rank_manage import RankManagePage
+from page.organizational_structure.rank_manage import RankManagePage
 from utils.driver_utils import DriverUtils
 
 

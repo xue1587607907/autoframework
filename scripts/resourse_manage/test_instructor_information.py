@@ -1,7 +1,7 @@
 import time
 import pytest
-from page.resourse_manage_page.instructor_information_page import InstructorInformationPage
-from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage.instructor_information_page import InstructorInformationPage
+from page.resourse_manage.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -70,8 +70,6 @@ class TestInstructorInformationCRUD:
     @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_and_disable(self):
         self.ins_info_page.click_disable1_btn()
-        self.ins_info_page.click_determine1_btn()
-        self.ins_info_page.click_remove_btn()
         self.ins_info_page.click_determine1_btn()
 
     @pytest.mark.run(order=56)

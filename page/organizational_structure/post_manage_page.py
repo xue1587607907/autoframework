@@ -61,10 +61,10 @@ class PostManagePage(BaseAction):
     select_post = By.XPATH, "/html/body/div[3]/div[1]/div/div[1]/ul/li/label/span[1]/span"
 
     # 点击空白区域
-    blank_area1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[1]/div"
+    blank_area1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/div/div/div[1]/div"
 
     # 选择岗位输入框
-    select_post_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div/div/div[2]/div[1]/div/div/div/div[2]/form/div[2]/div/div/div[2]/div/div/div/input"
+    select_post_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/div/div/div[2]/form/div[2]/div/div/div[2]/div/div/div/input"
 
     # 选择具体岗位
     select_specific_post = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[1]/span"

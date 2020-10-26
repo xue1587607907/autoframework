@@ -1,7 +1,7 @@
 import time
 import pytest
-from page.resourse_manage_page.course_label_page import CourseLabelPage
-from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage.course_label_page import CourseLabelPage
+from page.resourse_manage.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -21,6 +21,7 @@ class TestQuestionBankCRUD:
     @pytest.mark.run(order=24)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_course_label(self):
+        self.resources_sort_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
         self.course_label_page.click_course_label_btn()
         self.course_label_page.click_resources_sort_input()

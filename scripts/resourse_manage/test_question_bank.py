@@ -1,7 +1,7 @@
 import time
 import pytest
-from page.resourse_manage_page.question_bank_page import QuestionBankPage
-from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage.question_bank_page import QuestionBankPage
+from page.resourse_manage.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -44,7 +44,7 @@ class TestQuestionBankCRUD:
     def test_add_question_bank(self):
         self.question_bank_page.refresh_page()
         self.question_bank_page.click_new_btn()
-        self.question_bank_page.input_question_bank_name("测试{}".format(time.strftime("%H%M%S")))
+        self.question_bank_page.input_question_bank_name("测试题库")
         self.question_bank_page.click_sort_input()
         self.question_bank_page.select_third_sort()
         self.question_bank_page.click_determine_btn()
@@ -62,7 +62,7 @@ class TestQuestionBankCRUD:
     def test_modify_question_bank(self):
         self.question_bank_page.click_question_bank1_btn()
         self.question_bank_page.clear(self.question_bank_page.question_bank_name_input)
-        self.question_bank_page.input_question_bank_name("修改的名称{}".format(time.strftime("%H%M%S")))
+        self.question_bank_page.input_question_bank_name("修改后{}".format(time.strftime("%H%M%S")))
         self.question_bank_page.click_determine2_btn()
 
     @pytest.mark.run(order=44)

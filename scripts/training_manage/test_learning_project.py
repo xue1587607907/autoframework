@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.training_manage_page.learning_project_page import LearningProjectPage
+from page.training_manage.learning_project_page import LearningProjectPage
 from utils.driver_utils import DriverUtils
 
 
@@ -12,13 +12,8 @@ class TestLearningProjectCRUD:
         DriverUtils.set_switch(True)
         self.learn_pro_page = LearningProjectPage(self.driver)
 
-    # def teardown(self):
-    #     time.sleep(2)
-    #     DriverUtils.quit_driver()
-
-    def teardown_class(self):
+    def teardown(self):
         time.sleep(2)
-        DriverUtils.set_switch(False)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=67)
@@ -52,7 +47,6 @@ class TestLearningProjectCRUD:
         self.learn_pro_page.click_end_time_input()
         self.learn_pro_page.click_select_end_time()
         self.learn_pro_page.click_next_btn()
-        # 下一步到第二页, 添加面授课程
         self.learn_pro_page.click_new_stage_btn()
         self.learn_pro_page.input_stage_name("阶段一")
         self.learn_pro_page.click_determine_btn()
@@ -68,13 +62,11 @@ class TestLearningProjectCRUD:
         self.learn_pro_page.click_select_end_time1()
         self.learn_pro_page.click_determine11_btn()
         self.learn_pro_page.click_determine2_btn()
-        # 添加视频课程
         self.learn_pro_page.click_video_btn()
         self.learn_pro_page.click_course_name1()
         self.learn_pro_page.click_select_course1()
         self.learn_pro_page.click_determine3_btn()
         self.learn_pro_page.click_determine4_btn()
-        # 添加考试
         self.learn_pro_page.click_add_test_btn()
         self.learn_pro_page.click_papers_used_input()
         self.learn_pro_page.click_select_paper()
@@ -88,18 +80,17 @@ class TestLearningProjectCRUD:
         self.learn_pro_page.input_pass_score_input(5)
         self.learn_pro_page.input_credit_input(4)
         self.learn_pro_page.click_determine7_btn()
-        # 上下移动和删除
         self.learn_pro_page.click_move_up_down()
         self.learn_pro_page.click_remove_btn()
         self.learn_pro_page.click_determine8_btn()
         self.learn_pro_page.click_research_settings()
         self.learn_pro_page.click_select_elective()
-        # 点击下一步
         self.learn_pro_page.click_next1_btn()
         self.learn_pro_page.click_add_user_btn()
         self.learn_pro_page.click_select_user()
         self.learn_pro_page.click_determine9_btn()
         self.learn_pro_page.click_next2_btn()
+        self.learn_pro_page.input_elective(0)
         self.learn_pro_page.click_save_and_publish()
 
     @pytest.mark.run(order=69)
@@ -109,8 +100,7 @@ class TestLearningProjectCRUD:
         self.learn_pro_page.clear_project_name_input()
         self.learn_pro_page.input_project_name("修改后{}".format(time.strftime("%M%S")))
         self.learn_pro_page.click_determine()
-        self.learn_pro_page.click_pagesize()
-        self.learn_pro_page.click_first_btn()
+        # self.learn_pro_page.click_pagesize()
+        # self.learn_pro_page.click_first_btn()
 
-    def test_a(self):
-        pass
+

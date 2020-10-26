@@ -1,9 +1,9 @@
 import random
 import time
 import pytest
-from page.organizational_structure_page.account_dm_page import AccountDM
+from page.learning_center.learning_center_page import LearningCenterPage
+from page.organizational_structure.account_dm_page import AccountDM
 from utils.driver_utils import DriverUtils
-from page.learning_center_page import LearningCenterPage
 
 
 # 组织架构增删改查
@@ -17,7 +17,6 @@ class TestAccountCRUD:
 
     def teardown(self):
         time.sleep(2)
-        # DriverUtils.set_switch(False)
         DriverUtils.quit_driver()
 
     i = 0
@@ -29,7 +28,7 @@ class TestAccountCRUD:
             i += 1
 
     @pytest.mark.run(order=2)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     @pytest.mark.parametrize("params", [{"useraccount": "xue"+str, "name": "xue"+str}])
     def test_add_user(self, params):
         self.account_dm_page.click_add_user()
@@ -42,7 +41,7 @@ class TestAccountCRUD:
         self.account_dm_page.click_preservation()
 
     @pytest.mark.run(order=3)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     @pytest.mark.parametrize("params", [{"useraccount": "abc{}".format(time.strftime("%H%M%S")), "name": "abc{}".format(time.strftime("%H%M%S"))}])
     def test_modify_personal_data(self, params):
         self.account_dm_page.click_account_button()
@@ -53,7 +52,7 @@ class TestAccountCRUD:
         self.account_dm_page.click_preservation()
 
     @pytest.mark.run(order=4)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.account_dm_page.input_department("技术部")
         self.account_dm_page.input_account("jack")
@@ -64,7 +63,7 @@ class TestAccountCRUD:
         self.account_dm_page.click_enable()
 
     @pytest.mark.run(order=5)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_click_disable(self):
         self.account_dm_page.click_more_btn()
         self.account_dm_page.click_more_disable_btn()

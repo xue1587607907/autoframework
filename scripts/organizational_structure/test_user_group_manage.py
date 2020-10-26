@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.organizational_structure_page.user_group_manage_page import UserGroupManagePage
+from page.organizational_structure.user_group_manage_page import UserGroupManagePage
 from utils.driver_utils import DriverUtils
 
 
@@ -19,6 +19,7 @@ class TestUserGroupManageCRUD:
     @pytest.mark.run(order=12)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
+        self.user_group_manage_page.refresh_page()
         self.user_group_manage_page.click_user_group_manage_btn()
         self.user_group_manage_page.input_user_group_name("新人组")
         self.user_group_manage_page.click_keys_enter(self.user_group_manage_page.user_group_search)

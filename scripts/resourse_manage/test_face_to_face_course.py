@@ -1,7 +1,7 @@
 import time
 import pytest
-from page.resourse_manage_page.face_to_face_course_page import FaceToFaceCoursePage
-from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage.face_to_face_course_page import FaceToFaceCoursePage
+from page.resourse_manage.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 

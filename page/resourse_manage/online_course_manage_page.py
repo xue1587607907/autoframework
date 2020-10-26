@@ -19,7 +19,7 @@ class OnlineCourseManagePage(BaseAction):
     last_month_btn = By.CSS_SELECTOR, "button.el-picker-panel__shortcut:nth-child(2)"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[3]/div/div/div/input"
+    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div/div/input"
     enable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
     disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]"
 

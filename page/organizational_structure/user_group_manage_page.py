@@ -32,10 +32,10 @@ class UserGroupManagePage(BaseAction):
     add_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/form/div[3]/div/div/button[1]"
 
     # 全选框
-    select_all = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div/div/div[1]/div/div[3]/div[2]/div[2]/div[1]/div/div/div[2]/table/thead/tr/th[1]/div/label/span/span"
+    select_all = By.XPATH, "/html/body/div[2]/div/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div[2]/table/thead/tr/th[1]/div/label/span"
 
     # 确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[3]/div/button[2]/span"
+    determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[2]/span"
 
     # 选择第一条数据
     select_the_first = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span"

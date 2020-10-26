@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.resourse_manage_page.study_resources_manage_page import StudyResourcesManagePage
+from page.resourse_manage.study_resources_manage_page import StudyResourcesManagePage
 from utils.driver_utils import DriverUtils
 
 

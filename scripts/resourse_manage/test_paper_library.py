@@ -1,8 +1,8 @@
 import time
 import pytest
-from page.resourse_manage_page.paper_library_page import PaperLibraryPage
-from page.resourse_manage_page.question_bank_page import QuestionBankPage
-from page.resourse_manage_page.resources_sort_page import ResourcesSortPage
+from page.resourse_manage.paper_library_page import PaperLibraryPage
+from page.resourse_manage.question_bank_page import QuestionBankPage
+from page.resourse_manage.resources_sort_page import ResourcesSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -21,7 +21,7 @@ class TestPaperLibraryCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=46)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_question_bank_query(self):
         self.question_bank_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -42,7 +42,7 @@ class TestPaperLibraryCRUD:
         self.question_bank_page.click_disable_btn()
 
     @pytest.mark.run(order=47)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_fixed_paper(self):
         self.paper_page.click_new_btn()
         self.paper_page.click_fixed_papers_btn()
@@ -50,6 +50,7 @@ class TestPaperLibraryCRUD:
         self.paper_page.click_question_bank_select_btn()
         self.paper_page.input_question_bank("测试")
         self.paper_page.click_search_btn()
+        # self.paper_page.click_keys_enter(self.paper_page.search_question_bank_input)
         self.paper_page.select_question_bank1_btn()
         self.paper_page.click_select_all()
         self.paper_page.click_determine_btn()
@@ -59,7 +60,7 @@ class TestPaperLibraryCRUD:
         self.paper_page.click_save_btn()
 
     @pytest.mark.run(order=48)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_random_paper(self):
         self.paper_page.click_new_btn()
         self.paper_page.click_random_papers_btn()
@@ -72,7 +73,7 @@ class TestPaperLibraryCRUD:
         self.paper_page.click_determine3_btn()
 
     @pytest.mark.run(order=49)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_paper_content(self):
         self.paper_page.click_more_btn()
         self.paper_page.move_mouse(self.paper_page.more_btn)
@@ -86,7 +87,7 @@ class TestPaperLibraryCRUD:
         self.paper_page.click_determine4_btn()
 
     @pytest.mark.run(order=50)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_paper(self):
         self.paper_page.click_radio()
         self.paper_page.click_remove1_btn()

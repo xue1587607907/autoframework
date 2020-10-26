@@ -1,6 +1,6 @@
 import time
 import pytest
-from page.training_manage_page.train_sort_page import TrainSortPage
+from page.training_manage.train_sort_page import TrainSortPage
 from utils.driver_utils import DriverUtils
 
 
@@ -20,9 +20,9 @@ class TestTrainSortCRUD:
     @pytest.mark.skipif(condition=True, reason=None)
     def test_sort_query(self):
         self.train_sort_page.click_train_manage_btn()
-        self.train_sort_page.input_content_first_search("一级分类")
+        self.train_sort_page.input_content_first_search("普通员工")
         self.train_sort_page.click_keys_enter(self.train_sort_page.first_search)
-        self.train_sort_page.input_content_second_search("一级分类")
+        self.train_sort_page.input_content_second_search("公司会议")
         self.train_sort_page.click_keys_enter(self.train_sort_page.first_search)
         self.train_sort_page.refresh_page()
         self.train_sort_page.click_new_btn()
