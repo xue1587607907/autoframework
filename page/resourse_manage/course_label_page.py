@@ -9,46 +9,46 @@ class CourseLabelPage(BaseAction):
     course_label_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[2]"
 
     # 资源分类输入框
-    resources_sort_input = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[1]/main/form/div/div/div/div[1]/input"
+    resources_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/form/div/div/div/div[1]/input"
 
     # 选择三级分类
-    d1 = By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li/span"
+    d1 = By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li[1]/span"
     d2 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li/span"
-    d3 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[2]/span"
+    d3 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[1]/span"
 
     # 新建按钮
-    new_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[1]/button"
+    new_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/button"
 
     # 标签分类输入框
-    label_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div/div/div[2]/form/div[1]/div/div[1]/input"
+    label_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div[2]/form/div[1]/div/div[1]/input"
 
     # 标签名称输入框
-    label_name_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div[1]/div/div/div[1]/input"
-    label_name_input2 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div[2]/div/div[1]/div[1]/input"
+    label_name_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div/div/div[1]/div[1]/input"
+    label_name_input2 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div[2]/div/div[1]/div[1]/input"
 
     # 新增标签按钮
-    add_label_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div/div/div[1]/div[2]/span[1]"
+    add_label_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div[1]/div/div[1]/div[2]/span[1]"
 
     # 删除标签名称按钮
-    remove_label_btn = By.CSS_SELECTOR, "div.tag:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span:nth-child(2)"
+    remove_label_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div[2]/div/div[1]/div[2]/span[2]"
 
     # 上移按钮
-    move_up_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div[2]/div/div/div[2]/span[3]"
+    move_up_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div[2]/div/div[1]/div[2]/span[3]"
 
     # 下移按钮
-    move_down_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div[1]/div/div/div[2]/span[4]"
+    move_down_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div[2]/form/div[2]/div/div[1]/div/div/div[2]/span[4]"
 
     # 确定按钮
-    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[1]/div/div/div[3]/div/button[1]"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div[3]/div/button[1]/span"
 
     # 编辑标签按钮
-    edit_label_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr/td[4]/div/main/main/div/span[1]"
+    edit_label_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/div/span[1]"
 
     # 删除标签分类按钮
-    remove1_label_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr/td[4]/div/main/main/div/span[2]"
+    remove1_label_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/div/span[2]"
 
     # 点击删除弹窗的确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]/span"
+    determine1_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2) > span:nth-child(1)"
 
     # 点击课程标签按钮
     def click_course_label_btn(self):

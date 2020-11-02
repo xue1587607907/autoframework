@@ -15,7 +15,7 @@ class ExamManagePage(BaseAction):
     keyword_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div[2]/div/div/div/input"
+    status_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div[2]/div/div/div[1]/input"
 
     # 进行中
     have_in_hand_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]/span"
@@ -24,7 +24,7 @@ class ExamManagePage(BaseAction):
     no_started_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # 考试组织筛选框
-    exam_organ_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div[3]/div/div/div/input"
+    exam_organ_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div[3]/div/div/div[1]/input"
 
     # 直接发起
     direct_initiation = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
@@ -33,16 +33,16 @@ class ExamManagePage(BaseAction):
     project_initiation = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # 新增按钮
-    new_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/button/span"
+    new_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/button"
 
     # 所用试卷输入框
     papers_used_input = By.CSS_SELECTOR, "div.jw-self-form-item:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 选择试卷
-    select_paper = By.XPATH, "/html/body/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[3]/div"
+    select_paper = By.XPATH, "/html/body/div[2]/div/div[2]/div/div/div/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
 
     # 确定按钮
-    determine_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[2]"
+    determine_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[1]"
 
     # 考试名称输入框
     exam_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/form/div[2]/div/div[1]/div/input"
@@ -76,10 +76,10 @@ class ExamManagePage(BaseAction):
     add_user_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[1]/div[2]/button[1]/span"
 
     # 选择用户复选框
-    select_user = By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div[2]/table/thead/tr/th[1]/div/label/span/span"
+    select_user = By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div[3]/div[2]/div/div/div[2]/table/thead/tr/th[1]/div/label/span/span"
 
     # 确定按钮
-    determine2_btn = By.XPATH, "/html/body/div[4]/div/div[3]/div/button[2]/span"
+    determine2_btn = By.XPATH, "/html/body/div[4]/div/div[3]/div/button[1]"
 
     # 保存并发布按钮
     save_and_publish = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[3]/button[1]"

@@ -18,39 +18,39 @@ class TrainSortPage(BaseAction):
     first_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[1]/input"
 
     # 第二个搜索框
-    second_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[1]/div/input"
+    second_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[1]/div/input"
 
     # 新建按钮
-    new_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/div/button"
+    new_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div/button"
 
     # 父级分类
-    parent_sort = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div[2]/form/div[1]/div/div/div/input"
+    parent_sort = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[2]/div/div[2]/form/div[1]/div/div/div[1]/input"
 
     # 选择分类
-    d1 = By.XPATH, "/html/body/div[3]/div[1]/div[1]/div[1]/ul/li/span"
-    d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li[2]/label/span[1]/span"
+    d1 = By.XPATH, "/html/body/div[3]/div[1]/div/div[1]/ul/li/span"
+    d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li[1]/label/span[1]/span"
 
     # 空白区域
-    blank_area = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div[1]/div"
+    blank_area = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[2]/div/div[1]"
 
     # 分类名称输入框
     sort_name_input = By.CSS_SELECTOR, "div.el-form-item:nth-child(2) > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)"
 
     # 确定按钮
-    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div[3]/div/button[2]"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[2]/div/div[3]/div/button[1]/span"
 
     # 上下移动按钮
-    move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[2]/div/main/main/div/span[2]"
-    move_down_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[2]/div/main/main/div/span[2]"
+    move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[2]/div/main/main/div/span[2]"
+    move_down_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[2]/div/main/main/div/span[2]"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[4]/td[2]/div/main/main/div/span[1]"
+    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[6]/td[2]/div/main/main/div/span[1]"
 
     # 删除弹窗的确定按钮
     determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 分类名称按钮(点击进入编辑)
-    sort_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[4]/td[1]/div/div/span"
+    sort_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[6]/td[1]/div/div/span"
 
     # 点击培训管理
     def click_train_manage_btn(self):

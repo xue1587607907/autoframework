@@ -15,22 +15,22 @@ class LearningProjectPage(BaseAction):
     learn_project_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[1]/ul/li[5]/span[2]"
 
     # 关键字搜索框
-    keyword_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
+    keyword_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[1]/div/input"
 
     # 时间筛选框
-    time_filter = By.CSS_SELECTOR, "input.el-range-input:nth-child(2)"
+    time_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[2]/div/div/input[1]"
 
     # 最近一周,最近一个月筛选按钮
-    last_week_btn = By.CSS_SELECTOR, "button.el-picker-panel__shortcut:nth-child(1)"
-    last_month_btn = By.CSS_SELECTOR, "button.el-picker-panel__shortcut:nth-child(2)"
+    last_week_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/button[1]"
+    last_month_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/button[2]"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[3]/div/div/div/input"
-    have_in_hand_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
+    status_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[3]/div/div/div[1]/input"
+    have_in_hand_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[4]/span"
     finished_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]/span"
 
     # 新建按钮
-    new_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/div/button"
+    new_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div/button/span"
 
     # 项目名称输入框
     project_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/form/div/div[1]/div[2]/div/div/div[1]/input"
@@ -50,37 +50,37 @@ class LearningProjectPage(BaseAction):
     start_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/form/div/div[5]/div[2]/div/div/div[1]/div/span[1]/i"
 
     # 选择开始时间
-    select_start_time = By.XPATH, "/html/body/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[3]/div/span"
+    select_start_time = By.CSS_SELECTOR, "tr.el-date-table__row:nth-child(2) > td:nth-child(5) > div:nth-child(1) > span:nth-child(1)"
 
     # 结束时间输入框
     end_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/form/div/div[7]/div[2]/div/div/div[1]/div/span[1]/i"
 
     # 选择结束时间
-    select_end_time = By.XPATH, "/html/body/div[4]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[4]/div/span"
+    select_end_time = By.CSS_SELECTOR, "div.el-picker-panel:nth-child(6) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(6) > td:nth-child(7) > div:nth-child(1) > span:nth-child(1)"
 
     # 下一步按钮
     next_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div/button[1]/span"
 
     # 新增阶段按钮
-    new_stage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]"
+    new_stage_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]"
 
     # 阶段名称输入框
-    stage_name_input = By.CSS_SELECTOR, ".el-input--mini > input:nth-child(1)"
+    stage_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[3]/div/div[2]/div/div/form/div/div/div[1]/input"
 
     # 确定按钮
-    determine_btn = By.CSS_SELECTOR, "div.el-dialog__footer:nth-child(3) > div:nth-child(1) > button:nth-child(2)"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[3]/div/div[3]/div/button[1]"
 
     # 面授课程按钮
-    face_to_face_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[1]"
+    face_to_face_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[1]/span"
 
     # 课程名称输入框
     course_name = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[1]/div[1]/form/div[1]/div/div[1]/div/input"
 
     # 选择课程
-    select_course = By.XPATH, "/html/body/div[3]/div/div[2]/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
+    select_course = By.XPATH, "/html/body/div[2]/div/div[2]/div/div/div/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
 
     # 确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[2]"
+    determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[1]/span"
 
     # 内容名称输入框
     content_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[2]/form/div/div[2]/div[1]/div/div/div/div/div/input"
@@ -102,7 +102,7 @@ class LearningProjectPage(BaseAction):
     select_end_time1 = By.XPATH, "/html/body/div[4]/div[1]/div/div[3]/table[1]/tbody/tr[5]/td[6]/div/span"
 
     # 确定按钮
-    determine2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[2]/span"
+    determine2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[1]"
 
     # 视频课程按钮
     video_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[2]"
@@ -111,13 +111,13 @@ class LearningProjectPage(BaseAction):
     course_name1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[1]/form/div[1]/div/div/div/input"
 
     # 选择课程
-    select_course1 = By.XPATH, "/html/body/div[3]/div/div[2]/div/div/div[1]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
+    select_course1 = By.XPATH, "/html/body/div[2]/div/div[2]/div/div/div[1]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
 
     # 弹窗的确定按钮
-    determine3_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[2]/span"
+    determine3_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[1]/span"
 
     # 外面的确定按钮
-    determine4_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[2]"
+    determine4_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[1]"
 
     # 添加考试按钮
     add_test_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[3]"
@@ -126,10 +126,10 @@ class LearningProjectPage(BaseAction):
     papers_used_input = By.CSS_SELECTOR, "div.jw-self-form-item:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 选择试卷
-    select_paper = By.XPATH, "/html/body/div[3]/div/div[2]/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
+    select_paper = By.XPATH, "/html/body/div[3]/div/div[2]/div/div/div/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
 
     # 确定按钮
-    determine5_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[2]"
+    determine5_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[1]"
 
     # 考试名称输入框
     exam_name_input = By.CSS_SELECTOR, "div.jw-self-form-item:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
@@ -157,7 +157,7 @@ class LearningProjectPage(BaseAction):
     credit_input = By.CSS_SELECTOR, "div.el-input-number:nth-child(4) > div:nth-child(1) > input:nth-child(1)"
 
     # 确定按钮
-    determine7_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[2]/span"
+    determine7_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[1]"
 
     # 上移/下移
     move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[2]/div/div/div[3]/table/tbody/tr[2]/td[5]/div/main/div/span[3]"
@@ -182,10 +182,10 @@ class LearningProjectPage(BaseAction):
     add_user_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/button[1]/span"
 
     # 选择用户复选框
-    select_user = By.XPATH, "/html/body/div[3]/div/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div[2]/table/thead/tr/th[1]/div/label/span/span"
+    select_user = By.XPATH, "/html/body/div[3]/div/div[2]/div/div/div[3]/div[2]/div/div/div[2]/table/thead/tr/th[1]/div/label/span/span"
 
     # 确定按钮
-    determine9_btn = By.XPATH, "/html/body/div[3]/div/div[3]/div/button[2]"
+    determine9_btn = By.XPATH, "/html/body/div[3]/div/div[3]/div/button[1]/span"
 
     # 下一步按钮
     next2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[4]/button[1]/span"
@@ -197,7 +197,7 @@ class LearningProjectPage(BaseAction):
     save_and_publish = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[6]/button[2]/span"
 
     # 项目名称按钮
-    project_name_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
+    project_name_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
 
     # 页数选择框
     pagesize = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[2]/div/div/span/div/div/input"

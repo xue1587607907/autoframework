@@ -15,11 +15,11 @@ class TestInstructorInformationCRUD:
         self.ins_info_page = InstructorInformationPage(self.driver)
 
     def teardown(self):
-        time.sleep(2)
+        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=52)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.resources_sort_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -47,7 +47,7 @@ class TestInstructorInformationCRUD:
         self.ins_info_page.click_disable_btn()
 
     @pytest.mark.run(order=53)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_outside_lecturer(self):
         self.ins_info_page.click_add_lecturer_btn()
         self.ins_info_page.click_add_outside_lecturer()
@@ -57,7 +57,7 @@ class TestInstructorInformationCRUD:
         self.ins_info_page.click_determine_btn()
 
     @pytest.mark.run(order=54)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_lecturer_info(self):
         self.ins_info_page.click_name_btn()
         self.ins_info_page.clear_lecturer_name_input()
@@ -67,13 +67,13 @@ class TestInstructorInformationCRUD:
         self.ins_info_page.click_determine_btn()
 
     @pytest.mark.run(order=55)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_and_disable(self):
         self.ins_info_page.click_disable1_btn()
         self.ins_info_page.click_determine1_btn()
 
     @pytest.mark.run(order=56)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_inside_lecturer(self):
         self.ins_info_page.click_add_lecturer_btn()
         self.ins_info_page.click_add_inside_lecturer()

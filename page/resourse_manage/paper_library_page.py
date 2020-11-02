@@ -22,9 +22,9 @@ class PaperLibraryPage(BaseAction):
     last_month_btn = By.CSS_SELECTOR, "button.el-picker-panel__shortcut:nth-child(2)"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[1]/main/div/div[3]/div/div/div/input"
-    enable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
-    disable_btn = By.XPATH, "/html/body/div[3]/div[1]/div[1]/ul/li[3]/span"
+    status_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div[3]/div/div/div[1]/input"
+    enable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
+    disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # 新建按钮
     new_btn = By.CSS_SELECTOR, ".jw-table-buttons-contain > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)"
@@ -63,7 +63,7 @@ class PaperLibraryPage(BaseAction):
     score_input = By.CSS_SELECTOR, "div.el-input:nth-child(2) > input:nth-child(1)"
 
     # 保存按钮
-    save_btn = By.CSS_SELECTOR, "button.el-button--mini:nth-child(1)"
+    save_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/button[1]"
 
     # 随机试卷按钮--------------------------------------------------------------
     random_papers_btn = By.XPATH, "/html/body/ul/li[2]"
@@ -98,7 +98,7 @@ class PaperLibraryPage(BaseAction):
     determine3_btn = By.CSS_SELECTOR, "button.el-button--mini:nth-child(1)"
 
     # 更多按钮
-    more_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[9]/div/main/main/div/button"
+    more_btn = By.CSS_SELECTOR, ".el-table__fixed-body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(9) > div:nth-child(1) > main:nth-child(1) > main:nth-child(1) > div:nth-child(1) > button:nth-child(1)"
 
     # 编辑按钮
     edit_btn = By.XPATH, "/html/body/ul/li[1]"
@@ -110,13 +110,13 @@ class PaperLibraryPage(BaseAction):
     determine4_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 选择试卷单选框
-    radio = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span"
+    radio = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span"
 
     # 试卷删除按钮
-    remove1_btn = By.CSS_SELECTOR, "button.el-button--mini:nth-child(2)"
+    remove1_btn = By.CSS_SELECTOR, "button.el-button--mini:nth-child(2) > span:nth-child(1)"
 
     # 弹窗的确定按钮
-    determine5_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"
+    determine5_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2) > span:nth-child(1)"
 
     # 向右翻页
     page_right = By.CSS_SELECTOR, "i.el-icon-arrow-right:nth-child(1)"

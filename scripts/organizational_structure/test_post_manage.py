@@ -13,7 +13,7 @@ class TestPostManageCRUD:
         self.post_manage_page = PostManagePage(self.driver)
 
     def teardown(self):
-        time.sleep(2)
+        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=6)
@@ -42,7 +42,9 @@ class TestPostManageCRUD:
         self.post_manage_page.clear(self.post_manage_page.post_name_input)
         self.post_manage_page.input_post_name("修改后的名称{}".format(time.strftime("%M%S")))
         self.post_manage_page.click_determine_btn()
+        # 打开新窗口,切换句柄
         self.post_manage_page.click_manage_user_btn1()
+        self.post_manage_page.switch_window()
         self.post_manage_page.click_select_user_radio()
         self.post_manage_page.click_adjust_post_btn()
         self.post_manage_page.click_new_post_select()

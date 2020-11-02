@@ -13,11 +13,11 @@ class TestStudyResourcesCRUD:
         self.study = StudyResourcesManagePage(self.driver)
 
     def teardown(self):
-        time.sleep(2)
+        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=27)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_video_library_query(self):
         self.study.refresh_page()
         self.study.click_resources_manage()
@@ -32,7 +32,7 @@ class TestStudyResourcesCRUD:
         self.study.click_transcoding_fail()
 
     @pytest.mark.run(order=28)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_resources_info(self):
         self.study.refresh_page()
         self.study.click_edit_btn()
@@ -45,20 +45,18 @@ class TestStudyResourcesCRUD:
         self.study.click_determine_btn()
 
     @pytest.mark.run(order=29)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_resources(self):
         self.study.click_remove_btn()
         self.study.click_determine1_btn()
 
     @pytest.mark.run(order=30)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_database_query(self):
         self.study.refresh_page()
         self.study.click_database_btn()
         self.study.click_type_filter()
         self.study.click_first_type_btn()
-        # self.study.click_type_filter()
-        # self.study.click_second_type_btn()
         self.study.refresh_page()
         self.study.click_database_btn()
         self.study.click_time_filter()
@@ -73,19 +71,17 @@ class TestStudyResourcesCRUD:
         self.study.click_disable_btn()
 
     @pytest.mark.run(order=31)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_more_operation(self):
         self.study.refresh_page()
         self.study.click_database_btn()
-        # self.study.click_more_btn()
-        # self.study.click_related_courses()
-        # self.study.select_related_courses()
-        # self.study.click_related_courses_determine()
+        self.study.click_related_courses()
+        self.study.select_related_courses()
+        self.study.click_related_courses_determine()
         self.study.move_mouse(self.study.more_btn)
         self.study.click_more_enable()
         self.study.refresh_page()
         self.study.click_database_btn()
-        self.study.click_more_btn()
         self.study.click_download_btn()
         self.study.click_more_btn()
         self.study.click_more_remove_btn()

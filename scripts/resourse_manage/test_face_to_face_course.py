@@ -15,11 +15,11 @@ class TestFaceToFaceCourseCRUD:
         self.resources_sort_page = ResourcesSortPage(self.driver)
 
     def teardown(self):
-        time.sleep(2)
+        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=37)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_course_query(self):
         self.face_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -39,7 +39,7 @@ class TestFaceToFaceCourseCRUD:
         self.face_page.click_disable_btn()
 
     @pytest.mark.run(order=38)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_course(self):
         self.face_page.click_new_courses()
         self.face_page.input_courses_name1("测试{}".format(time.strftime("%H%M%S")))
@@ -50,7 +50,7 @@ class TestFaceToFaceCourseCRUD:
         self.face_page.click_save_and_publish()
 
     @pytest.mark.run(order=39)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_course_content(self):
         self.face_page.click_course_name_btn()
         self.face_page.clear_courses_name_input()
@@ -62,7 +62,7 @@ class TestFaceToFaceCourseCRUD:
         self.face_page.click_save_and_publish()
 
     @pytest.mark.run(order=40)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_more(self):
         self.face_page.refresh_page()
         self.face_page.click_disable1_btn()

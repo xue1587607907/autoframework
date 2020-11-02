@@ -14,7 +14,7 @@ class TestRankManageCRUD:
         self.rank_manage_page = RankManagePage(self.driver)
 
     def teardown(self):
-        time.sleep(2)
+        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=9.2)
@@ -33,6 +33,8 @@ class TestRankManageCRUD:
         self.rank_manage_page.input_rank_name("修改后{}".format(random.randint(5, 9)))
         self.rank_manage_page.click_determine_btn()
         self.rank_manage_page.click_edit_btn()
+        # 打开新窗口,切换句柄
+        self.rank_manage_page.switch_window()
         self.rank_manage_page.click_user_radio()
         self.rank_manage_page.click_adjust_rank_btn()
         self.rank_manage_page.click_new_rank()

@@ -30,10 +30,9 @@ class TestLogin:
         # assert self.login_page.get_info() == params["info"]
         self.learning_center_page.click_head_portrait()
         self.learning_center_page.click_switch_manage_btn()
-        time.sleep(1)
 
-
-
+    if __name__ == '__main__':
+        pytest.main(['-s', "test_login.py", "test_account_department.py"])
 
 
 

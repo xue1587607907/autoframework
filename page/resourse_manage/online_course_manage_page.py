@@ -19,9 +19,9 @@ class OnlineCourseManagePage(BaseAction):
     last_month_btn = By.CSS_SELECTOR, "button.el-picker-panel__shortcut:nth-child(2)"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div/div/input"
-    enable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
-    disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]"
+    status_filter = By.CSS_SELECTOR, ".jw-select > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
+    enable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
+    disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[3]/span"
 
     # 新建课程按钮
     new_courses = By.CSS_SELECTOR, ".jw-table-buttons-contain > div:nth-child(1) > button:nth-child(1)"
@@ -50,19 +50,19 @@ class OnlineCourseManagePage(BaseAction):
     section_name_input = By.CSS_SELECTOR, ".el-input--mini > input:nth-child(1)"
 
     # 确定按钮
-    determine1_btn = By.CSS_SELECTOR, ".jw-com-default-content > div:nth-child(4) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)"
+    determine1_btn = By.CSS_SELECTOR, "div.el-dialog__footer:nth-child(3) > div:nth-child(1) > button:nth-child(1) > span:nth-child(1)"
 
     # 添加学习内容按钮
     add_learn_content_btn = By.CSS_SELECTOR, "span.jw-flex-all-center > span:nth-child(2)"
 
     # 内容类型输入框
-    content_type = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[1]/div/div/div/div[1]/input"
+    content_type = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div/div/div/div/div[1]/input"
 
     # 视频按钮
     video_btn = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[1]"
 
     # 学习资料按钮
-    learn_data_btn = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[2]"
+    learn_data_btn = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[2]/span"
 
     # 选择视频按钮
     select_video_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[2]/div/div/button"
@@ -71,37 +71,34 @@ class OnlineCourseManagePage(BaseAction):
     select_data_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[2]/div/div/button/span"
 
     # 勾选弹窗的资料
-    check_data_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(2) > td:nth-child(1) > div:nth-child(1) > label:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+    check_data_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(1) > div:nth-child(1) > label:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 勾选弹窗的视频
-    check_video_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(1) > div:nth-child(1) > label:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+    check_video_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(2) > div:nth-child(1) > span:nth-child(2)"
 
     # 内容名称输入框
     content_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[3]/div/div[1]/div/input"
 
     # 选择视频弹窗的确定按钮
-    determine2_btn = By.XPATH, "/html/body/div[4]/div/div[3]/div/button[2]"
+    determine2_btn = By.XPATH, "/html/body/div[4]/div/div[3]/div/button[2]/span"
 
     # 新增内容的确定按钮
-    determine3_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[3]/div/div/button[2]"
+    determine3_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[3]/div/button[1]"
 
     # 发布按钮
     release_btn = By.CSS_SELECTOR, "div.jw-flex-all-center:nth-child(4) > button:nth-child(1)"
 
     # 课程名称按钮
-    courses_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[2]/div/span/span"
+    courses_name_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[2]/div/span/span"
 
     # 禁用按钮
-    disable1_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[9]/div/main/main/button[2]"
+    disable1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[9]/div/main/main/button[2]/span"
 
     # 禁用弹窗的确定按钮
-    determine5_btn = By.CSS_SELECTOR, "html body.el-popup-parent--hidden div.el-message-box__wrapper div.el-message-box div.el-message-box__btns button.el-button.el-button--default.el-button--small.el-button--primary"
+    determine5_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"
 
     # "删除"课程按钮
-    remove2_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[9]/div/main/main/button[1]"
-
-    # 删除弹窗的确定按钮
-    determine6_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]"
+    remove2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[9]/div/main/main/button[1]"
 
     # 课程目录按钮
     courses_content_btn = By.CSS_SELECTOR, "#tab-second > span:nth-child(1)"

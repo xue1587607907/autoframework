@@ -10,51 +10,45 @@ class ResourcesSortPage(BaseAction):
     resources_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[3]/span"
 
     # 新增按钮
-    add_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/div/button"
+    add_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div/button/span"
 
     # 父级分类输入框
-    parent_sort = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div[2]/form/div[1]/div/div/div[1]/input"
+    parent_sort = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[2]/div/div[2]/form/div[1]/div/div/div[1]/input"
 
     # 资源分类
     d1 = By.XPATH, "/html/body/div[3]/div[1]/div[1]/div[1]/ul/li/span"
     d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li/span"
     d3 = By.XPATH, "/html/body/div[3]/div[1]/div[3]/div[1]/ul/li/label/span[1]/span"
 
-    # 弹窗的分类名称
+    # 分类名称
     sort_name = By.CSS_SELECTOR, "div.el-form-item:nth-child(2) > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)"
 
     # 点击任意空白处
-    blank_space = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div[1]/div"
+    blank_space = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[2]/div/div[1]"
 
     # 确定按钮
-    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div[3]/div/button[2]"
-
-    # wps按钮
-    wps_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div/div[1]/div[2]/div[6]/div[2]/div[2]/div[1]/span[2]/span"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[2]/div/div[3]/div/button[1]"
 
     # 资源名称
-    resources_name = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[3]/td[1]/div/div/span"
+    resources_name = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[3]/td[1]/div/div/span"
 
     # 上移按钮
-    move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[2]/div/main/main/div/span[2]"
+    move_up_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[2]/div/main/main/div/span[2]"
 
     # 下移按钮
-    move_down_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[2]/div/main/main/div/span[2]"
+    move_down_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[2]/div/main/main/div/span[3]"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[2]/div/main/main/div/span[1]"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[2]/div/main/main/div/span[1]"
 
     # 删除弹出的"确定"按钮
-    remove_determine_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"
+    remove_determine_btn = By.CSS_SELECTOR, "button.el-button--small:nth-child(2) > span:nth-child(1)"
 
     # 部门搜索框
-    department_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[1]/input"
+    department_search = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[1]/input"
 
     # 资源名称搜索框
-    resources_name_search = By.CSS_SELECTOR, ".jw-tree-data-contain > div:nth-child(1) > input:nth-child(1)"
-
-    # 资源分类区域
-    resources_sort_area = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]"
+    resources_name_search = By.CSS_SELECTOR, "div.jw-inline-block > div:nth-child(1) > input:nth-child(1)"
 
     #  点击资源管理
     def click_resources_manage(self):
@@ -98,15 +92,6 @@ class ResourcesSortPage(BaseAction):
     # 点击下移按钮
     def click_move_down_btn(self):
         return self.click(self.move_down_btn)
-
-    # 鼠标移动到资源分类
-    def move_mouse_resources_sort(self):
-        time.sleep(2)
-        return self.move_mouse(self.resources_sort_area)
-
-    # 点击wps
-    # def click_wps(self):
-    #     return self.click(self.wps_btn)
 
     # 点击删除按钮
     def click_remove_btn(self):

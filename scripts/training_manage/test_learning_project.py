@@ -13,11 +13,11 @@ class TestLearningProjectCRUD:
         self.learn_pro_page = LearningProjectPage(self.driver)
 
     def teardown(self):
-        time.sleep(2)
+        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=67)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.learn_pro_page.click_train_manage_btn()
         self.learn_pro_page.click_train_organization_btn()
@@ -36,7 +36,7 @@ class TestLearningProjectCRUD:
         self.learn_pro_page.click_finished_btn()
 
     @pytest.mark.run(order=68)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_project(self):
         self.learn_pro_page.click_new_btn()
         self.learn_pro_page.input_project_name("测试项目{}".format(time.strftime("%M%S")))
@@ -94,13 +94,13 @@ class TestLearningProjectCRUD:
         self.learn_pro_page.click_save_and_publish()
 
     @pytest.mark.run(order=69)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_modify(self):
+        # self.learn_pro_page.refresh_page()
         self.learn_pro_page.click_project_name_btn()
         self.learn_pro_page.clear_project_name_input()
         self.learn_pro_page.input_project_name("修改后{}".format(time.strftime("%M%S")))
         self.learn_pro_page.click_determine()
         # self.learn_pro_page.click_pagesize()
         # self.learn_pro_page.click_first_btn()
-
 

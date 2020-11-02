@@ -99,29 +99,29 @@ class StudyResourcesManagePage(BaseAction):
     # disable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
 
     # "更多"按钮
-    more_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[4]/div[2]/table/tbody/tr[1]/td[7]/div/main/div/button"
+    more_btn = By.CSS_SELECTOR, ".el-table__fixed-body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(7) > div:nth-child(1) > main:nth-child(1) > div:nth-child(3) > span:nth-child(1)"
     # more_btn = By.CSS_SELECTOR, ".el-table__fixed-body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(7) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > button:nth-child(1)"
 
     # 关联课程按钮
-    related_courses = By.XPATH, "/html/body/ul/li[1]"
+    related_courses = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[4]/div[2]/table/tbody/tr[2]/td[7]/div/main/span[1]"
 
     # 课程复选框
-    cources_check_box = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[2]/div/div[2]/div/div[1]/div[1]/div/div[2]/div[1]/label/span[2]"
+    cources_check_box = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[2]/div/div[2]/div/div[1]/div[1]/div/div[2]/div[1]/label/span[1]/span"
 
     # 课程复选框的"确定"按钮
-    cources_check_box_determine = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[2]/div/div[3]/div/button[1]"
+    cources_check_box_determine = By.CSS_SELECTOR, "div.el-dialog__footer:nth-child(3) > div:nth-child(1) > button:nth-child(1)"
 
     # 下载按钮
-    download_btn = By.XPATH, "/html/body/ul/li[2]"
+    download_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[4]/div[2]/table/tbody/tr[1]/td[7]/div/main/span[2]"
 
     # 删除按钮
-    more_remove_btn = By.XPATH, "/html/body/ul/li[3]"
+    more_remove_btn = By.XPATH, "/html/body/ul/li[1]"
 
     # 点击删除弹窗的确定按钮
-    determine2_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
+    determine2_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"
 
     # 启用(禁用)按钮
-    more_enable_btn = By.XPATH, "/html/body/ul/li[4]"
+    more_enable_btn = By.XPATH, "/html/body/ul/li[2]"
 
     # 点击资源管理
     def click_resources_manage(self):

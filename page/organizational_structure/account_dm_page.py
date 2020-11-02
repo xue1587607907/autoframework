@@ -6,10 +6,10 @@ from base.base_action import BaseAction
 class AccountDM(BaseAction):
 
     # 新增按钮
-    add_user = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/div/button/span"
+    add_user = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div/button"
 
     # 用户账号
-    user_account = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/form/div[1]/div/div[1]/div/input"
+    user_account = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/form/div[1]/div/div[1]/div/input"
 
     # 姓名
     username = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/form/div[2]/div/div[1]/div/input"
@@ -23,7 +23,7 @@ class AccountDM(BaseAction):
     d5 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[1]/label/span[1]/span"
 
     # 保存按钮
-    preservation = By.CSS_SELECTOR, "button.el-button--primary:nth-child(1) > span:nth-child(1)"
+    preservation = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[4]/button[1]/span"
 
     # 修改"账号名"按钮
     account_button = By.CSS_SELECTOR, ".el-table__fixed > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
@@ -41,13 +41,19 @@ class AccountDM(BaseAction):
     second_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[2]/div/div/div"
+    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[3]/div/div/div/input"
 
     # 状态下的启用按钮
     enable = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
 
     # 禁用
-    disable = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
+    disable = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]"
+
+    # "更多"按钮
+    more_button = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/div/button"
+
+    # "更多"下的"禁用"按钮
+    more_disable_button = By.XPATH, "/html/body/ul/li[2]"
 
     # "禁用"该用户的"确定"按钮
     determine_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]"
@@ -138,12 +144,6 @@ class AccountDM(BaseAction):
     # 点击回车
     def click_enter(self):
         return self.click_keys_enter(self.first_search)
-
-    # "更多"按钮
-    more_button = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/div/button"
-
-    # "更多"下的"禁用"按钮
-    more_disable_button = By.XPATH, "/html/body/ul/li[2]"
 
     # 点击更多按钮
     def click_more_btn(self):

@@ -14,12 +14,17 @@ class TestPostLearningCRUD:
         self.exam_manage = ExamManagePage(self.driver)
         self.post_learn_page = PostLearningPage(self.driver)
 
-    def teardown(self):
+    # def teardown(self):
+    #     time.sleep(1)
+    #     DriverUtils.quit_driver()
+
+    def teardown_class(self):
         time.sleep(2)
+        DriverUtils.set_switch(False)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=72)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.exam_manage.click_train_manage_btn()
         self.post_learn_page.click_post_learning_btn()
@@ -32,7 +37,7 @@ class TestPostLearningCRUD:
         self.post_learn_page.select_unpublished()
 
     @pytest.mark.run(order=73)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
         self.post_learn_page.click_new_post_learning_btn()
         self.post_learn_page.click_post_sort_input()
@@ -66,4 +71,7 @@ class TestPostLearningCRUD:
         self.post_learn_page.click_elective()
         self.post_learn_page.input_customs_clearance_task(1)
         self.post_learn_page.click_save_and_publish()
+
+    def test_a(self):
+        pass
 

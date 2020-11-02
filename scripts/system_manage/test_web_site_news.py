@@ -13,11 +13,11 @@ class TestWebSiteNewsCRUD:
         self.web_site_news_page = WebSiteNewsPage(self.driver)
 
     def teardown(self):
-        time.sleep(2)
+        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=15)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.web_site_news_page.click_system_manage_btn()
         self.web_site_news_page.input_name_search("上海")
@@ -29,7 +29,7 @@ class TestWebSiteNewsCRUD:
         self.web_site_news_page.click_unpublished_btn()
 
     @pytest.mark.run(order=16)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
         self.web_site_news_page.click_create_announcement_btn()
         self.web_site_news_page.input_announcement_title_input("测试公告")
@@ -38,7 +38,7 @@ class TestWebSiteNewsCRUD:
         self.web_site_news_page.click_save_and_publish_btn()
 
     @pytest.mark.run(order=17)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_modify(self):
         self.web_site_news_page.click_title_btn()
         self.web_site_news_page.clear_announcement_title_input()
@@ -46,7 +46,7 @@ class TestWebSiteNewsCRUD:
         self.web_site_news_page.click_save_and_publish_btn()
 
     @pytest.mark.run(order=18)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_remove(self):
         self.web_site_news_page.click_topping_btn()
         self.web_site_news_page.click_remove_btn()

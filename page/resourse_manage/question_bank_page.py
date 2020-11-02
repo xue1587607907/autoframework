@@ -22,11 +22,9 @@ class QuestionBankPage(BaseAction):
     last_month_btn = By.CSS_SELECTOR, "button.el-picker-panel__shortcut:nth-child(2)"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[3]/div/div/div/input"
-    # enable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
-    enable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > span:nth-child(1)"
-    # disable_btn = By.XPATH, "/html/body/div[3]/div[1]/div[1]/ul/li[3]/span"
-    disable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
+    status_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[3]/div/div/div[1]/input"
+    enable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
+    disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # 新建按钮
     new_btn = By.CSS_SELECTOR, ".jw-table-buttons-contain > div:nth-child(1) > button:nth-child(1)"
@@ -34,61 +32,70 @@ class QuestionBankPage(BaseAction):
     # 题库名称输入框
     question_bank_name_input = By.CSS_SELECTOR, "div.el-form-item:nth-child(1) > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)"
 
+    # 编辑题库名称按钮
+    edit_question_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/div[2]/span"
+
     # 分类输入框
-    sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[5]/div/div[2]/form/div[2]/div/div/div/input"
+    sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[5]/div/div[2]/form/div[2]/div/div/div/input"
 
     # 三级分类按钮
-    d1 = By.XPATH, "/html/body/div[3]/div[1]/div/div[1]/ul/li/span"
+    d1 = By.XPATH, "/html/body/div[3]/div[1]/div/div[1]/ul/li[1]/span"
     d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li/span"
     d3 = By.XPATH, "/html/body/div[3]/div[1]/div[3]/div[1]/ul/li[1]/span"
 
     # 确定按钮
-    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[5]/div/div[3]/div/div/button[2]/span"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[5]/div/div[3]/div/button[1]/span"
 
     # 第二个确定按钮
-    determine5_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]"
+    determine5_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]/span"
 
     # 单选题按钮
-    single_choice_questions_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/ul/li[1]"
+    single_choice_questions_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/ul/li[1]/div[2]"
 
     # 题目输入框
-    subject_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[4]/div/div[2]/div/div/div[1]/div[2]/div[1]/textarea"
+    subject_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[5]/div/div[2]/div/div/div[1]/div[2]/div[1]/textarea"
 
     # 选项A
-    optionA_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[4]/div/div[2]/div/div/div[2]/div[2]/div[1]/div[2]/div[1]/textarea"
+    optionA_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[5]/div/div[2]/div/div/div[2]/div[2]/div[1]/div[2]/div[1]/textarea"
 
     # 选项B
-    optionB_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[4]/div/div[2]/div/div/div[2]/div[2]/div[2]/div[2]/div[1]/textarea"
+    optionB_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[5]/div/div[2]/div/div/div[2]/div[2]/div[2]/div[2]/div[1]/textarea"
 
     # 答案选项按钮
-    answer_option = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[4]/div/div[2]/div/div/div[3]/div[2]/div[1]/div/label[1]/span[1]/span"
+    answer_option = By.CSS_SELECTOR, "label.el-radio:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 弹窗确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[4]/div/div[3]/div/button[2]"
+    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[5]/div/div[3]/div/button[2]/span"
 
     # 外面确定按钮
     determine2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[5]/button[1]"
+
+    # 修改题库的确定按钮
+    determine_btn1 = By.CSS_SELECTOR, "div.el-dialog__footer:nth-child(3) > div:nth-child(1) > button:nth-child(1) > span:nth-child(1)"
+
+    # 外面的确定按钮
+    determine_btn2 = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[5]/button[1]/span"
 
     # 题库名称按钮
     question_bank1_btn = By.CSS_SELECTOR, ".el-table__body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 题库单选框
-    question_bank_radio = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span"
+    question_bank_radio = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span"
 
     # 删除按钮
-    remove_btn = By.CSS_SELECTOR, "button.el-button--mini:nth-child(2)"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div/button[2]"
 
     # 弹窗的确定按钮
     determine3_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"
 
     # 更多按钮
-    more_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/div/button"
+    more_btn = By.CSS_SELECTOR, ".el-table__fixed-body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(8) > div:nth-child(1) > main:nth-child(1) > main:nth-child(1) > div:nth-child(1) > button:nth-child(1)"
 
     # 更多下的禁用按钮
     disable1_btn = By.XPATH, "/html/body/ul/li[2]"
 
     # 禁用的确定按钮
-    determine4_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
+    determine4_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
 
     # 更多下的编辑按钮
     edit_btn = By.XPATH, "/html/body/ul/li[1]"
@@ -153,7 +160,7 @@ class QuestionBankPage(BaseAction):
     def input_question_bank_name(self, content):
         return self.input(self.question_bank_name_input, content)
 
-    # 点击分类输入框
+    # 点击资源分类输入框
     def click_sort_input(self):
         return self.click(self.sort_input)
 

@@ -15,11 +15,11 @@ class TestOnlineCourseManageCRUD:
         self.resources_sort_page = ResourcesSortPage(self.driver)
 
     def teardown(self):
-        time.sleep(2)
+        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=33)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_course_query(self):
         self.online_course.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -28,18 +28,13 @@ class TestOnlineCourseManageCRUD:
         self.online_course.input_courses_name("测试")
         self.online_course.click_keys_enter(self.online_course.course_name_search)
         self.online_course.refresh_page()
-        # self.online_course.click_time_filter()
-        # self.online_course.click_last_week_btn()
-        # self.online_course.click_time_filter()
-        # self.online_course.click_last_month_btn()
-        # self.online_course.refresh_page()
         self.online_course.click_status_filter()
         self.online_course.click_enable_btn()
         self.online_course.click_status_filter()
         self.online_course.click_disable_btn()
 
     @pytest.mark.run(order=34)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_course(self):
         self.online_course.refresh_page()
         self.online_course.click_new_courses()
@@ -72,7 +67,7 @@ class TestOnlineCourseManageCRUD:
         self.online_course.click_release_btn()
 
     @pytest.mark.run(order=35)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_course_content(self):
         self.online_course.click_courses_name_btn()
         self.online_course.click_courses_content_btn()
@@ -87,7 +82,7 @@ class TestOnlineCourseManageCRUD:
         self.online_course.click_go_back_btn()
 
     @pytest.mark.run(order=36)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_more(self):
         self.online_course.refresh_page()
         self.online_course.click_disable1_btn()

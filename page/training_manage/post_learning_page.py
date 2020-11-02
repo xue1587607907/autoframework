@@ -9,10 +9,10 @@ class PostLearningPage(BaseAction):
     post_learning_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[6]/span[2]"
 
     # 岗位名称搜索框
-    post_name_search_input = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div[1]/div/input"
+    post_name_search_input = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div[1]/div/input"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div[2]/div/div/div/input"
+    status_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div[2]/div/div/div[1]/input"
 
     # 已发布
     published = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
@@ -21,25 +21,25 @@ class PostLearningPage(BaseAction):
     unpublished = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
 
     # 新建岗位学习方案按钮
-    new_post_learning_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div[1]/button/span"
+    new_post_learning_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div[1]/button/span"
 
     # 岗位分类输入框
-    post_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div[2]/div/div[2]/div/form/div[1]/div/div[2]/div/div[1]/input"
+    post_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div[2]/div/div[2]/div/form/div[1]/div/div[2]/div/div[1]/input"
 
     # 选择岗位分类
     select_post_sort = By.XPATH, "/html/body/div[4]/div[1]/div/div[1]/ul/li[1]/label/span[1]/span"
 
     # 空白区域
-    blank_area = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div[2]/div/div[1]"
+    blank_area = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div[2]/div/div[1]"
 
     # 岗位名称选择框
-    post_name_select = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div[2]/div/div[2]/div/form/div[2]/div/div[2]/div[1]/input"
+    post_name_select = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div[2]/div/div[2]/div/form/div[2]/div/div[2]/div[1]/input"
 
     # 选择岗位
     select_post = By.XPATH, "/html/body/div[5]/div[1]/div[1]/ul/li[1]"
 
     # 确定按钮
-    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div[2]/div/div[3]/div/button[1]/span"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div[2]/div/div[3]/div/button[1]/span"
 
     # 添加阶段按钮
     add_phase_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/span[2]"
@@ -48,37 +48,37 @@ class PostLearningPage(BaseAction):
     phase_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[5]/div/div[2]/form/div/div/div[1]/input"
 
     # 确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[5]/div/div[3]/div/div/button[1]"
+    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[5]/div/div[3]/div/button[1]"
 
     # 视频课程按钮
     video_course = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/caption/div/span[2]/button[1]/span"
 
     # 选择视频
-    select_video = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[2]/div/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
+    select_video = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
 
     # 确定按钮
-    determine2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[3]/div/div/button[2]/span"
+    determine2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[3]/div/button[1]"
 
     # 面授课程按钮
     interaction_course_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/caption/div/span[2]/button[2]/span"
 
     # 选择面授课程
-    select_interaction_course = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[2]/div/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
+    select_interaction_course = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
 
     # 确定按钮
-    determine3_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[3]/div/div/button[2]/span"
+    determine3_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[3]/div/button[1]/span"
 
     # 考试按钮
-    exam_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/caption/div/span[2]/button[3]"
+    exam_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/caption/div/span[2]/button[3]/span"
 
     # 所用试卷输入框
     user_paper_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[2]/div/div/div/form/div[1]/div/div/div/input"
 
     # 选择试卷
-    select_paper = By.XPATH, "/html/body/div[2]/div/div[2]/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
+    select_paper = By.XPATH, "/html/body/div[3]/div/div[2]/div/div/div/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
 
     # 确定按钮
-    determine4_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[2]"
+    determine4_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[1]/span"
 
     # 考试名称输入框
     exam_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[2]/div/div/div/form/div[2]/div/div[1]/div/input"
@@ -90,7 +90,7 @@ class PostLearningPage(BaseAction):
     pass_score_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[2]/div/div/div/form/div[6]/div/div/div[1]/div/div[1]/div/input"
 
     # 确定按钮
-    determine5_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[3]/div/div/button[2]/span"
+    determine5_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[6]/div/div[3]/div/button[1]"
 
     # 上移按钮
     move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/div[3]/div[3]/div/span[3]"
@@ -105,10 +105,10 @@ class PostLearningPage(BaseAction):
     determine6_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 研修设置
-    train_set = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/div[2]/div[2]/div/div/div[1]/input"
+    train_set = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[1]/div[3]/div[2]/div/div/div/input"
 
     # 选修按钮
-    elective = By.XPATH, "/html/body/div[3]/div[1]/div[1]/ul/li[2]/span"
+    elective = By.XPATH, "/html/body/div[3]/div[1]/div[1]/ul/li[2]"
 
     # 通关任务输入框
     customs_clearance_task_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[2]/div[2]/form/div/div/div/div/input"

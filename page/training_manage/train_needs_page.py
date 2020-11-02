@@ -9,19 +9,19 @@ class TrainNeedsPage(BaseAction):
     train_needs_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[3]"
 
     # 需求名称输入框
-    needs_name_search = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div/div[1]/input"
+    needs_name_search = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div[1]/input"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div/div[3]/div[1]/input"
+    status_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div[3]/div[1]/input"
 
     # 未完成
-    no_finished = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+    no_finished = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
 
     # 已完成
     finished = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]"
 
     # 更新时间筛选框
-    update_time_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div/div[4]/div/div/div"
+    update_time_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div[4]/div/div/div/input[1]"
 
     # 最近一周
     last_week = By.XPATH, "/html/body/div[2]/div[1]/div[1]/button[1]"
@@ -30,25 +30,25 @@ class TrainNeedsPage(BaseAction):
     last_month = By.XPATH, "/html/body/div[2]/div[1]/div[1]/button[2]"
 
     # 新增需求按钮
-    new_needs_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/button/span"
+    new_needs_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/button/span"
 
     # 需求名称输入框
-    needs_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/div/div/div[2]/form/div[1]/div/div[1]/input"
+    needs_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[2]/form/div[1]/div/div[1]/input"
 
     # 确定按钮
-    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/button[1]"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/button[1]/span"
 
     # 设置为已完成
-    set_to_completed = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/button[1]/span"
+    set_to_completed = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main"
 
     # 需求名称按钮(点击进入编辑)
-    need_name_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[2]/div/span/span"
+    need_name_btn = By.CSS_SELECTOR, ".el-table__body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/button[2]"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/span[2]"
 
     # 确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]"
+    determine1_btn = By.XPATH, "/html/body/div[4]/div/div[3]/button[2]/span"
 
     # 点击培训需求
     def click_train_needs_btn(self):

@@ -8,10 +8,10 @@ class WebSiteNewsPage(BaseAction):
     system_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[2]/ul/li[2]/span"
 
     # 名称搜索框
-    name_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div/div[1]/input"
+    name_search = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div[1]/input"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div/div[2]/div[1]/input"
+    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div[2]/div/input"
 
     # 已发布
     published_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
@@ -20,7 +20,7 @@ class WebSiteNewsPage(BaseAction):
     unpublished_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # 创建公告按钮
-    create_announcement_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/button"
+    create_announcement_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/button/span"
 
     # 公告标题输入框
     announcement_title_input = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/form/div[1]/div/div[1]/input"
@@ -32,13 +32,13 @@ class WebSiteNewsPage(BaseAction):
     save_and_publish_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/button[2]/span"
 
     # 标题按钮(点击进入编辑)
-    title_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
+    title_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
 
     # 置顶按钮
-    topping_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[5]/div/main/main/button[1]"
+    topping_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[5]/div/main/main/span[1]"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[5]/div/main/main/button[2]"
+    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[5]/div/main/main/span[2]"
 
     # 确定按钮
     determine_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"

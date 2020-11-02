@@ -9,42 +9,42 @@ class UserGroupManagePage(BaseAction):
     user_group_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[1]/ul/li[4]"
 
     # 用户组搜索框
-    user_group_search = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div[1]/div/input"
+    user_group_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div/input"
 
     # 新增按钮
-    new_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/button"
+    new_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/button/span"
 
     # 用户组名称输入框
-    user_group_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div[2]/div/div[2]/form/div[1]/div/div/input"
-    user_group_name_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div[3]/div/div[2]/form/div[1]/div/div/input"
+    user_group_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[2]/form/div[1]/div/div[1]/input"
+    # 编辑用户组,用户组名称的属性有更改
+    user_group_name_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[2]/form/div[1]/div/div/input"
 
     # 确定按钮
-    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div[2]/div/div[3]/div/button[2]"
-    determine_btn1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/main/div/div[3]/div/div[3]/div/button[2]/span"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/button[1]/span"
 
     # 用户组名称按钮(点击进入编辑)
-    user_group_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/span/span"
+    user_group_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/span/span"
 
     # 管理用户按钮
-    manage_user_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/button[1]/span"
+    manage_user_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/span[1]"
 
     # "添加"用户按钮
-    add_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/form/div[3]/div/div/button[1]"
+    add_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/button[1]"
 
     # 全选框
-    select_all = By.XPATH, "/html/body/div[2]/div/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div[2]/table/thead/tr/th[1]/div/label/span"
+    select_all = By.XPATH, "/html/body/div[2]/div/div[2]/div/div/div[3]/div[2]/div/div/div[2]/table/thead/tr/th[1]/div/label/span/span"
 
     # 确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[2]/span"
+    determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[1]/span"
 
-    # 选择第一条数据
-    select_the_first = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span"
+    # 选择所有数据(移除)
+    select_the_first = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div/div/div[4]/div[1]/table/thead/tr/th[1]/div/label/span/span"
 
     # 移除按钮
-    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/form/div[3]/div/div/button[2]/span"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/button[2]/span"
 
     # 删除按钮
-    remove1_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div[1]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/button[2]/span"
+    remove1_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/span[2]"
 
     # 确定按钮
     determine2_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
