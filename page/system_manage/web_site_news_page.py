@@ -4,6 +4,7 @@ from base.base_action import BaseAction
 
 # 网站新闻公告页面
 class WebSiteNewsPage(BaseAction):
+
     # 系统管理按钮
     system_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[2]/ul/li[2]/span"
 

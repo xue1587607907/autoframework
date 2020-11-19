@@ -28,18 +28,9 @@ class TestLogin:
         self.login_page.click_login_button()
         # print(self.login_page.get_info())
         # assert self.login_page.get_info() == params["info"]
-        self.learning_center_page.click_head_portrait()
+        # self.learning_center_page.click_head_portrait()
+        self.learning_center_page.move_mouse(self.learning_center_page.head_portrait)
         self.learning_center_page.click_switch_manage_btn()
-
-    if __name__ == '__main__':
-        pytest.main(['-s', "test_login.py", "test_account_department.py"])
-
-
-
-
-
-
-
 
 
 

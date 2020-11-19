@@ -28,7 +28,7 @@ class TestAccountCRUD:
             i += 1
 
     @pytest.mark.run(order=2)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     @pytest.mark.parametrize("params", [{"useraccount": "xue"+str, "name": "xue"+str}])
     def test_add_user(self, params):
         self.account_dm_page.click_add_user()
@@ -41,7 +41,7 @@ class TestAccountCRUD:
         self.account_dm_page.click_preservation()
 
     @pytest.mark.run(order=3)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     @pytest.mark.parametrize("params", [{"useraccount": "abc{}".format(time.strftime("%H%M%S")), "name": "abc{}".format(time.strftime("%H%M%S"))}])
     def test_modify_personal_data(self, params):
         self.account_dm_page.click_account_button()
@@ -52,7 +52,7 @@ class TestAccountCRUD:
         self.account_dm_page.click_preservation()
 
     @pytest.mark.run(order=4)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.account_dm_page.input_department("技术部")
         self.account_dm_page.input_account("jack")
@@ -63,10 +63,9 @@ class TestAccountCRUD:
         self.account_dm_page.click_enable()
 
     @pytest.mark.run(order=5)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_click_disable(self):
-        self.account_dm_page.click_more_btn()
+        self.account_dm_page.refresh_page()
         self.account_dm_page.click_more_disable_btn()
-        self.driver.implicitly_wait(10)
         self.account_dm_page.click_determine_btn()
 

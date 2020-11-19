@@ -19,7 +19,7 @@ class TestQuestionBankCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=24)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_add_course_label(self):
         self.resources_sort_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -37,7 +37,7 @@ class TestQuestionBankCRUD:
         self.course_label_page.click_determine_btn()
 
     @pytest.mark.run(order=25)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_label_sort(self):
         self.course_label_page.click_edit_label_btn()
         self.course_label_page.clear(self.course_label_page.label_sort_input)
@@ -47,7 +47,7 @@ class TestQuestionBankCRUD:
         self.course_label_page.click_determine_btn()
 
     @pytest.mark.run(order=26)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_label_sort(self):
         self.course_label_page.click_remove1_label_btn()
         self.course_label_page.click_determine1_btn()

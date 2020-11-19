@@ -4,6 +4,7 @@ from base.base_action import BaseAction
 
 # 岗位管理页面
 class PostManagePage(BaseAction):
+
     # 岗位管理按钮
     post_manage_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[2]"
 
@@ -20,9 +21,8 @@ class PostManagePage(BaseAction):
     classification_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div/div/div/div[2]/form/div[1]/div/div/div[1]/input"
 
     # 选择分类
-    d1 = By.XPATH, "/html/body/div[3]/div[1]/div[1]/div[1]/ul/li/span"
-    d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li[1]/span"
-    d3 = By.XPATH, "/html/body/div[3]/div[1]/div[3]/div[1]/ul/li[2]/label/span[1]/span"
+    d1 = By.XPATH, "/html/body/div[3]/div[1]/div[1]/div[1]/ul/li[1]/span"
+    d2 = By.XPATH, "/html/body/div[3]/div[1]/div[2]/div[1]/ul/li[1]/label/span[1]/span"
 
     # 空白区域
     blank_area = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div/div/div/div[1]"
@@ -92,11 +92,10 @@ class PostManagePage(BaseAction):
     def click_classification_select(self):
         return self.click(self.classification_input)
 
-    # 选择三类分类
+    # 选择岗位分类
     def select_third_sort(self):
         self.click(self.d1)
         self.click(self.d2)
-        self.click(self.d3)
         self.click(self.blank_area)
 
     # 输入岗位名称

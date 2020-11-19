@@ -19,7 +19,7 @@ class TestQuestionBankCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=41)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_question_bank_query(self):
         self.question_bank_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -40,7 +40,7 @@ class TestQuestionBankCRUD:
         self.question_bank_page.click_disable_btn()
 
     @pytest.mark.run(order=42)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_add_question_bank(self):
         self.question_bank_page.refresh_page()
         self.question_bank_page.click_new_btn()
@@ -59,7 +59,7 @@ class TestQuestionBankCRUD:
         self.question_bank_page.click_determine2_btn()
 
     @pytest.mark.run(order=43)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_question_bank(self):
         self.question_bank_page.refresh_page()
         self.question_bank_page.click_question_bank_btn()
@@ -71,7 +71,7 @@ class TestQuestionBankCRUD:
         self.question_bank_page.click(self.question_bank_page.determine_btn2)
 
     @pytest.mark.run(order=44)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_disable_and_remove(self):
         self.question_bank_page.refresh_page()
         self.question_bank_page.click_question_bank_btn()

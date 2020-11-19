@@ -17,7 +17,7 @@ class TestUserGroupManageCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=12)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.user_group_manage_page.refresh_page()
         self.user_group_manage_page.click_user_group_manage_btn()
@@ -29,7 +29,7 @@ class TestUserGroupManageCRUD:
         self.user_group_manage_page.click_determine_btn()
 
     @pytest.mark.run(order=13)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_modify(self):
         self.user_group_manage_page.click_user_group_name_btn()
         self.user_group_manage_page.clear_user_group_name()
@@ -37,10 +37,9 @@ class TestUserGroupManageCRUD:
         self.user_group_manage_page.click(self.user_group_manage_page.determine_btn)
 
     @pytest.mark.run(order=14)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_more(self):
         self.user_group_manage_page.click_manage_user_btn()
-        # 切换新窗口
         self.user_group_manage_page.switch_window()
         self.user_group_manage_page.click_add_btn()
         self.user_group_manage_page.click_select_all()

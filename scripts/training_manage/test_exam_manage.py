@@ -17,7 +17,7 @@ class TestExamManageCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=70)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.exam_manage.click_train_manage_btn()
         self.exam_manage.click_exam_manage_btn()
@@ -35,7 +35,7 @@ class TestExamManageCRUD:
         self.exam_manage.click_project_initiation()
 
     @pytest.mark.run(order=71)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
         self.exam_manage.click_new_btn()
         self.exam_manage.click_papers_used_input()

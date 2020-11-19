@@ -60,7 +60,7 @@ class BaseAction:
 
     # 页面刷新
     def refresh_page(self):
-        time.sleep(2)
+        time.sleep(1)
         return self.driver.refresh()
 
     # 后退
@@ -72,3 +72,4 @@ class BaseAction:
     def move_mouse(self, feature):
         action = ActionChains(self.driver)
         return action.move_to_element(self.find_el(feature)).perform()
+

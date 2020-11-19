@@ -104,8 +104,69 @@ class LearningProjectPage(BaseAction):
     # 确定按钮
     determine2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[1]"
 
+    # 直播课程按钮
+    live_course_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[2]"
+
+    # 直播名称输入框
+    live_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/main/div/div/div[2]/div/div/div[2]/div/form/div[1]/div/div/input"
+
+    # 选择互动课程
+    select_interaction_course = By.XPATH, "/html/body/div[2]/div/div[2]/div/div/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
+
+    # 点击确定按钮
+    determine_btn15 = By.XPATH, "/html/body/div[2]/div/div[3]/div/div/button[1]/span"
+
+    # 培训分类输入框
+    train_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/main/div/div/div[2]/div/div/div[2]/div/form/div[2]/div/div/div[1]/input"
+
+    # 选择培训分类
+    select_train_sort = By.XPATH, "/html/body/div[4]/div[1]/div[1]/div[1]/ul/li[1]/label/span[1]/span"
+
+    # 空白区域
+    blank_area1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[1]"
+
+    # 学分输入框
+    credit_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[1]"
+
+    # 学时输入框
+    class_hour = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/main/div/div/div[2]/div/div/div[2]/div/form/div[5]/div/div/div/input"
+
+    # 授课讲师输入框
+    lecturer_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/main/div/div/div[2]/div/div/div[2]/div/form/div[6]/div/div/input"
+
+    # 选择讲师
+    select_lecturer = By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span[1]/span"
+
+    # 确定按钮
+    determine_btn12 = By.XPATH, "/html/body/div[4]/div/div[3]/div/div/button[1]/span"
+
+    # 小节名称输入框
+    section_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[1]/div/div/div/div/div/input"
+
+    # 直播日期输入框
+    live_date_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[2]/div/div/div/div/div/span[1]/i"
+
+    # 选择日期
+    select_date = By.XPATH, "/html/body/div[6]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[1]/div/span"
+
+    # 直播时间输入框
+    live_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[3]/div/div/div/div/div/i[1]"
+
+    # 选择直播时间
+    select_live_time = By.XPATH, "/html/body/div[6]/div[1]/div[1]/div[2]/div/div[1]/div[1]/ul/li[16]"
+    select_live_time1 = By.XPATH, "/html/body/div[6]/div[1]/div[2]/div[2]/div/div[1]/div[1]/ul/li[17]"
+
+    # 弹窗的确定按钮
+    determine_btn13 = By.XPATH, "/html/body/div[6]/div[2]/button[2]"
+
+    # 外面的确定按钮
+    determine_btn14 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[1]/span"
+
+    # 自定义直播按钮
+    custom_live_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/main/div/div/div[2]/div/div/div[1]/div[2]/label[2]/span[1]/span"
+
     # 视频课程按钮
-    video_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[2]"
+    video_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[3]/span"
 
     # 课程名称输入框
     course_name1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/div[1]/form/div[1]/div/div/div/input"
@@ -120,7 +181,7 @@ class LearningProjectPage(BaseAction):
     determine4_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[1]"
 
     # 添加考试按钮
-    add_test_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[3]"
+    add_test_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[4]/span"
 
     # 所用试卷输入框
     papers_used_input = By.CSS_SELECTOR, "div.jw-self-form-item:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
@@ -191,10 +252,10 @@ class LearningProjectPage(BaseAction):
     next2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[4]/button[1]/span"
 
     # 选修任务输入框
-    elective_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[4]/div[2]/div[2]/form/div/div/div[1]/div/input"
+    elective_input = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div[2]/div[2]/form/div/div/div[1]/div/input"
 
     # 保存并发布按钮
-    save_and_publish = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[6]/button[2]/span"
+    save_and_publish = By.CSS_SELECTOR, "button.el-button--primary:nth-child(2)"
 
     # 项目名称按钮
     project_name_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
@@ -344,6 +405,75 @@ class LearningProjectPage(BaseAction):
     def click_determine2_btn(self):
         return self.click(self.determine2_btn)
 
+    # 点击直播课程按钮
+    def click_live_course_btn(self):
+        return self.click(self.live_course_btn)
+
+    # 点击直播名称输入框
+    def click_live_name_input(self):
+        return self.click(self.live_name_input)
+
+    # 选择互动课程
+    def click_select_interaction_course(self):
+        return self.click(self.select_interaction_course)
+
+    # 点击确定
+    def click_determine_btn15(self):
+        return self.click(self.determine_btn15)
+
+    # 点击培训分类输入框
+    def click_train_sort_input(self):
+        return self.click(self.train_sort_input)
+
+    # 选择培训分类
+    def click_select_train_sort(self):
+        return self.click(self.select_train_sort)
+
+    # 点击空白区域
+    def click_blank_area1(self):
+        return self.click(self.blank_area1)
+
+    # 点击授课讲师输入框
+    def click_lecturer_input(self):
+        return self.click(self.lecturer_input)
+
+    # 选择授课讲师
+    def click_select_lecturer(self):
+        return self.click(self.select_lecturer)
+
+    # 点击确定按钮
+    def click_determine_btn12(self):
+        return self.click(self.determine_btn12)
+
+    # 点击小节名称输入框
+    def input_section_name(self, content):
+        return self.input(self.section_name_input, content)
+
+    # 点击直播日期输入框
+    def click_live_date_input(self):
+        return self.click(self.live_date_input)
+
+    # 选择日期
+    def click_select_date(self):
+        return self.click(self.select_date)
+
+    # 直播时间输入框
+    def click_live_time_input(self):
+        return self.click(self.live_time_input)
+
+    # 选择直播时间
+    def click_select_live_time(self):
+        self.click(self.select_live_time)
+        return self.click(self.select_live_time1)
+
+    # 点击弹窗的确定按钮
+    def click_determine_btn13(self):
+        return self.click(self.determine_btn13)
+
+    # 点击外面的确定按钮
+    def click_determine_btn14(self):
+        return self.click(self.determine_btn14)
+
     # 点击视频课程按钮
     def click_video_btn(self):
         return self.click(self.video_btn)
@@ -481,7 +611,7 @@ class LearningProjectPage(BaseAction):
     def click_determine(self):
         return self.click(self.determine)
 
-    # 点击页面大小
+    # 点击页面大小筛选框
     def click_pagesize(self):
         return self.click(self.pagesize)
 

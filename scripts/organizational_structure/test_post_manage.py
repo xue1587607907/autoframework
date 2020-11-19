@@ -19,6 +19,7 @@ class TestPostManageCRUD:
     @pytest.mark.run(order=6)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
+        self.post_manage_page.refresh_page()
         self.post_manage_page.click_post_manage_btn()
         self.post_manage_page.input_first_search("研发")
         self.post_manage_page.click_keys_enter(self.post_manage_page.first_search)

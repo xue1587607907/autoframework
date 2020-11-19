@@ -1,5 +1,5 @@
-from selenium.webdriver.common.by import By
 from base.base_action import BaseAction
+from selenium.webdriver.common.by import By
 
 
 # 账号部门页面,增删改查操作
@@ -19,23 +19,21 @@ class AccountDM(BaseAction):
     d1 = By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/ul/li/label/span[1]/span"
     d2 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li[2]/label/span[1]/span"
     d3 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[2]/label/span[1]/span"
-    d4 = By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/ul/li[1]/label/span[1]/span"
-    d5 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[1]/label/span[1]/span"
 
     # 保存按钮
     preservation = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[4]/button[1]/span"
 
-    # 修改"账号名"按钮
+    # 账号名称(点击进入编辑)
     account_button = By.CSS_SELECTOR, ".el-table__fixed > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 第一个搜索框
     first_search = By.CSS_SELECTOR, ".jw-tree-data-contain > div:nth-child(1) > input:nth-child(1)"
 
-    # 部门放大镜
-    department_mag = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[1]/span/span/i"
-
-    # 账号名放大镜
-    account_mag = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[1]/div/span/span/i"
+    # # 部门放大镜
+    # department_mag = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[1]/span/span/i"
+    #
+    # # 账号名放大镜
+    # account_mag = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[1]/div/span/span/i"
 
     # 第二个搜索框
     second_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
@@ -43,20 +41,20 @@ class AccountDM(BaseAction):
     # 状态筛选框
     status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[3]/div/div/div/input"
 
-    # 状态下的启用按钮
+    # 筛选框选择启用
     enable = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
 
-    # 禁用
+    # 筛选框选择禁用
     disable = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]"
 
     # "更多"按钮
     more_button = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/div/button"
 
-    # "更多"下的"禁用"按钮
-    more_disable_button = By.XPATH, "/html/body/ul/li[2]"
+    # 禁用按钮
+    more_disable_button = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/main/span"
 
     # "禁用"该用户的"确定"按钮
-    determine_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]"
+    determine_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
 
     # 有效期输入框
     time_of_validity_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/form/div[13]/div/div[1]/div/input"
@@ -105,29 +103,21 @@ class AccountDM(BaseAction):
     # 通过部门查询
     def input_department(self, content):
         self.input(self.first_search, content)
-        self.click_enter()
+        self.click_keys_enter(self.first_search)
         return self.clear_department()
 
     # 清空部门内容
     def clear_department(self):
         return self.clear(self.second_search)
 
-    # 点击部门放大镜
-    def click_department_mag(self):
-        return self.click(self.department_mag)
-
     # 通过账号查询
     def input_account(self, content):
         self.input(self.second_search, content)
-        return self.click_enter()
+        return self.click_keys_enter(self.second_search)
 
     # 清空账号内容
     def clear_account(self):
         return self.clear(self.second_search)
-
-    # 点击账号放大镜
-    def click_account_mag(self):
-        return self.click(self.account_mag)
 
     # 点击状态筛选
     def click_status_filter(self):
@@ -141,11 +131,7 @@ class AccountDM(BaseAction):
     def click_disable(self):
         return self.click(self.disable)
 
-    # 点击回车
-    def click_enter(self):
-        return self.click_keys_enter(self.first_search)
-
-    # 点击更多按钮
+    # 点击更多按钮(已经不存在)
     def click_more_btn(self):
         return self.click(self.more_button)
 

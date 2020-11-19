@@ -6,11 +6,10 @@ from base.base_action import BaseAction
 class LearningCenterPage(BaseAction):
 
     # 头像按钮
-    # head_portrait = By.CLASS_NAME, "jw-user-face"
-    head_portrait = By.XPATH, "/html/body/div/div/div[2]/div[1]/div[1]/div/div[2]/div"
+    head_portrait = By.CSS_SELECTOR, "#app > div > div.jw-bottom-flow-auto > div.jw-main-content-contain.jw-position-relative > div.jw-header-top > div > div.jw-header-top-right > div > div.jw-user-face"
 
     # 切换管理端按钮
-    switch_manage_btn = By.XPATH, "/html/body/div/div/div[2]/div[1]/div[1]/div/div[2]/div/div[2]/div[2]/div[2]/span[1]"
+    switch_manage_btn = By.CSS_SELECTOR, "#app > div > div.jw-bottom-flow-auto > div.jw-main-content-contain.jw-position-relative > div.jw-header-top > div > div.jw-header-top-right > div > div.jw-user-content > div.jw-user-main > div.jw-user-bottom > span:nth-child(1)"
 
     # 点击客户端头像
     def click_head_portrait(self):

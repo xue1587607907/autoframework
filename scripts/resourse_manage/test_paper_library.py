@@ -21,7 +21,7 @@ class TestPaperLibraryCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=46)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_question_bank_query(self):
         self.question_bank_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -42,7 +42,7 @@ class TestPaperLibraryCRUD:
         self.question_bank_page.click_disable_btn()
 
     @pytest.mark.run(order=47)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_add_fixed_paper(self):
         self.paper_page.refresh_page()
         self.paper_page.click_paper_btn()
@@ -61,7 +61,7 @@ class TestPaperLibraryCRUD:
         self.paper_page.click_save_btn()
 
     @pytest.mark.run(order=48)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_add_random_paper(self):
         self.paper_page.refresh_page()
         self.paper_page.click_paper_btn()
@@ -76,7 +76,7 @@ class TestPaperLibraryCRUD:
         self.paper_page.click_determine3_btn()
 
     @pytest.mark.run(order=49)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_paper_content(self):
         self.paper_page.refresh_page()
         self.paper_page.click_paper_btn()
@@ -92,7 +92,7 @@ class TestPaperLibraryCRUD:
         self.paper_page.click_determine4_btn()
 
     @pytest.mark.run(order=50)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_paper(self):
         self.paper_page.click_paper_btn()
         self.paper_page.click_radio()

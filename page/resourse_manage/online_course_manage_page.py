@@ -65,22 +65,22 @@ class OnlineCourseManagePage(BaseAction):
     learn_data_btn = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[2]/span"
 
     # 选择视频按钮
-    select_video_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[2]/div/div/button"
+    select_video_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[2]/div/div/div/div/div[1]/input"
 
     # 选择资料按钮
-    select_data_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[2]/div/div/button/span"
+    select_data_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[2]/div/div/div/div/div/input"
 
     # 勾选弹窗的资料
     check_data_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(1) > div:nth-child(1) > label:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 勾选弹窗的视频
-    check_video_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(2) > div:nth-child(1) > span:nth-child(2)"
+    check_video_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(1) > div:nth-child(1) > label:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 内容名称输入框
     content_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[2]/div/div/form/div[3]/div/div[1]/div/input"
 
     # 选择视频弹窗的确定按钮
-    determine2_btn = By.XPATH, "/html/body/div[4]/div/div[3]/div/button[2]/span"
+    determine2_btn = By.XPATH, "/html/body/div[4]/div/div[3]/div/button[1]/span"
 
     # 新增内容的确定按钮
     determine3_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/div/div/div[6]/div/div[3]/div/button[1]"
@@ -92,7 +92,7 @@ class OnlineCourseManagePage(BaseAction):
     courses_name_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[2]/div/span/span"
 
     # 禁用按钮
-    disable1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[9]/div/main/main/button[2]/span"
+    disable1_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[9]/div/main/main/span[2]"
 
     # 禁用弹窗的确定按钮
     determine5_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"

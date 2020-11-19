@@ -17,7 +17,7 @@ class TestStudyResourcesCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=27)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_video_library_query(self):
         self.study.refresh_page()
         self.study.click_resources_manage()
@@ -32,7 +32,7 @@ class TestStudyResourcesCRUD:
         self.study.click_transcoding_fail()
 
     @pytest.mark.run(order=28)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_resources_info(self):
         self.study.refresh_page()
         self.study.click_edit_btn()
@@ -45,13 +45,13 @@ class TestStudyResourcesCRUD:
         self.study.click_determine_btn()
 
     @pytest.mark.run(order=29)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_resources(self):
         self.study.click_remove_btn()
         self.study.click_determine1_btn()
 
     @pytest.mark.run(order=30)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_database_query(self):
         self.study.refresh_page()
         self.study.click_database_btn()
@@ -71,7 +71,7 @@ class TestStudyResourcesCRUD:
         self.study.click_disable_btn()
 
     @pytest.mark.run(order=31)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_more_operation(self):
         self.study.refresh_page()
         self.study.click_database_btn()

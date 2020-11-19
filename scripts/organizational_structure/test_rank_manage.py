@@ -20,6 +20,7 @@ class TestRankManageCRUD:
     @pytest.mark.run(order=9.2)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_rank(self):
+        self.rank_manage_page.refresh_page()
         self.rank_manage_page.click_rank_manage_btn()
         self.rank_manage_page.click_new_btn()
         self.rank_manage_page.input_rank_name("P{}".format(random.randint(5, 9)))
