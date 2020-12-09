@@ -50,13 +50,13 @@ class FaceToFaceCoursePage(BaseAction):
     course_name_btn = By.CSS_SELECTOR, ".el-table__body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 禁用按钮
-    disable1_btn = By.CSS_SELECTOR, ".el-table__fixed-body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(8) > div:nth-child(1) > main:nth-child(1) > main:nth-child(1) > button:nth-child(2)"
+    disable1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/span[2]"
 
     # 禁用/删除 弹窗的确定按钮
-    determine_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"
+    determine_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 删除按钮
-    remove_btn = By.CSS_SELECTOR, ".el-table__fixed-body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(8) > div:nth-child(1) > main:nth-child(1) > main:nth-child(1) > button:nth-child(1)"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/span[1]"
 
     # 向右翻页
     page_right = By.CSS_SELECTOR, "i.el-icon-arrow-right:nth-child(1)"

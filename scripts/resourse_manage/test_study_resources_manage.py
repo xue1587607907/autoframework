@@ -13,7 +13,6 @@ class TestStudyResourcesCRUD:
         self.study = StudyResourcesManagePage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=27)
@@ -36,8 +35,6 @@ class TestStudyResourcesCRUD:
     def test_modify_resources_info(self):
         self.study.refresh_page()
         self.study.click_edit_btn()
-        # self.study.click_resources_sort_select()
-        # self.study.select_third_sort()
         self.study.click_resources_sort_btn()
         self.study.select_all(self.study.edit_resources_name_input)
         self.study.click_key_backspace(self.study.edit_resources_name_input)
@@ -87,14 +84,6 @@ class TestStudyResourcesCRUD:
         self.study.click_more_remove_btn()
         self.study.click_determine2_btn()
 
-    @pytest.mark.run(order=32)  # 分页组件位置更改
-    @pytest.mark.skipif(condition=True, reason=None)
-    def test_turn_the_page(self):
-        self.study.refresh_page()
-        self.study.click_page_right()
-        self.study.click_page_left()
-        self.study.click_num_btn_page()
-        self.study.click_page_size()
-        self.study.click_third_btn()
+
 
 

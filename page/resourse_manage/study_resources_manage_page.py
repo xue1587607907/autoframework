@@ -43,10 +43,10 @@ class StudyResourcesManagePage(BaseAction):
     determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div[1]/main/div/div[4]/div/div[3]/div/button[1]"
 
     # 删除按钮
-    remove_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(6) > div:nth-child(1) > main:nth-child(1) > span:nth-child(2)"
+    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div[2]/div[2]/div/div/div[1]/div[3]/table/tbody/tr[1]/td[6]/div/main/span[2]"
 
     # 弹窗的确定按钮
-    determine1_btn = By.CSS_SELECTOR, "button.el-button:nth-child(2)"
+    determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 向右翻页---------------------------------------------------------------------------
     page_right = By.CSS_SELECTOR, "i.el-icon-arrow-right:nth-child(1)"
@@ -65,7 +65,6 @@ class StudyResourcesManagePage(BaseAction):
 
     # 5条/每页按钮---------------------------------------------------------------------------
     third_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
-    # third_btn = By.CSS_SELECTOR, ".hover > span:nth-child(1)"
 
     # 资料库页面元素和操作方法
     # 课程资料库按钮
@@ -92,15 +91,12 @@ class StudyResourcesManagePage(BaseAction):
 
     # 选择启用
     enable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
-    # enable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1)"
 
     # 选择禁用---------------------------------------------------------------------------
     disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
-    # disable_btn = By.CSS_SELECTOR, "div.el-select-dropdown:nth-child(4) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2)"
 
     # "更多"按钮
     more_btn = By.CSS_SELECTOR, ".el-table__fixed-body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(7) > div:nth-child(1) > main:nth-child(1) > div:nth-child(3) > span:nth-child(1)"
-    # more_btn = By.CSS_SELECTOR, ".el-table__fixed-body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(7) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > button:nth-child(1)"
 
     # 关联课程按钮
     related_courses = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[4]/div[2]/table/tbody/tr[2]/td[7]/div/main/span[1]"

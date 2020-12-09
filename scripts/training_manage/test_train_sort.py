@@ -1,5 +1,5 @@
-import time
 import pytest
+import time
 from page.training_manage.train_sort_page import TrainSortPage
 from utils.driver_utils import DriverUtils
 
@@ -13,7 +13,6 @@ class TestTrainSortCRUD:
         self.train_sort_page = TrainSortPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=60)

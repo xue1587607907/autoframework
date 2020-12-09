@@ -1,4 +1,3 @@
-import time
 import pytest
 from page.system_manage.web_site_news_page import WebSiteNewsPage
 from utils.driver_utils import DriverUtils
@@ -13,7 +12,6 @@ class TestWebSiteNewsCRUD:
         self.web_site_news_page = WebSiteNewsPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=15)

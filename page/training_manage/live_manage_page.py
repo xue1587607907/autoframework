@@ -7,7 +7,7 @@ from base.base_action import BaseAction
 class LiveManagePage(BaseAction):
 
     # 直播管理按钮
-    live_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[1]/ul/li[7]/span[2]"
+    live_manage_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[5]/div/span[2]"
 
     # 直播名称搜索框
     live_name_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[1]/div/input"
@@ -75,8 +75,9 @@ class LiveManagePage(BaseAction):
     # 直播日期输入框
     live_date_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[2]/div/div/div/div/div/span[1]/i"
 
-    # 选择日期
-    select_date = By.XPATH, "/html/body/div[5]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[1]/div/span"
+    # 点击下一个月,选择日期
+    next_month_btn = By.XPATH, "/html/body/div[5]/div[1]/div/div[1]/button[4]"
+    select_date = By.XPATH, "/html/body/div[5]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[2]/div/span"
 
     # 直播时间输入框
     live_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[3]/div/div/div/div/div/i[1]"
@@ -215,6 +216,7 @@ class LiveManagePage(BaseAction):
 
     # 点击选择日期
     def click_select_date(self):
+        self.click(self.next_month_btn)
         return self.click(self.select_date)
 
     # 点击直播时间输入框
@@ -299,7 +301,8 @@ class LiveManagePage(BaseAction):
     # 直播日期输入框
     live_date_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[2]/div/div/div/div/div/input"
 
-    # 选择日期
+    # 点击下一个月,选择日期
+    next_month_btn1 = By.XPATH, "/html/body/div[4]/div[1]/div/div[1]/button[4]"
     select_live_date = By.XPATH, "/html/body/div[4]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[1]/div/span"
 
     # 直播时间输入框
@@ -373,6 +376,7 @@ class LiveManagePage(BaseAction):
 
     # 选择直播日期
     def click_select_live_date(self):
+        self.click(self.next_month_btn1)
         return self.click(self.select_live_date)
 
     # 点击直播时间输入框

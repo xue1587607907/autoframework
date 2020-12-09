@@ -15,7 +15,6 @@ class TestCooperativeOrganizationCRUD:
         self.coo_organ_page = CooperativeOrganizationPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=57)
@@ -37,6 +36,7 @@ class TestCooperativeOrganizationCRUD:
     @pytest.mark.run(order=58)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
+        self.coo_organ_page.refresh_page()
         self.coo_organ_page.click_new_btn()
         self.coo_organ_page.input_mechanism_name("合作机构{}".format(time.strftime("%M%S")))
         self.coo_organ_page.click_determine_btn()
@@ -44,6 +44,8 @@ class TestCooperativeOrganizationCRUD:
     @pytest.mark.run(order=59)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_and_disable(self):
+        self.coo_organ_page.refresh_page()
+        self.coo_organ_page.click_manage_btn()
         self.coo_organ_page.click_disable1_btn()
         self.coo_organ_page.click_determine1_btn()
         self.coo_organ_page.click_remove_btn()

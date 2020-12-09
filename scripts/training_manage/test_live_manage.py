@@ -1,4 +1,3 @@
-import time
 import pytest
 from page.training_manage.exam_manage_page import ExamManagePage
 from page.training_manage.live_manage_page import LiveManagePage
@@ -19,7 +18,6 @@ class TestLiveManageCRUD:
     #     DriverUtils.quit_driver()
 
     def teardown_class(self):
-        time.sleep(1)
         DriverUtils.set_switch(False)
         DriverUtils.quit_driver()
 
@@ -65,7 +63,7 @@ class TestLiveManageCRUD:
         self.live_manage_page.click_live_date_input()
         self.live_manage_page.click_select_date()
         self.live_manage_page.click_live_time_input()
-        self.live_manage_page.click_select_live_time()
+        # self.live_manage_page.click_select_live_time()
         self.live_manage_page.click_determine_btn3()
         self.live_manage_page.click_next_btn()
         self.live_manage_page.click_add_user_btn()
@@ -76,6 +74,7 @@ class TestLiveManageCRUD:
     @pytest.mark.run(order=76)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add_custom_live(self):
+        self.live_manage_page.refresh_page()
         self.live_manage_page.click_add_live_btn()
         self.live_manage_page.click_custom_live_btn()
         self.live_manage_page.input_live_name("自定义直播")
@@ -91,7 +90,7 @@ class TestLiveManageCRUD:
         self.live_manage_page.click_live_date_input1()
         self.live_manage_page.click_select_live_date()
         self.live_manage_page.click_live_time_input1()
-        self.live_manage_page.click_select_live_time2()
+        # self.live_manage_page.click_select_live_time2()
         self.live_manage_page.click_determine_btn7()
         self.live_manage_page.click_next_btn1()
         self.live_manage_page.click_add_user_btn1()
@@ -99,7 +98,8 @@ class TestLiveManageCRUD:
         self.live_manage_page.click_determine_btn8()
         self.live_manage_page.click_publish_btn1()
 
-
+    def test_a(self):
+        pass
 
 
 

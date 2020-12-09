@@ -1,4 +1,3 @@
-import time
 import pytest
 from page.system_manage.operation_log_page import OperationLogPage
 from page.system_manage.web_site_news_page import WebSiteNewsPage
@@ -15,13 +14,12 @@ class TestOperationLogCRUD:
         self.operation_log_page = OperationLogPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=18.5)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
-        self.web_site_news_page.click_system_manage_btn()
+        # self.web_site_news_page.click_system_manage_btn()
         self.operation_log_page.click_operation_log_btn()
         self.operation_log_page.input_account_search("xue")
         self.operation_log_page.click_keys_enter(self.operation_log_page.account_search)

@@ -15,7 +15,6 @@ class TestFaceToFaceCourseCRUD:
         self.resources_sort_page = ResourcesSortPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=37)
@@ -35,8 +34,6 @@ class TestFaceToFaceCourseCRUD:
         self.face_page.refresh_page()
         self.face_page.click_status_filter()
         self.face_page.click_enable_btn()
-        self.face_page.click_status_filter()
-        self.face_page.click_disable_btn()
 
     @pytest.mark.run(order=38)
     @pytest.mark.skipif(condition=True, reason=None)
@@ -69,8 +66,4 @@ class TestFaceToFaceCourseCRUD:
         self.face_page.click_determine_btn()
         self.face_page.click_remove_btn()
         self.face_page.click_determine_btn()
-        self.face_page.refresh_page()
-        # self.face_page.click_page_right()
-        # self.face_page.click_page_left()
-        # self.face_page.click_page_num_filter()
-        # self.face_page.click_first_btn()
+

@@ -1,4 +1,3 @@
-import time
 import pytest
 from page.training_manage.exam_manage_page import ExamManagePage
 from utils.driver_utils import DriverUtils
@@ -13,12 +12,12 @@ class TestExamManageCRUD:
         self.exam_manage = ExamManagePage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=70)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
+        self.exam_manage.refresh_page()
         self.exam_manage.click_train_manage_btn()
         self.exam_manage.click_exam_manage_btn()
         self.exam_manage.input_keyword_search("测试")
@@ -37,6 +36,7 @@ class TestExamManageCRUD:
     @pytest.mark.run(order=71)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
+        self.exam_manage.refresh_page()
         self.exam_manage.click_new_btn()
         self.exam_manage.click_papers_used_input()
         self.exam_manage.click_select_paper()

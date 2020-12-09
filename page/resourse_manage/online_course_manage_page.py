@@ -98,7 +98,7 @@ class OnlineCourseManagePage(BaseAction):
     determine5_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"
 
     # "删除"课程按钮
-    remove2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[9]/div/main/main/button[1]"
+    remove2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[9]/div/main/main/span[1]"
 
     # 课程目录按钮
     courses_content_btn = By.CSS_SELECTOR, "#tab-second > span:nth-child(1)"

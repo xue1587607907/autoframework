@@ -27,7 +27,7 @@ class PostLearningPage(BaseAction):
     post_sort_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div[2]/div/div[2]/div/form/div[1]/div/div[2]/div/div[1]/input"
 
     # 选择岗位分类
-    select_post_sort = By.XPATH, "/html/body/div[4]/div[1]/div/div[1]/ul/li[1]/label/span[1]/span"
+    select_post_sort = By.XPATH, "/html/body/div[3]/div[1]/div[1]/div[1]/ul/li[1]/label/span[1]/span"
 
     # 空白区域
     blank_area = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div[2]/div/div[1]"
@@ -36,7 +36,7 @@ class PostLearningPage(BaseAction):
     post_name_select = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div[2]/div/div[2]/div/form/div[2]/div/div[2]/div[1]/input"
 
     # 选择岗位
-    select_post = By.XPATH, "/html/body/div[5]/div[1]/div[1]/ul/li[1]"
+    select_post = By.XPATH, "/html/body/div[4]/div[1]/div[1]/ul/li[1]"
 
     # 确定按钮
     determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div[2]/div/div[3]/div/button[1]/span"

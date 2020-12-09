@@ -22,48 +22,49 @@ class PaperLibraryPage(BaseAction):
     last_month_btn = By.CSS_SELECTOR, "button.el-picker-panel__shortcut:nth-child(2)"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div[3]/div/div/div[1]/input"
+    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div[4]/div/div/div/input"
     enable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
     disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # 新建按钮
-    new_btn = By.CSS_SELECTOR, ".jw-table-buttons-contain > div:nth-child(1) > div:nth-child(1) > button:nth-child(1)"
+    new_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/button/span"
 
     # 固定试卷按钮
     fixed_papers_btn = By.XPATH, "/html/body/ul/li[1]"
 
     # 固定试卷名称输入框
-    paper_name_input = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div[1]/div/div/div/form/div/div/div[1]/input"
+    paper_name_input = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/form/div/div/div[1]/input"
 
     # 从题库中选择题目按钮
-    question_bank_select_btn = By.CSS_SELECTOR, ".jw-new-side-cong > p:nth-child(1)"
+    question_bank_select_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[1]"
+    question_bank_select_btn1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/div[1]/div[1]/p"
 
     # 搜索题库输入框
-    search_question_bank_input = By.CSS_SELECTOR, "div.el-form-item__content:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
+    search_question_bank_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div/div[1]/div[1]/div/input"
 
     # 搜索框按钮
-    search_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/div[2]/div/div[2]/div[1]/div[1]/form/div/div/div/span/span/i"
+    search_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div/div[1]/div[1]/div/span/span/i"
 
     # 选择题库按钮
-    question_bank1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div[1]/div[1]/div[3]/table/tbody/tr[1]/td/div"
+    question_bank1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div/div[1]/ul/li"
 
     # 全选题目复选框
-    select_all = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div[2]/div[1]/div[2]/table/thead/tr/th[1]/div/label/span/span"
+    select_all = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div/div[2]/div[2]/label/span[1]/span"
 
     # 确定按钮
-    determine_btn = By.CSS_SELECTOR, ".dialog-footer > button:nth-child(1)"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[3]/div/button[1]/span"
 
     # 试题删除按钮
-    remove_btn = By.CSS_SELECTOR, "div.jw-new-newfixed-ti:nth-child(2) > div:nth-child(3) > form:nth-child(1) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1) > span:nth-child(3) > img:nth-child(1)"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div/div[2]/div/span/span[2]"
 
     # 提示确定按钮
     determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
 
     # 分值输入框
-    score_input = By.CSS_SELECTOR, "div.el-input:nth-child(2) > input:nth-child(1)"
+    score_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div/div/div/form/div/div/div/div/input"
 
     # 保存按钮
-    save_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[2]/button[1]"
+    save_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[3]/button[1]"
 
     # 随机试卷按钮--------------------------------------------------------------
     random_papers_btn = By.XPATH, "/html/body/ul/li[2]"
@@ -78,7 +79,7 @@ class PaperLibraryPage(BaseAction):
     select_all1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/div[2]/div/div[2]/div[1]/div[2]/table/thead/tr/th[1]/div/label/span/span"
 
     # 确定按钮
-    determine2_btn = By.CSS_SELECTOR, ".dialog-footer > button:nth-child(1)"
+    determine2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/div[2]/div/div[3]/div/button[1]/span"
 
     # 抽题数量输入框
     select_question_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/div[3]/div[1]/p[2]/div/input"
@@ -185,6 +186,9 @@ class PaperLibraryPage(BaseAction):
     # 点击从题库中选择试题--------------------------------
     def click_question_bank_select_btn(self):
         return self.click(self.question_bank_select_btn)
+
+    def click_question_bank_select_btn1(self):
+        return self.click(self.question_bank_select_btn1)
 
     # 搜索框输入试卷名称
     def input_question_bank(self, content):

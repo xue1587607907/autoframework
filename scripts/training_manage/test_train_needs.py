@@ -1,4 +1,3 @@
-import time
 import pytest
 from page.training_manage.learning_project_page import LearningProjectPage
 from page.training_manage.train_needs_page import TrainNeedsPage
@@ -15,7 +14,6 @@ class TestTrainNeedsCRUD:
         self.train_needs_page = TrainNeedsPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=63)

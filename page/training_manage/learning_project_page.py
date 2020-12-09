@@ -9,10 +9,10 @@ class LearningProjectPage(BaseAction):
     train_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[2]/ul/li[4]/span"
 
     # 培训组织按钮
-    train_organization_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[1]/ul/li[4]/span[2]"
+    train_organization_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[2]/div/span[2]"
 
     # 学习项目按钮
-    learn_project_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[1]/ul/li[5]/span[2]"
+    learn_project_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[2]/li/div/span[2]"
 
     # 关键字搜索框
     keyword_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[1]/div/input"
@@ -147,7 +147,7 @@ class LearningProjectPage(BaseAction):
     live_date_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[2]/div/div/div/div/div/span[1]/i"
 
     # 选择日期
-    select_date = By.XPATH, "/html/body/div[6]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[1]/div/span"
+    select_date = By.XPATH, "/html/body/div[6]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[5]/div/span"
 
     # 直播时间输入框
     live_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[2]/div/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[3]/div/div/div/div/div/i[1]"

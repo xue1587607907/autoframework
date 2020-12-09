@@ -88,17 +88,11 @@ class QuestionBankPage(BaseAction):
     # 弹窗的确定按钮
     determine3_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"
 
-    # 更多按钮
-    more_btn = By.CSS_SELECTOR, ".el-table__fixed-body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(8) > div:nth-child(1) > main:nth-child(1) > main:nth-child(1) > div:nth-child(1) > button:nth-child(1)"
-
-    # 更多下的禁用按钮
-    disable1_btn = By.XPATH, "/html/body/ul/li[2]"
+    # 禁用按钮
+    disable1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/main/span"
 
     # 禁用的确定按钮
-    determine4_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
-
-    # 更多下的编辑按钮
-    edit_btn = By.XPATH, "/html/body/ul/li[1]"
+    determine4_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 向右翻页
     page_right = By.CSS_SELECTOR, "i.el-icon-arrow-right:nth-child(1)"
@@ -180,6 +174,7 @@ class QuestionBankPage(BaseAction):
 
     # 点击单选题
     def click_single_choice_questions_btn(self):
+        self.switch_window()
         return self.click(self.single_choice_questions_btn)
 
     # 输入题目
@@ -209,14 +204,6 @@ class QuestionBankPage(BaseAction):
     # 点击题库名称
     def click_question_bank1_btn(self):
         return self.click(self.question_bank1_btn)
-
-    # 点击更多按钮
-    def click_more_btn(self):
-        return self.click(self.more_btn)
-
-    # 点击编辑按钮
-    def click_edit_btn(self):
-        return self.click(self.edit_btn)
 
     # 点击禁用按钮
     def click_disable1_btn(self):

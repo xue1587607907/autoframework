@@ -15,7 +15,6 @@ class TestQuestionBankCRUD:
         self.question_bank_page = QuestionBankPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=41)
@@ -75,20 +74,12 @@ class TestQuestionBankCRUD:
     def test_disable_and_remove(self):
         self.question_bank_page.refresh_page()
         self.question_bank_page.click_question_bank_btn()
-        self.question_bank_page.click_more_btn()
         self.question_bank_page.click_disable1_btn()
         self.question_bank_page.click_determine3_btn()
         self.question_bank_page.click_question_bank_radio()
         self.question_bank_page.click_remove_btn()
         self.question_bank_page.click_determine3_btn()
 
-    @pytest.mark.run(order=45)  # 翻页组件位置更改
-    @pytest.mark.skipif(condition=True, reason=None)
-    def test_turn_the_page(self):
-        self.question_bank_page.refresh_page()
-        self.question_bank_page.click_page_right()
-        self.question_bank_page.click_page_left()
-        self.question_bank_page.click_page_num_filter()
-        self.question_bank_page.click_first_btn()
+
 
 

@@ -13,7 +13,6 @@ class TestResourcesSortCRUD:
         self.resources_sort_page = ResourcesSortPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=19)

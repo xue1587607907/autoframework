@@ -1,4 +1,3 @@
-import time
 import pytest
 from page.training_manage.exam_manage_page import ExamManagePage
 from page.training_manage.post_learning_page import PostLearningPage
@@ -15,12 +14,12 @@ class TestPostLearningCRUD:
         self.post_learn_page = PostLearningPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=72)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
+        self.post_learn_page.refresh_page()
         self.exam_manage.click_train_manage_btn()
         self.post_learn_page.click_post_learning_btn()
         self.post_learn_page.input_post_name("java")
@@ -34,6 +33,7 @@ class TestPostLearningCRUD:
     @pytest.mark.run(order=73)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
+        self.post_learn_page.refresh_page()
         self.post_learn_page.click_new_post_learning_btn()
         self.post_learn_page.click_post_sort_input()
         self.post_learn_page.click_select_post_sort()

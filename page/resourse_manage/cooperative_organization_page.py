@@ -12,35 +12,38 @@ class CooperativeOrganizationPage(BaseAction):
     coo_organ_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[9]"
 
     # 关键字搜搜
-    keyword_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
+    keyword_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div[1]/input"
 
     # 状态筛选框
-    status_filter = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
+    status_filter = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div[2]/div[1]/input"
 
     # 启用/禁用
     enable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]"
     disable_btn = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]"
 
     # 新增按钮
-    new_btn = By.CSS_SELECTOR, "button.filter-btn > span:nth-child(1)"
+    new_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/button/span"
 
     # 名称输入框
-    name_input = By.CSS_SELECTOR, "div.el-form-item:nth-child(1) > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)"
+    name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[2]/form/div[1]/div/div/input"
 
     # 联系人输入框
-    contacts_input = By.CSS_SELECTOR, "div.el-form-item:nth-child(2) > div:nth-child(2) > div:nth-child(1) > input:nth-child(1)"
+    contacts_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[2]/form/div[2]/div/div/input"
 
     # 确定按钮
-    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div/div[3]/div/button[2]"
+    determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/button[1]/span"
+
+    # 管理按钮
+    manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[6]/div/main/main/span"
 
     # 禁用
-    disable1_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(7) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > span:nth-child(2)"
+    disable1_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div/button[1]"
 
     # 确定按钮
     determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
 
     # 删除按钮
-    remove_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(7) > div:nth-child(1) > main:nth-child(1) > div:nth-child(1) > span:nth-child(1)"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[2]/div/button[2]"
 
     # 点击讲师与导师按钮
     def click_lecturer_and_tutor_btn(self):
@@ -77,6 +80,10 @@ class CooperativeOrganizationPage(BaseAction):
     # 点击确定按钮
     def click_determine_btn(self):
         return self.click(self.determine_btn)
+
+    # 点击管理按钮
+    def click_manage_btn(self):
+        return self.click(self.manage_btn)
 
     # 点击禁用按钮
     def click_disable1_btn(self):

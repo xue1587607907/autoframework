@@ -17,7 +17,6 @@ class TestPaperLibraryCRUD:
         self.paper_page = PaperLibraryPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=46)
@@ -56,7 +55,6 @@ class TestPaperLibraryCRUD:
         self.paper_page.click_select_all()
         self.paper_page.click_determine_btn()
         self.paper_page.click_remove_btn()
-        self.paper_page.click_determine1_btn()
         self.paper_page.input_score(5)
         self.paper_page.click_save_btn()
 
@@ -67,7 +65,7 @@ class TestPaperLibraryCRUD:
         self.paper_page.click_paper_btn()
         self.paper_page.click_new_btn()
         self.paper_page.click_random_papers_btn()
-        self.paper_page.click_question_bank_select_btn()
+        self.paper_page.click_question_bank_select_btn1()
         self.paper_page.click_select_all1()
         self.paper_page.click_determine2_btn()
         self.paper_page.input_select_question(3)
@@ -99,14 +97,6 @@ class TestPaperLibraryCRUD:
         self.paper_page.click_remove1_btn()
         self.paper_page.click_determine5_btn()
 
-    @pytest.mark.run(order=51)  # 翻页组件位置更改
-    @pytest.mark.skipif(condition=True, reason=None)
-    def test_turn_the_page(self):
-        self.question_bank_page.refresh_page()
-        self.question_bank_page.click_page_right()
-        self.question_bank_page.click_page_left()
-        self.question_bank_page.click_page_num_filter()
-        self.question_bank_page.click_first_btn()
 
 
 

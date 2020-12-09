@@ -34,7 +34,7 @@ class BaseAction:
         return self.find_el(feature).clear()
 
     # 切换frame
-    def switch_to(self, feature_frame):
+    def switch_to_frame(self, feature_frame):
         return self.driver.switch_to.frame(self.find_el(feature_frame))
 
     # 切换为默认
@@ -46,11 +46,11 @@ class BaseAction:
         handles = self.driver.window_handles
         return self.driver.switch_to.window(handles[-1])
 
-    # 回车键处理
+    # 回车键
     def click_keys_enter(self, feature):
         return self.find_el(feature).send_keys(Keys.ENTER)
 
-    # 回退键处理
+    # 回退键
     def click_key_backspace(self, feature):
         return self.find_el(feature).send_keys(Keys.BACK_SPACE)
 

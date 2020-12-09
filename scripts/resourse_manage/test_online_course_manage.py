@@ -15,7 +15,6 @@ class TestOnlineCourseManageCRUD:
         self.resources_sort_page = ResourcesSortPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=33)
@@ -89,11 +88,7 @@ class TestOnlineCourseManageCRUD:
         self.online_course.click_determine5_btn()
         self.online_course.click_remove2_btn()
         self.online_course.click_determine5_btn()
-        # self.online_course.click_page_right()
-        # self.online_course.click_page_left()
-        # self.online_course.refresh_page()
-        # self.online_course.click_page_num_filter()
-        # self.online_course.click_first_btn()
+
 
 
 

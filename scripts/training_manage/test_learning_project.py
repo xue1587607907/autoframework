@@ -13,27 +13,27 @@ class TestLearningProjectCRUD:
         self.learn_pro_page = LearningProjectPage(self.driver)
 
     def teardown(self):
-        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=67)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
+        self.learn_pro_page.refresh_page()
         self.learn_pro_page.click_train_manage_btn()
         self.learn_pro_page.click_train_organization_btn()
         self.learn_pro_page.click_learn_project_btn()
-        # self.learn_pro_page.input_keyword_search("培训")
-        # self.learn_pro_page.click_keys_enter(self.learn_pro_page.keyword_search)
-        # self.learn_pro_page.refresh_page()
-        # self.learn_pro_page.click_time_filter()
-        # self.learn_pro_page.click_last_week_btn()
-        # self.learn_pro_page.click_time_filter()
-        # self.learn_pro_page.click_last_month_btn()
-        # self.learn_pro_page.refresh_page()
-        # self.learn_pro_page.click_status_filter()
-        # self.learn_pro_page.click_have_in_hand_btn()
-        # self.learn_pro_page.click_status_filter()
-        # self.learn_pro_page.click_finished_btn()
+        self.learn_pro_page.input_keyword_search("培训")
+        self.learn_pro_page.click_keys_enter(self.learn_pro_page.keyword_search)
+        self.learn_pro_page.refresh_page()
+        self.learn_pro_page.click_time_filter()
+        self.learn_pro_page.click_last_week_btn()
+        self.learn_pro_page.click_time_filter()
+        self.learn_pro_page.click_last_month_btn()
+        self.learn_pro_page.refresh_page()
+        self.learn_pro_page.click_status_filter()
+        self.learn_pro_page.click_have_in_hand_btn()
+        self.learn_pro_page.click_status_filter()
+        self.learn_pro_page.click_finished_btn()
 
     @pytest.mark.run(order=68)
     @pytest.mark.skipif(condition=True, reason=None)
@@ -54,7 +54,7 @@ class TestLearningProjectCRUD:
         self.learn_pro_page.click_course_name()
         self.learn_pro_page.click_select_course()
         self.learn_pro_page.click_determine1_btn()
-        self.learn_pro_page.input_content_name_input("{}".format(time.strftime("%M%S")))
+        self.learn_pro_page.input_content_name_input("小节1")
         self.learn_pro_page.click_start_time_input1()
         self.learn_pro_page.click_select_start_time1()
         self.learn_pro_page.click_determine11_btn()
@@ -116,13 +116,12 @@ class TestLearningProjectCRUD:
     @pytest.mark.run(order=69)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify(self):
-        # self.learn_pro_page.refresh_page()
+        self.learn_pro_page.refresh_page()
         self.learn_pro_page.click_project_name_btn()
         self.learn_pro_page.clear_project_name_input()
         self.learn_pro_page.input_project_name("修改后{}".format(time.strftime("%M%S")))
         self.learn_pro_page.click_determine()
-        # self.learn_pro_page.click_pagesize()
-        # self.learn_pro_page.click_first_btn()
+
 
 
 

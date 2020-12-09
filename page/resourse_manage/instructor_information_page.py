@@ -64,10 +64,10 @@ class InstructorInformationPage(BaseAction):
     determine_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[3]/div/button[1]/span"
 
     # 姓名按钮(点击进入编辑)
-    name_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(2) > div:nth-child(1) > span:nth-child(1)"
+    name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[2]/div/div[3]/table/tbody/tr[1]/td[1]/div/span"
 
     # 禁用按钮
-    disable1_btn = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > main:nth-child(1) > button:nth-child(1) > span:nth-child(1)"
+    disable1_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[2]/div/div[3]/table/tbody/tr[1]/td[8]/div/main/span"
 
     # 禁用的确定按钮
     determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
@@ -85,7 +85,7 @@ class InstructorInformationPage(BaseAction):
     select_inside_lecturer = By.CSS_SELECTOR, "tr.el-table__row:nth-child(1) > td:nth-child(1) > div:nth-child(1) > label:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 弹窗的确定按钮
-    determine2_btn = By.CSS_SELECTOR, "div.dialog-footer > button:nth-child(2)"
+    determine2_btn = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[2]"
 
     # 外面的确定按钮
     determine3_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[3]/div/button[1]/span"

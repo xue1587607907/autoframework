@@ -16,7 +16,7 @@ class TestAccountCRUD:
         self.account_dm_page = AccountDM(self.driver)
 
     def teardown(self):
-        time.sleep(1)
+        # time.sleep(1)
         DriverUtils.quit_driver()
 
     i = 0
