@@ -7,7 +7,7 @@ from base.base_action import BaseAction
 class ResourcesSortPage(BaseAction):
 
     # 资源管理按钮
-    resources_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[3]/span"
+    resources_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[2]/span"
 
     # 新增按钮
     add_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div/button/span"

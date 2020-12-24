@@ -6,7 +6,7 @@ from base.base_action import BaseAction
 class TrainNeedsPage(BaseAction):
 
     # 培训需求按钮
-    train_needs_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[3]"
+    train_needs_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[1]/li[2]/div/span[2]"
 
     # 需求名称输入框
     needs_name_search = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div[1]/input"

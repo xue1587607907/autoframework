@@ -19,7 +19,7 @@ class TestOperationLogCRUD:
     @pytest.mark.run(order=18.5)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
-        # self.web_site_news_page.click_system_manage_btn()
+        self.web_site_news_page.click_system_manage_btn()
         self.operation_log_page.click_operation_log_btn()
         self.operation_log_page.input_account_search("xue")
         self.operation_log_page.click_keys_enter(self.operation_log_page.account_search)

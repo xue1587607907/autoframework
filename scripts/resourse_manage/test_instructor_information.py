@@ -21,7 +21,6 @@ class TestInstructorInformationCRUD:
     @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.resources_sort_page.refresh_page()
-        self.resources_sort_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
         self.ins_info_page.click_lecturer_and_tutor_btn()
         self.ins_info_page.click_lecturer_info_btn()

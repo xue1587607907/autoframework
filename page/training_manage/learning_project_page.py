@@ -6,7 +6,7 @@ from base.base_action import BaseAction
 class LearningProjectPage(BaseAction):
 
     # 培训管理按钮
-    train_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[2]/ul/li[4]/span"
+    train_manage_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[3]/span"
 
     # 培训组织按钮
     train_organization_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[2]/div/span[2]"
@@ -102,7 +102,7 @@ class LearningProjectPage(BaseAction):
     select_end_time1 = By.XPATH, "/html/body/div[4]/div[1]/div/div[3]/table[1]/tbody/tr[5]/td[6]/div/span"
 
     # 确定按钮
-    determine2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[1]"
+    determine2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[5]/div/div[3]/div/button[1]/span"
 
     # 直播课程按钮
     live_course_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div[1]/div[2]/button[2]"

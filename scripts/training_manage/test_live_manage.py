@@ -1,3 +1,4 @@
+import time
 import pytest
 from page.training_manage.exam_manage_page import ExamManagePage
 from page.training_manage.live_manage_page import LiveManagePage
@@ -13,12 +14,8 @@ class TestLiveManageCRUD:
         self.exam_manage = ExamManagePage(self.driver)
         self.live_manage_page = LiveManagePage(self.driver)
 
-    # def teardown(self):
-    #     time.sleep(1)
-    #     DriverUtils.quit_driver()
-
-    def teardown_class(self):
-        DriverUtils.set_switch(False)
+    def teardown(self):
+        time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=74)
@@ -63,7 +60,6 @@ class TestLiveManageCRUD:
         self.live_manage_page.click_live_date_input()
         self.live_manage_page.click_select_date()
         self.live_manage_page.click_live_time_input()
-        # self.live_manage_page.click_select_live_time()
         self.live_manage_page.click_determine_btn3()
         self.live_manage_page.click_next_btn()
         self.live_manage_page.click_add_user_btn()
@@ -90,16 +86,12 @@ class TestLiveManageCRUD:
         self.live_manage_page.click_live_date_input1()
         self.live_manage_page.click_select_live_date()
         self.live_manage_page.click_live_time_input1()
-        # self.live_manage_page.click_select_live_time2()
         self.live_manage_page.click_determine_btn7()
         self.live_manage_page.click_next_btn1()
         self.live_manage_page.click_add_user_btn1()
         self.live_manage_page.click_select_all1()
         self.live_manage_page.click_determine_btn8()
         self.live_manage_page.click_publish_btn1()
-
-    def test_a(self):
-        pass
 
 
 

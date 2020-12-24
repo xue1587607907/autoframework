@@ -28,7 +28,7 @@ class TestResourcesSortCRUD:
 
     @pytest.mark.run(order=20)
     @pytest.mark.skipif(condition=True, reason=None)
-    @pytest.mark.parametrize("params", [{"name": "修改后的分类{}".format(time.strftime("%H%M%S"))}])
+    @pytest.mark.parametrize("params", [{"name": "修改后的分类{}".format(time.strftime("%M%S"))}])
     def test_modify_resources_name(self, params):
         self.resources_sort_page.click_resources_name()
         self.resources_sort_page.clear_resources_name_input()
@@ -39,9 +39,6 @@ class TestResourcesSortCRUD:
     @pytest.mark.skipif(condition=True, reason=None)
     def test_move_up_and_down(self):
         self.resources_sort_page.click_move_up_btn()
-        # self.resources_sort_page.move_mouse_resources_sort()
-        # js = "window.scrollTo(0,1000)"
-        # self.driver.execute_script(js)
         self.resources_sort_page.click_move_down_btn()
 
     @pytest.mark.run(order=22)

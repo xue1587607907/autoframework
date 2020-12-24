@@ -17,7 +17,7 @@ class TestRolePermissionManageCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=14.2)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
         self.role_permission_manage_page.refresh_page()
         self.role_permission_manage_page.click_role_permission_manage_btn()
@@ -31,7 +31,7 @@ class TestRolePermissionManageCRUD:
         self.role_permission_manage_page.click_determine_btn()
 
     @pytest.mark.run(order=14.4)
-    # @pytest.mark.skipif(condition=True, reason=None)
+    @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_and_manege(self):
         self.role_permission_manage_page.refresh_page()
         self.role_permission_manage_page.click_manage_user()

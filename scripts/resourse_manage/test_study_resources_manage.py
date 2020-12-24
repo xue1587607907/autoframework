@@ -1,5 +1,7 @@
 import time
 import pytest
+
+from page.resourse_manage.resources_sort_page import ResourcesSortPage
 from page.resourse_manage.study_resources_manage_page import StudyResourcesManagePage
 from utils.driver_utils import DriverUtils
 
@@ -11,6 +13,7 @@ class TestStudyResourcesCRUD:
         self.driver = DriverUtils.get_driver()
         DriverUtils.set_switch(True)
         self.study = StudyResourcesManagePage(self.driver)
+        self.resources_sort_page = ResourcesSortPage(self.driver)
 
     def teardown(self):
         DriverUtils.quit_driver()
@@ -18,8 +21,8 @@ class TestStudyResourcesCRUD:
     @pytest.mark.run(order=27)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_video_library_query(self):
-        self.study.refresh_page()
-        self.study.click_resources_manage()
+        self.resources_sort_page.refresh_page()
+        self.resources_sort_page.click_resources_manage()
         self.study.click_study_resources_manage()
         self.study.click_search()
         self.study.input_search_content("测试")
@@ -31,6 +34,7 @@ class TestStudyResourcesCRUD:
         self.study.click_transcoding_fail()
 
     @pytest.mark.run(order=28)
+    # 这个方法不通用(可以不运行)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_resources_info(self):
         self.study.refresh_page()
@@ -44,6 +48,7 @@ class TestStudyResourcesCRUD:
     @pytest.mark.run(order=29)
     @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_resources(self):
+        self.study.refresh_page()
         self.study.click_remove_btn()
         self.study.click_determine1_btn()
 

@@ -6,7 +6,7 @@ from base.base_action import BaseAction
 class WebSiteNewsPage(BaseAction):
 
     # 系统管理按钮
-    system_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[2]/ul/li[2]/span"
+    system_manage_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[6]/span"
 
     # 名称搜索框
     name_search = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div[1]/input"

@@ -9,7 +9,7 @@ class PaperLibraryPage(BaseAction):
     papers_and_questions_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[1]/ul/li[5]"
 
     # 试卷库按钮
-    paper_btn = By.CSS_SELECTOR, "li.jw-router-child:nth-child(8)"
+    paper_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[6]/li[2]/div/span[2]"
 
     # 课程名称搜索框
     course_name_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"

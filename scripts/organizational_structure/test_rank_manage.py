@@ -1,5 +1,4 @@
 import random
-import time
 import pytest
 from page.organizational_structure.rank_manage import RankManagePage
 from utils.driver_utils import DriverUtils
@@ -14,7 +13,6 @@ class TestRankManageCRUD:
         self.rank_manage_page = RankManagePage(self.driver)
 
     def teardown(self):
-        # time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=9.2)

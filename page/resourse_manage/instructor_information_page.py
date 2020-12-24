@@ -6,10 +6,10 @@ from base.base_action import BaseAction
 class InstructorInformationPage(BaseAction):
 
     # 讲师与导师按钮
-    lecturer_and_tutor_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[7]/span[2]"
+    lecturer_and_tutor_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[7]/div/span[2]"
 
     # 讲师信息按钮
-    lecturer_info_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[8]/span[2]"
+    lecturer_info_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[7]/li[1]/div/span[2]"
 
     # 关键字搜索框
     keyword_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[1]/div[1]/div[1]/div/input"

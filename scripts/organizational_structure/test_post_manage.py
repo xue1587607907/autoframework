@@ -13,7 +13,6 @@ class TestPostManageCRUD:
         self.post_manage_page = PostManagePage(self.driver)
 
     def teardown(self):
-        # time.sleep(1)
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=6)

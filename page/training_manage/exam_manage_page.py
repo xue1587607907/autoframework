@@ -6,10 +6,10 @@ from base.base_action import BaseAction
 class ExamManagePage(BaseAction):
 
     # 培训管理按钮
-    train_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[2]/ul/li[4]/span"
+    train_manage_btn = By.XPATH, "/html/body/div/div/div[3]/div[2]/ul/li[3]/span"
 
     # 考试管理按钮
-    exam_manage_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[5]"
+    exam_manage_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[3]/div/span[2]"
 
     # 关键字搜索框
     keyword_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"

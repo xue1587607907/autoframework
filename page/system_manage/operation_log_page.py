@@ -6,7 +6,7 @@ from base.base_action import BaseAction
 class OperationLogPage(BaseAction):
 
     # 操作日志按钮
-    operation_log_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[2]/span[2]"
+    operation_log_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[2]/div/span[2]"
 
     # 账号搜索框
     account_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/main/div[1]/div[1]/div[1]/div/input"

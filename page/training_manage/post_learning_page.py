@@ -6,7 +6,7 @@ from base.base_action import BaseAction
 class PostLearningPage(BaseAction):
 
     # 岗位学习按钮
-    post_learning_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[6]/span[2]"
+    post_learning_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[4]/div/span[2]"
 
     # 岗位名称搜索框
     post_name_search_input = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div[1]/div/input"

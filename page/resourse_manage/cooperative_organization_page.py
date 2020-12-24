@@ -6,10 +6,10 @@ from base.base_action import BaseAction
 class CooperativeOrganizationPage(BaseAction):
 
     # 讲师与导师按钮
-    lecturer_and_tutor_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[7]/span[2]"
+    lecturer_and_tutor_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[7]/div/span[2]"
 
     # 合作机构管理按钮
-    coo_organ_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[9]"
+    coo_organ_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[7]/li[2]/div/span[2]"
 
     # 关键字搜搜
     keyword_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[1]/main/div/div/div[1]/input"

@@ -70,12 +70,6 @@ class TestOnlineCourseManageCRUD:
     def test_modify_course_content(self):
         self.online_course.click_courses_name_btn()
         self.online_course.click_courses_content_btn()
-        # self.online_course.click_move_up()
-        # self.online_course.click_move_down()
-        # self.online_course.click_edit_btn()
-        # self.online_course.clear(self.online_course.content_name_input)
-        # self.online_course.input_content_name("新名称{}".format(time.strftime("%H%M%S")))
-        # self.online_course.click_determine3_btn()
         self.online_course.click_remove1_btn()
         self.online_course.click_determine4_btn()
         self.online_course.click_go_back_btn()
