@@ -44,11 +44,11 @@ class CourseLabelPage(BaseAction):
     # 编辑标签按钮
     edit_label_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/div/span[1]"
 
-    # 删除标签分类按钮
-    remove1_label_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/div/span[2]"
+    # 标签删除按钮
+    remove1_label_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr/td[4]/div/main/div/div/span[2]"
 
     # 点击删除弹窗的确定按钮
-    determine1_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2) > span:nth-child(1)"
+    determine1_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]/span"
 
     # 点击课程标签按钮
     def click_course_label_btn(self):

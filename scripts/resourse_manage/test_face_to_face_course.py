@@ -18,7 +18,7 @@ class TestFaceToFaceCourseCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=37)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_course_query(self):
         self.face_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -36,7 +36,7 @@ class TestFaceToFaceCourseCRUD:
         self.face_page.click_enable_btn()
 
     @pytest.mark.run(order=38)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_course(self):
         self.face_page.click_new_courses()
         self.face_page.input_courses_name1("测试{}".format(time.strftime("%H%M%S")))
@@ -47,19 +47,20 @@ class TestFaceToFaceCourseCRUD:
         self.face_page.click_save_and_publish()
 
     @pytest.mark.run(order=39)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_modify_course_content(self):
+        self.face_page.refresh_page()
         self.face_page.click_course_name_btn()
         self.face_page.clear_courses_name_input()
         self.face_page.input_courses_name1("修改后{}".format(time.strftime("%H%M%S")))
-        self.face_page.clear(self.face_page.credit_input)
-        self.face_page.input_credit(4)
-        self.face_page.clear(self.face_page.class_hours)
-        self.face_page.input_class_hours(3)
-        self.face_page.click_save_and_publish()
+        self.face_page.clear(self.face_page.credit_input1)
+        self.face_page.input(self.face_page.credit_input1, 5)
+        self.face_page.clear(self.face_page.class_hours1)
+        self.face_page.input(self.face_page.class_hours1, 6)
+        self.face_page.click(self.face_page.save)
 
     @pytest.mark.run(order=40)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_more(self):
         self.face_page.refresh_page()
         self.face_page.click_disable1_btn()

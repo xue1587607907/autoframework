@@ -40,8 +40,8 @@ class TrainSortPage(BaseAction):
     determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[2]/div/div[3]/div/button[1]/span"
 
     # 上下移动按钮
-    move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[2]/div/main/main/div/span[2]"
-    move_down_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[2]/div/main/main/div/span[2]"
+    move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[2]/div/main/main/main/span[1]"
+    move_down_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[2]/div/main/main/main/span[1]"
 
     # 删除按钮
     remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[6]/td[2]/div/main/main/div/span[1]"
@@ -50,7 +50,10 @@ class TrainSortPage(BaseAction):
     determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 分类名称按钮(点击进入编辑)
-    sort_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[6]/td[1]/div/div/span"
+    sort_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr/td[1]/div/div/span"
+
+    # 分类名称搜索框
+    sort_name_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[1]/div/input"
 
     # 点击培训管理
     def click_train_manage_btn(self):
@@ -108,6 +111,10 @@ class TrainSortPage(BaseAction):
     # 点击确定按钮
     def click_determine1_btn(self):
         return self.click(self.determine1_btn)
+
+    # 输入分类名称
+    def input_sort_name1(self, content):
+        return self.input(self.sort_name_search, content)
 
 
 

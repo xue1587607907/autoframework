@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from page.training_manage.learning_project_page import LearningProjectPage
 from page.training_manage.train_needs_page import TrainNeedsPage
@@ -17,7 +19,7 @@ class TestTrainNeedsCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=63)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.learn_pro_page.click_train_manage_btn()
         self.train_needs_page.click_train_needs_btn()
@@ -35,14 +37,15 @@ class TestTrainNeedsCRUD:
         self.train_needs_page.click_last_month()
 
     @pytest.mark.run(order=64)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
         self.train_needs_page.click_new_needs_btn()
-        self.train_needs_page.input_needs_name("企业文化培训")
+        self.train_needs_page.input_needs_name("企业文化培训{}".format(time.strftime("%M%S")))
         self.train_needs_page.click_determine_btn()
+        self.train_needs_page.refresh_page()
         self.train_needs_page.click_need_name_btn()
         self.train_needs_page.clear_needs_name_input()
-        self.train_needs_page.input_needs_name("修改后的培训需求")
+        self.train_needs_page.input_needs_name("修改后的培训需求{}".format(time.strftime("%M%S")))
         self.train_needs_page.click_determine_btn()
         self.train_needs_page.click_set_to_completed()
         self.train_needs_page.click_remove_btn()

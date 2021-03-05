@@ -19,7 +19,7 @@ class TestLiveManageCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=74)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.exam_manage.refresh_page()
         self.exam_manage.click_train_manage_btn()
@@ -43,7 +43,7 @@ class TestLiveManageCRUD:
         self.live_manage_page.click_select_end()
 
     @pytest.mark.run(order=75)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_course_live(self):
         self.live_manage_page.refresh_page()
         self.live_manage_page.click_add_live_btn()
@@ -59,8 +59,8 @@ class TestLiveManageCRUD:
         self.live_manage_page.input_section_name("小节1")
         self.live_manage_page.click_live_date_input()
         self.live_manage_page.click_select_date()
-        self.live_manage_page.click_live_time_input()
-        self.live_manage_page.click_determine_btn3()
+        self.live_manage_page.click_select_live_start_time()
+        self.live_manage_page.click_select_live_end_time()
         self.live_manage_page.click_next_btn()
         self.live_manage_page.click_add_user_btn()
         self.live_manage_page.click_select_all()
@@ -68,7 +68,7 @@ class TestLiveManageCRUD:
         self.live_manage_page.click_publish_btn()
 
     @pytest.mark.run(order=76)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_custom_live(self):
         self.live_manage_page.refresh_page()
         self.live_manage_page.click_add_live_btn()
@@ -85,8 +85,8 @@ class TestLiveManageCRUD:
         self.live_manage_page.input_section("小节1")
         self.live_manage_page.click_live_date_input1()
         self.live_manage_page.click_select_live_date()
-        self.live_manage_page.click_live_time_input1()
-        self.live_manage_page.click_determine_btn7()
+        self.live_manage_page.click_select_live_start_time1()
+        self.live_manage_page.click_select_live_end_time1()
         self.live_manage_page.click_next_btn1()
         self.live_manage_page.click_add_user_btn1()
         self.live_manage_page.click_select_all1()

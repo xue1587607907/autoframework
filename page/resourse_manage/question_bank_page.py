@@ -65,10 +65,10 @@ class QuestionBankPage(BaseAction):
     answer_option = By.CSS_SELECTOR, "label.el-radio:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 弹窗确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[5]/div/div[3]/div/button[2]/span"
+    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[5]/div/div[3]/div/button[1]/span"
 
     # 外面确定按钮
-    determine2_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[5]/button[1]"
+    determine2_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[5]/button/span"
 
     # 修改题库的确定按钮
     determine_btn1 = By.CSS_SELECTOR, "div.el-dialog__footer:nth-child(3) > div:nth-child(1) > button:nth-child(1) > span:nth-child(1)"
@@ -83,13 +83,13 @@ class QuestionBankPage(BaseAction):
     question_bank_radio = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div/button[2]"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[7]/div/main/div/main/span[2]"
 
     # 弹窗的确定按钮
-    determine3_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2)"
+    determine3_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
 
     # 禁用按钮
-    disable1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/main/span"
+    disable1_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[7]/div/main/div/main/span[1]"
 
     # 禁用的确定按钮
     determine4_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"

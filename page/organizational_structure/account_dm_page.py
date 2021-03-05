@@ -5,8 +5,8 @@ from selenium.webdriver.common.by import By
 # 账号部门页面,增删改查操作
 class AccountDM(BaseAction):
 
-    # 新增按钮
-    add_user = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[1]/div/button"
+    # 新增账号按钮
+    add_user = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/div[2]/div[1]/button/span"
 
     # 用户账号
     user_account = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/form/div[1]/div/div[1]/div/input"
@@ -27,31 +27,22 @@ class AccountDM(BaseAction):
     account_button = By.CSS_SELECTOR, ".el-table__fixed > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
 
     # 第一个搜索框
-    first_search = By.CSS_SELECTOR, ".jw-tree-data-contain > div:nth-child(1) > input:nth-child(1)"
-
-    # # 部门放大镜
-    # department_mag = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[1]/span/span/i"
-    #
-    # # 账号名放大镜
-    # account_mag = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/main/div/div[1]/div/span/span/i"
+    first_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[1]/div/input"
 
     # 第二个搜索框
-    second_search = By.CSS_SELECTOR, "div.jw-inline-block:nth-child(1) > div:nth-child(1) > input:nth-child(1)"
+    second_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/div[1]/div/div[1]/div/input"
 
     # 状态筛选框
-    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[3]/div/div/div/input"
+    status_filter = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/div[1]/div/div[3]/div/div/div/input"
 
     # 筛选框选择启用
     enable = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[1]/span"
 
     # 筛选框选择禁用
-    disable = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]"
-
-    # "更多"按钮
-    more_button = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/div/button"
+    disable = By.XPATH, "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span"
 
     # 禁用按钮
-    more_disable_button = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/main/span"
+    disable_button = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div[1]/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/span"
 
     # "禁用"该用户的"确定"按钮
     determine_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
@@ -80,9 +71,7 @@ class AccountDM(BaseAction):
     # 选择部门
     def select_department(self):
         self.click(self.department)
-        self.click(self.d1)
-        self.click(self.d2)
-        return self.click(self.d3)
+        return self.click(self.d1)
 
     # 点击保存
     def click_preservation(self):
@@ -131,13 +120,9 @@ class AccountDM(BaseAction):
     def click_disable(self):
         return self.click(self.disable)
 
-    # 点击更多按钮(已经不存在)
-    def click_more_btn(self):
-        return self.click(self.more_button)
-
     # 点击禁用按钮
     def click_more_disable_btn(self):
-        return self.click(self.more_disable_button)
+        return self.click(self.disable_button)
 
     # 点击确定按钮
     def click_determine_btn(self):

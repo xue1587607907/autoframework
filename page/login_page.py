@@ -6,11 +6,11 @@ from base.base_action import BaseAction
 class LoginPage(BaseAction):
 
     # 用户名输入框
-    input_username = By.CSS_SELECTOR, "div.el-form-item:nth-child(1) > div:nth-child(1) > div:nth-child(1) > input:nth-child(2)"
+    input_username = By.XPATH, "//*[@id='username']"
     # 密码输入框
-    input_password = By.CSS_SELECTOR, ".el-input--suffix > input:nth-child(2)"
+    input_password = By.XPATH, "//*[@id='password']"
     # 登录按钮
-    login_button = By.CSS_SELECTOR, ".login-btn"
+    login_button = By.CSS_SELECTOR, ".jw-login-button"
     # 获取信息
     info = By.CSS_SELECTOR, "div.jw-top-menu-item:nth-child(3) > span:nth-child(1) "
 

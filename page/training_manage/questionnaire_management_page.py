@@ -6,7 +6,7 @@ from base.base_action import BaseAction
 class QuestionnaireManagementPage(BaseAction):
 
     # 问卷管理按钮
-    questionnaire_management_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[6]/div/span[2]"
+    questionnaire_management_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[1]/ul/li[5]/div/span[2]"
 
     # 关键字搜索框
     keyword_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/div[1]/div[1]/input"

@@ -17,7 +17,7 @@ class TestOperationLogCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=18.5)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.web_site_news_page.click_system_manage_btn()
         self.operation_log_page.click_operation_log_btn()

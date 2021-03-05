@@ -34,21 +34,22 @@ class TrainNeedsPage(BaseAction):
 
     # 需求名称输入框
     needs_name_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[2]/form/div[1]/div/div[1]/input"
+    needs_name_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[1]/div/div/div/div[2]/form/div[1]/div/div/input"
 
     # 确定按钮
     determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/button[1]/span"
 
     # 设置为已完成
-    set_to_completed = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main"
+    set_to_completed = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[7]/div/main/div/span[1]"
 
     # 需求名称按钮(点击进入编辑)
-    need_name_btn = By.CSS_SELECTOR, ".el-table__body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+    need_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/span[2]"
+    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[7]/div/main/div/span[2]"
 
     # 确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[4]/div/div[3]/button[2]/span"
+    determine1_btn = By.XPATH, "/html/body/div[3]/div/div[3]/button[2]"
 
     # 点击培训需求
     def click_train_needs_btn(self):
@@ -104,7 +105,7 @@ class TrainNeedsPage(BaseAction):
 
     # 清空需求名称
     def clear_needs_name_input(self):
-        return self.clear(self.needs_name_input)
+        return self.clear(self.needs_name_input1)
 
     # 点击删除按钮
     def click_remove_btn(self):

@@ -18,7 +18,7 @@ class TestQuestionBankCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=41)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_question_bank_query(self):
         self.question_bank_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -39,7 +39,7 @@ class TestQuestionBankCRUD:
         self.question_bank_page.click_disable_btn()
 
     @pytest.mark.run(order=42)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_question_bank(self):
         self.question_bank_page.refresh_page()
         self.question_bank_page.click_new_btn()
@@ -57,26 +57,12 @@ class TestQuestionBankCRUD:
         self.question_bank_page.click_determine1_btn()
         self.question_bank_page.click_determine2_btn()
 
-    @pytest.mark.run(order=43)
-    @pytest.mark.skipif(condition=True, reason=None)
-    def test_modify_question_bank(self):
-        self.question_bank_page.refresh_page()
-        self.question_bank_page.click_question_bank_btn()
-        self.question_bank_page.click_question_bank1_btn()
-        self.question_bank_page.click(self.question_bank_page.edit_question_btn)
-        self.question_bank_page.clear(self.question_bank_page.question_bank_name_input)
-        self.question_bank_page.input_question_bank_name("修改后{}".format(time.strftime("%H%M%S")))
-        self.question_bank_page.click(self.question_bank_page.determine_btn1)
-        self.question_bank_page.click(self.question_bank_page.determine_btn2)
-
     @pytest.mark.run(order=44)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_disable_and_remove(self):
         self.question_bank_page.refresh_page()
-        self.question_bank_page.click_question_bank_btn()
         self.question_bank_page.click_disable1_btn()
         self.question_bank_page.click_determine3_btn()
-        self.question_bank_page.click_question_bank_radio()
         self.question_bank_page.click_remove_btn()
         self.question_bank_page.click_determine3_btn()
 

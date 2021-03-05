@@ -32,14 +32,17 @@ class WebSiteNewsPage(BaseAction):
     # 保存并发布按钮
     save_and_publish_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/button[2]/span"
 
+    # 修改后的保存按钮
+    save_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/button[1]/span"
+
     # 标题按钮(点击进入编辑)
     title_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
 
     # 置顶按钮
-    topping_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[5]/div/main/main/span[1]"
+    topping_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[5]/div/main/div/span[1]"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[5]/div/main/main/span[2]"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[5]/div/main/div/span[2]"
 
     # 确定按钮
     determine_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
@@ -100,4 +103,7 @@ class WebSiteNewsPage(BaseAction):
     def click_determine_btn(self):
         return self.click(self.determine_btn)
 
+    # 保存按钮
+    def click_save_btn(self):
+        return self.click(self.save_btn)
 

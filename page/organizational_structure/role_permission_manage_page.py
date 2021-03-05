@@ -27,7 +27,7 @@ class RolePermissionManagePage(BaseAction):
     determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/button[1]"
 
     # 管理用户
-    manage_user_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[2]/td[4]/div/main/main/main/span[1]"
+    manage_user_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/div/main/span[1]"
 
     # 添加用户按钮
     add_user_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/button[1]/span"
@@ -39,7 +39,7 @@ class RolePermissionManagePage(BaseAction):
     determine_btn1 = By.XPATH, "/html/body/div[2]/div/div[3]/div/button[1]"
 
     # 复制角色
-    copy_role = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/main/span[2]"
+    copy_role = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/div/main/span[2]"
 
     # 删除角色
     remove_role = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[2]/td[4]/div/main/main/main/span[3]"

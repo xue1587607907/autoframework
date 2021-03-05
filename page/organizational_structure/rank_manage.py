@@ -20,27 +20,27 @@ class RankManagePage(BaseAction):
     # 职级名称按钮(点击编辑职级名称)
     rank_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[4]/td[1]/div/span/span"
 
-    # 编辑按钮
-    edit_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[3]/div/main/main/div/span[1]"
-
-    # 用户单选框
-    user_radio = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/label/span/span"
-
-    # 调整职级按钮
-    adjust_rank_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/button/span"
-
-    # 新职级选择框
-    new_rank = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/div/div/div[2]/form/div[2]/div/div/div/div/div/div[1]/input"
-
-    # 选择职级
-    select_rank = By.XPATH, "/html/body/div[3]/div[1]/div[1]/ul/li[2]"
-
-    # 确定按钮
-    determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/div/div/div[3]/div/button[1]/span"
+    # # 管理用户按钮
+    # edit_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[3]/div/main/main/div/span[1]"
+    #
+    # # 用户单选框
+    # user_radio = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/label/span/span"
+    #
+    # # 调整职级按钮
+    # adjust_rank_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/button/span"
+    #
+    # # 新职级选择框
+    # new_rank = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/div/div/div[2]/form/div[2]/div/div/div/div/div/div[1]/input"
+    #
+    # # 选择职级
+    # select_rank = By.XPATH, "/html/body/div[3]/div[1]/div[1]/ul/li[2]"
+    #
+    # # 确定按钮
+    # determine1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/div/div/div[3]/div/button[1]/span"
 
     # 上移/下移
-    move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[3]/div/main/main/div/span[2]"
-    move_down_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[3]/div/main/main/div/span[3]"
+    move_up_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[3]/div/main/div/div/span[2]"
+    move_down_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[3]/div/main/div/div/span[3]"
 
     # 删除按钮
     remove_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[4]/td[3]/div/main/main/div/span[4]"
@@ -72,30 +72,6 @@ class RankManagePage(BaseAction):
     def clear_rank_name_input(self):
         return self.clear(self.rank_name_input)
 
-    # 点击编辑按钮
-    def click_edit_btn(self):
-        return self.click(self.edit_btn)
-
-    # 点击用户单选框
-    def click_user_radio(self):
-        return self.click(self.user_radio)
-
-    # 点击调整职级按钮
-    def click_adjust_rank_btn(self):
-        return self.click(self.adjust_rank_btn)
-
-    # 点击新职级输入框
-    def click_new_rank(self):
-        return self.click(self.new_rank)
-
-    # 选择职级
-    def click_select_rank(self):
-        return self.click(self.select_rank)
-
-    # 点击确定
-    def click_determine1_btn(self):
-        return self.click(self.determine1_btn)
-
     # 点击上移
     def click_move_up_btn(self):
         return self.click(self.move_up_btn)
@@ -104,10 +80,34 @@ class RankManagePage(BaseAction):
     def click_move_down_btn(self):
         return self.click(self.move_down_btn)
 
-    # 点击删除按钮
-    def click_remove_btn(self):
-        return self.click(self.remove_btn)
+    # # 点击编辑按钮
+    # def click_edit_btn(self):
+    #     return self.click(self.edit_btn)
+    #
+    # # 点击用户单选框
+    # def click_user_radio(self):
+    #     return self.click(self.user_radio)
+    #
+    # # 点击调整职级按钮
+    # def click_adjust_rank_btn(self):
+    #     return self.click(self.adjust_rank_btn)
+    #
+    # # 点击新职级输入框
+    # def click_new_rank(self):
+    #     return self.click(self.new_rank)
+    #
+    # # 选择职级
+    # def click_select_rank(self):
+    #     return self.click(self.select_rank)
+    #
+    # # 点击确定
+    # def click_determine1_btn(self):
+    #     return self.click(self.determine1_btn)
 
-    # 点击确定按钮
-    def click_determine2_btn(self):
-        return self.click(self.determine2_btn)
+    # # 点击删除按钮
+    # def click_remove_btn(self):
+    #     return self.click(self.remove_btn)
+    #
+    # # 点击确定按钮
+    # def click_determine2_btn(self):
+    #     return self.click(self.determine2_btn)

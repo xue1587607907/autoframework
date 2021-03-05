@@ -38,25 +38,28 @@ class FaceToFaceCoursePage(BaseAction):
     d3 = By.XPATH, "/html/body/div[2]/div[1]/div[3]/div[1]/ul/li[1]/span"
 
     # 学分输入框
-    credit_input = By.CSS_SELECTOR, "div.jw-el-form-item-inline:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > input:nth-child(1)"
+    credit_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/form/div[4]/div/div/div/div/div/div/input"
+    credit_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/form/div[5]/div/div/div/div/div/div/input"
 
     # 学时输入框
-    class_hours = By.CSS_SELECTOR, "div.jw-offline-lesson-base-info-duration:nth-child(1) > div:nth-child(1) > div:nth-child(3) > input:nth-child(1)"
+    class_hours = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/form/div[5]/div/div/div/div/div/div/div/input"
+    class_hours1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/form/div[6]/div/div/div/div/div/div/div/input"
 
     # 保存并发布按钮
-    save_and_publish = By.CSS_SELECTOR, "button.el-button--mini:nth-child(2)"
+    save_and_publish = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/button[2]/span"
+    save = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/button[1]"
 
     # 课程名称按钮
-    course_name_btn = By.CSS_SELECTOR, ".el-table__body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+    course_name_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/span/span"
 
     # 禁用按钮
-    disable1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/span[2]"
+    disable1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/div/span[1]"
 
     # 禁用/删除 弹窗的确定按钮
     determine_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/main/span[1]"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/div/span[2]"
 
     # 向右翻页
     page_right = By.CSS_SELECTOR, "i.el-icon-arrow-right:nth-child(1)"

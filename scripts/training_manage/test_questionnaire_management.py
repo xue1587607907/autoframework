@@ -22,7 +22,7 @@ class TestTrainSortCRUD:
         time.sleep(2)
         DriverUtils.quit_driver()
 
-    @pytest.mark.run(order=60)
+    @pytest.mark.run(order=77)
     # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.questionnaire_management_page.refresh_page()
@@ -42,7 +42,7 @@ class TestTrainSortCRUD:
         self.questionnaire_management_page.click_select_under_way()
         self.questionnaire_management_page.refresh_page()
 
-    @pytest.mark.run(order=60)
+    @pytest.mark.run(order=78)
     # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_copy_template(self):
         self.questionnaire_management_page.refresh_page()
@@ -66,7 +66,7 @@ class TestTrainSortCRUD:
         self.questionnaire_management_page.click_determine_btn1()
         self.questionnaire_management_page.click_publish_btn()
 
-    @pytest.mark.run(order=60)
+    @pytest.mark.run(order=79)
     # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_directly_by(self):
         self.questionnaire_management_page.refresh_page()
@@ -84,3 +84,6 @@ class TestTrainSortCRUD:
         self.questionnaire_management_page.click_determine_btn2()
         self.questionnaire_management_page.click_next_btn3()
         self.questionnaire_management_page.click_publish_btn1()
+
+    def test_a(self):
+        pass

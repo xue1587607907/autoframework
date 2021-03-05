@@ -26,7 +26,7 @@ class UserGroupManagePage(BaseAction):
     user_group_name_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/span/span"
 
     # 管理用户按钮
-    manage_user_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/span[1]"
+    manage_user_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/div/span[1]"
 
     # "添加"用户按钮
     add_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/button[1]"
@@ -44,7 +44,7 @@ class UserGroupManagePage(BaseAction):
     remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[1]/div[2]/button[2]/span"
 
     # 删除按钮
-    remove1_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/main/span[2]"
+    remove1_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[5]/div[2]/table/tbody/tr[1]/td[4]/div/main/div/span[2]"
 
     # 确定按钮
     determine2_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"

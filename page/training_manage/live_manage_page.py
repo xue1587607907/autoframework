@@ -7,7 +7,7 @@ from base.base_action import BaseAction
 class LiveManagePage(BaseAction):
 
     # 直播管理按钮
-    live_manage_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[1]/ul/li[5]/div/span[2]"
+    live_manage_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[1]/ul/li[4]/div/span[2]"
 
     # 直播名称搜索框
     live_name_search = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[1]/div/input"
@@ -79,15 +79,13 @@ class LiveManagePage(BaseAction):
     next_month_btn = By.XPATH, "/html/body/div[5]/div[1]/div/div[1]/button[4]"
     select_date = By.XPATH, "/html/body/div[5]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[2]/div/span"
 
-    # 直播时间输入框
-    live_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[3]/div/div/div/div/div/i[1]"
+    # 直播开始/结束时间输入框
+    live_start_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[3]/div/div[1]/div/div/div/span[1]/i"
+    live_end_time_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[3]/div/div[2]/div/div/div/span[1]/i"
 
-    # 选择直播时间
-    select_live_time = By.XPATH, "/html/body/div[5]/div[1]/div[1]/div[2]/div/div[1]/div[1]/ul/li[18]"
-    select_live_time1 = By.XPATH, "/html/body/div[5]/div[1]/div[2]/div[2]/div/div[1]/div[1]/ul/li[19]"
-
-    # 弹窗的确定按钮
-    determine_btn3 = By.XPATH, "/html/body/div[5]/div[2]/button[2]"
+    # 选择直播开始/结束时间
+    select_start_live_time = By.XPATH, "/html/body/div[5]/div[1]/div[1]/div/div[117]"
+    select_end_live_time = By.XPATH, "/html/body/div[5]/div[1]/div[1]/div/div[118]"
 
     # 下一步按钮
     next_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[5]/button[1]/span"
@@ -219,18 +217,15 @@ class LiveManagePage(BaseAction):
         self.click(self.next_month_btn)
         return self.click(self.select_date)
 
-    # 点击直播时间输入框
-    def click_live_time_input(self):
-        return self.click(self.live_time_input)
+    # 选择直播开始时间
+    def click_select_live_start_time(self):
+        self.click(self.live_start_time_input)
+        return self.click(self.select_start_live_time)
 
-    # 选择直播时间
-    def click_select_live_time(self):
-        self.click(self.select_live_time)
-        return self.click(self.select_live_time1)
-
-    # 点击弹窗的确定按钮
-    def click_determine_btn3(self):
-        return self.click(self.determine_btn3)
+    # 选择直播结束时间
+    def click_select_live_end_time(self):
+        self.click(self.live_end_time_input)
+        return self.click(self.select_end_live_time)
 
     # 点击下一步
     def click_next_btn(self):
@@ -305,15 +300,13 @@ class LiveManagePage(BaseAction):
     next_month_btn1 = By.XPATH, "/html/body/div[4]/div[1]/div/div[1]/button[4]"
     select_live_date = By.XPATH, "/html/body/div[4]/div[1]/div/div[2]/table[1]/tbody/tr[6]/td[1]/div/span"
 
-    # 直播时间输入框
-    live_time_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[3]/div/div/div/div/div/i[1]"
+    # 直播开始/结束时间输入框
+    live_start_time_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[3]/div/div[1]/div/div/div/input"
+    live_end_time_input1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[4]/form/div/div[2]/div[3]/div/div[2]/div/div/div/span[1]/i"
 
-    # 选择直播时间
-    select_live_time2 = By.XPATH, "/html/body/div[4]/div[1]/div[1]/div[2]/div/div[1]/div[1]/ul/li[17]"
-    select_live_time3 = By.XPATH, "/html/body/div[4]/div[1]/div[2]/div[2]/div/div[1]/div[1]/ul/li[18]"
-
-    # 确定按钮
-    determine_btn7 = By.XPATH, "/html/body/div[4]/div[2]/button[2]"
+    # 选择直播开始/结束时间
+    select_start_live_time1 = By.XPATH, "/html/body/div[4]/div[1]/div[1]/div/div[117]"
+    select_end_live_time1 = By.XPATH, "/html/body/div[4]/div[1]/div[1]/div/div[118]"
 
     # 下一步按钮
     next_btn1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/main/div/div/div[2]/div/div/div[5]/button[1]/span"
@@ -379,18 +372,15 @@ class LiveManagePage(BaseAction):
         self.click(self.next_month_btn1)
         return self.click(self.select_live_date)
 
-    # 点击直播时间输入框
-    def click_live_time_input1(self):
-        return self.click(self.live_time_input1)
+    # 选择直播开始时间
+    def click_select_live_start_time1(self):
+        self.click(self.live_start_time_input1)
+        return self.click(self.select_start_live_time1)
 
-    # 选择直播时间
-    def click_select_live_time2(self):
-        self.click(self.select_live_time2)
-        return self.click(self.select_live_time3)
-
-    # 点击确定按钮
-    def click_determine_btn7(self):
-        return self.click(self.determine_btn7)
+    # 选择直播结束时间
+    def click_select_live_end_time1(self):
+        self.click(self.live_end_time_input1)
+        return self.click(self.select_end_live_time1)
 
     # 点击下一步
     def click_next_btn1(self):

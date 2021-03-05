@@ -18,7 +18,7 @@ class TestCooperativeOrganizationCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=57)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.resources_sort_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -34,7 +34,7 @@ class TestCooperativeOrganizationCRUD:
         self.coo_organ_page.refresh_page()
 
     @pytest.mark.run(order=58)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
         self.coo_organ_page.refresh_page()
         self.coo_organ_page.click_new_btn()
@@ -42,7 +42,7 @@ class TestCooperativeOrganizationCRUD:
         self.coo_organ_page.click_determine_btn()
 
     @pytest.mark.run(order=59)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_and_disable(self):
         self.coo_organ_page.refresh_page()
         self.coo_organ_page.click_manage_btn()

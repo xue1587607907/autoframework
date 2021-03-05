@@ -39,14 +39,8 @@ class PaperLibraryPage(BaseAction):
     question_bank_select_btn = By.XPATH, "/html/body/div/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div[1]"
     question_bank_select_btn1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[1]/div[1]/div[1]/p"
 
-    # 搜索题库输入框
-    search_question_bank_input = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div/div[1]/div[1]/div/input"
-
-    # 搜索框按钮
-    search_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div/div[1]/div[1]/div/span/span/i"
-
-    # 选择题库按钮
-    question_bank1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div/div[1]/ul/li"
+    # 选择题库
+    select_question_bank = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div/div[1]/ul/li[1]/span"
 
     # 全选题目复选框
     select_all = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div/div/div[2]/div[2]/label/span[1]/span"
@@ -54,8 +48,11 @@ class PaperLibraryPage(BaseAction):
     # 确定按钮
     determine_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[3]/div/button[1]/span"
 
+    #  禁用按钮
+    disable_btn1 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/div/main/span[1]"
+
     # 试题删除按钮
-    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[2]/div[2]/div/div[2]/div/span/span[2]"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/div/main/span[2]"
 
     # 提示确定按钮
     determine1_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
@@ -96,7 +93,7 @@ class PaperLibraryPage(BaseAction):
     score_input5 = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div[1]/div/div[3]/div[5]/p[3]/div/input"
 
     # 确定按钮
-    determine3_btn = By.CSS_SELECTOR, "button.el-button--mini:nth-child(1)"
+    determine3_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div[2]/div/div[2]/button[1]/span"
 
     # 更多按钮
     more_btn = By.CSS_SELECTOR, ".el-table__fixed-body-wrapper > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(9) > div:nth-child(1) > main:nth-child(1) > main:nth-child(1) > div:nth-child(1) > button:nth-child(1)"
@@ -105,19 +102,16 @@ class PaperLibraryPage(BaseAction):
     edit_btn = By.XPATH, "/html/body/ul/li[1]"
 
     # 禁用按钮
-    disable1_btn = By.XPATH, "/html/body/ul/li[2]"
+    disable1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/div/main/span[1]"
 
     # 禁用的确定按钮
     determine4_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
-    # 选择试卷单选框
-    radio = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div/div/div[2]/div[2]/div/div/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span"
-
     # 试卷删除按钮
-    remove1_btn = By.CSS_SELECTOR, "button.el-button--mini:nth-child(2) > span:nth-child(1)"
+    remove1_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[8]/div/main/div/main/span[2]"
 
     # 弹窗的确定按钮
-    determine5_btn = By.CSS_SELECTOR, "button.el-button--default:nth-child(2) > span:nth-child(1)"
+    determine5_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]"
 
     # 向右翻页
     page_right = By.CSS_SELECTOR, "i.el-icon-arrow-right:nth-child(1)"
@@ -190,17 +184,9 @@ class PaperLibraryPage(BaseAction):
     def click_question_bank_select_btn1(self):
         return self.click(self.question_bank_select_btn1)
 
-    # 搜索框输入试卷名称
-    def input_question_bank(self, content):
-        return self.input(self.search_question_bank_input, content)
-
-    # 搜索框按钮
-    def click_search_btn(self):
-        return self.click(self.search_btn)
-
-    # 点击搜索出来的题库
-    def select_question_bank1_btn(self):
-        return self.click(self.question_bank1_btn)
+    # 点击第一个试题
+    def click_first_question_bank(self):
+        return self.click(self.select_question_bank)
 
     # 全选按钮
     def click_select_all(self):
@@ -259,14 +245,6 @@ class PaperLibraryPage(BaseAction):
     def click_determine3_btn(self):
         return self.click(self.determine3_btn)
 
-    # 点击更多按钮
-    def click_more_btn(self):
-        return self.click(self.more_btn)
-
-    # 点击编辑按钮
-    def click_edit_btn(self):
-        return self.click(self.edit_btn)
-
     # 点击禁用按钮
     def click_disable1_btn(self):
         return self.click(self.disable1_btn)
@@ -274,10 +252,6 @@ class PaperLibraryPage(BaseAction):
     # 禁用弹窗的确定按钮
     def click_determine4_btn(self):
         return self.click(self.determine4_btn)
-
-    # 点击选择试卷单选框
-    def click_radio(self):
-        return self.click(self.radio)
 
     # 点击删除试卷
     def click_remove1_btn(self):

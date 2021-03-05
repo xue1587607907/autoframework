@@ -17,7 +17,7 @@ class TestPostLearningCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=72)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.post_learn_page.refresh_page()
         self.exam_manage.click_train_manage_btn()
@@ -31,7 +31,7 @@ class TestPostLearningCRUD:
         self.post_learn_page.select_unpublished()
 
     @pytest.mark.run(order=73)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
         self.post_learn_page.refresh_page()
         self.post_learn_page.click_new_post_learning_btn()

@@ -18,7 +18,7 @@ class TestResourcesSortCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=59.2)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_query(self):
         self.questionnaire_template_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -37,7 +37,7 @@ class TestResourcesSortCRUD:
         self.questionnaire_template_page.click_disable_btn()
 
     @pytest.mark.run(order=59.4)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add(self):
         self.questionnaire_template_page.click_add_btn()
         self.questionnaire_template_page.input_template_name("问卷模板{}".format(time.strftime("%M%S")))
@@ -51,7 +51,7 @@ class TestResourcesSortCRUD:
         self.questionnaire_template_page.click_determine_btn2()
 
     @pytest.mark.run(order=59.6)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_more(self):
         self.questionnaire_template_page.click_questionnaire_template_btn()
         self.questionnaire_template_page.click_disable_btn1()

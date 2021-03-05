@@ -33,22 +33,19 @@ class ResourcesSortPage(BaseAction):
     resources_name = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[3]/table/tbody/tr[3]/td[1]/div/div/span"
 
     # 上移按钮
-    move_up_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[2]/div/main/main/div/span[2]"
+    move_up_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[2]/div/main/main/div/span[1]"
 
     # 下移按钮
-    move_down_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[2]/td[2]/div/main/main/div/span[3]"
+    move_down_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[1]/td[2]/div/main/main/div/span[1]"
 
     # 删除按钮
-    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr[3]/td[2]/div/main/main/div/span[1]"
+    remove_btn = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[2]/div[2]/div[1]/div/div/div[4]/div[2]/table/tbody/tr/td[2]/div/main/main/div/span"
 
     # 删除弹出的"确定"按钮
-    remove_determine_btn = By.CSS_SELECTOR, "button.el-button--small:nth-child(2) > span:nth-child(1)"
+    remove_determine_btn = By.XPATH, "/html/body/div[2]/div/div[3]/button[2]/span"
 
-    # 部门搜索框
-    department_search = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[1]/div/div[1]/input"
-
-    # 资源名称搜索框
-    resources_name_search = By.CSS_SELECTOR, "div.jw-inline-block > div:nth-child(1) > input:nth-child(1)"
+    # 分类名称搜索框
+    sort_name_search = By.XPATH, "/html/body/div[1]/div/div[3]/div[3]/div/div[2]/main/div/div/div[3]/div/div[1]/main/div/div[1]/div/input"
 
     #  点击资源管理
     def click_resources_manage(self):
@@ -101,13 +98,9 @@ class ResourcesSortPage(BaseAction):
     def click_remove_determine_btn(self):
         return self.click(self.remove_determine_btn)
 
-    # 点击资源分类输入框
-    def click_resources_sort_search(self):
-        return self.click(self.resources_name_search)
-
-    # 在资源分类输入框输入内容
-    def input_resources_sort(self, feature):
-        return self.input(self.resources_name_search, feature)
+    # 通过分类名称搜索分类
+    def input_sort_name_search(self, content):
+        return self.input(self.sort_name_search, content)
 
 
 

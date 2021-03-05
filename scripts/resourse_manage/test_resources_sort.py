@@ -16,7 +16,7 @@ class TestResourcesSortCRUD:
         DriverUtils.quit_driver()
 
     @pytest.mark.run(order=19)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_add_resources_sort(self):
         self.resources_sort_page.refresh_page()
         self.resources_sort_page.click_resources_manage()
@@ -26,34 +26,20 @@ class TestResourcesSortCRUD:
         self.resources_sort_page.input_sort_name("三级分类{}".format(time.strftime("%M%S")))
         self.resources_sort_page.click_determine_btn()
 
-    @pytest.mark.run(order=20)
-    @pytest.mark.skipif(condition=True, reason=None)
-    @pytest.mark.parametrize("params", [{"name": "修改后的分类{}".format(time.strftime("%M%S"))}])
-    def test_modify_resources_name(self, params):
-        self.resources_sort_page.click_resources_name()
-        self.resources_sort_page.clear_resources_name_input()
-        self.resources_sort_page.input_sort_name(params["name"])
-        self.resources_sort_page.click_determine_btn()
-
     @pytest.mark.run(order=21)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_move_up_and_down(self):
         self.resources_sort_page.click_move_up_btn()
         self.resources_sort_page.click_move_down_btn()
 
     @pytest.mark.run(order=22)
-    @pytest.mark.skipif(condition=True, reason=None)
+    # @pytest.mark.skipif(condition=True, reason=None)
     def test_remove_resources_sort(self):
+        self.resources_sort_page.input_sort_name_search("三级分类")
+        self.resources_sort_page.click_keys_enter(self.resources_sort_page.sort_name_search)
         self.resources_sort_page.click_remove_btn()
         self.resources_sort_page.click_remove_determine_btn()
-        self.resources_sort_page.refresh_page()
 
-    @pytest.mark.run(order=23)
-    @pytest.mark.skipif(condition=True, reason=None)
-    def test_query_resources_sort(self):
-        self.resources_sort_page.click_resources_sort_search()
-        self.resources_sort_page.input_resources_sort("战略")
-        self.resources_sort_page.click_keys_enter(self.resources_sort_page.resources_name_search)
 
 
 
